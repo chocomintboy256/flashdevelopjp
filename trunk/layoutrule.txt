@@ -1,0 +1,34 @@
+SVNのコミットするときのレイアウトルール。
+基本的には以下のようなルールで行います。
+
+・Plugin は plugins の下に置きます。
+・その他は Plugin に関係の無いものは、ある程度ジャンルを分けて trunk 以下に置きます。
+	- 例). svn/trunk/html/Hoge.html
+
+
+例)
+
+svn/
+	branches/
+	tags/
+	trunk/
+		tools/
+			
+		macro/
+			shortcut/
+				AlwaysCompile.cs
+				readme_AlwaysCompile.txt
+			debug/
+				FlexPMD.cs
+				
+		plugin/
+			CustomPlugin/
+				FlexPMD/
+					PluginMain.cs
+					... 略
+				FDjpPlugin/
+					PluginMain.cs
+					... 略
+
+bk-zen.com
+
