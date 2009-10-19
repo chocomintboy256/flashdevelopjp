@@ -1,12 +1,16 @@
-SVN�̃R�~�b�g����Ƃ��̃��C�A�E�g���[���B
-��{�I�ɂ͈ȉ��̂悤�ȃ��[���ōs���܂��B
+﻿SVNのコミットするときのレイアウトルールと注意。
 
-�EPlugin �� plugins �̉��ɒu���܂��B
-�E���̑��� Plugin �Ɋ֌W�̖������̂́A������x�W�������𕪂��� trunk �ȉ��ɒu���܂��B
-	- ��). svn/trunk/html/Hoge.html
+注意)
+	Text で日本語を使う場合は、UTF-8じゃないと文字化けしそう。
+
+基本的には以下のようなルールで行います。
+
+・Plugin は plugins の下に置きます。
+・その他は Plugin に関係の無いものは、ある程度ジャンルを分けて trunk 以下に置きます。
+	- 例). svn/trunk/html/Hoge.html
 
 
-��)
+例)
 
 svn/
 	branches/
@@ -25,10 +29,10 @@ svn/
 			CustomPlugin/
 				FlexPMD/
 					PluginMain.cs
-					... ��
+					... 略
 				FDjpPlugin/
 					PluginMain.cs
-					... ��
+					... 略
 
 bk-zen.com
 
