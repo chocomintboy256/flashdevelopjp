@@ -178,7 +178,11 @@ namespace FDjpPlugin
         {
             string cword = "";
             string nword = "";
-            if (sci.CurrentPos == sci.Length) return;
+            if (sci.CurrentPos >= sci.Length)
+            {
+                sci.CurrentPos = sci.Length;
+                return;
+            }
             cword = sci.GetWordFromPosition(sci.CurrentPos);
             sci.WordRightEnd();
             nword = sci.GetWordFromPosition(sci.CurrentPos);
@@ -208,8 +212,12 @@ namespace FDjpPlugin
         private void prevWord(Object sender, EventArgs e)
         {
             string cword = "";
-            string nword = "";
-            if (sci.CurrentPos == 0) return ;
+            string nword = sci.GetWordFromPosition(sci.SelectionStart);
+            if ((nword != null) && sci.CurrentPos - nword.Length < 1)
+            {
+                sci.CurrentPos = 0;
+                return;
+            }
             do
             {
                 cword = sci.GetWordFromPosition(sci.CurrentPos);
