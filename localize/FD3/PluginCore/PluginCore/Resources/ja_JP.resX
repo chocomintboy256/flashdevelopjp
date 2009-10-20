@@ -1742,7 +1742,7 @@
     <value>このプロジェクトはなにも出力せず、設定されたコマンドも実行しません。</value>
   </data>
   <data name="ProjectManager.Info.NoProjectsOpenLink" xml:space="preserve">
-    <value>新しいプロジェクトを作成|{0}または{0}|既存のプロジェクトを開く|{0}または{0}|Flex Builder プロジェクトをインポート|</value>
+    <value>|新しいプロジェクトを作成|{0}または{0}|既存のプロジェクトを開く|{0}または{0}|Flex Builder プロジェクトをインポート|</value>
   </data>
   <data name="ProjectManager.Info.NoTemplatesFound" xml:space="preserve">
     <value>テンプレートディレクトリの中にテンプレートが見つかりません。新規プロジェクトが作成できない可能性があります。FlashDevelop を再インストールしてください。</value>
