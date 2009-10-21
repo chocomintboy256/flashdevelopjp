@@ -30,6 +30,9 @@ namespace FDjpPlugin
         private ToolStripMenuItem nextItem = null;
         private ToolStripMenuItem prevItem = null;
         private ToolStripMenuItem alwaysItem = null;
+        private ToolStripMenuItem nextLineItem = null;
+        private ToolStripMenuItem prevLineItem = null;
+
 
 
         #region IPlugin メンバ
@@ -146,6 +149,13 @@ namespace FDjpPlugin
             this.alwaysItem = new ToolStripMenuItem();
             this.alwaysItem.Text = Resources.LABEL_ALWAYS_COMPILE;
             this.alwaysItem.Click += new EventHandler(this.alwaysCompile);
+            /*
+            this.nextLineItem = new ToolStripMenuItem();
+            this.nextLineItem.Text = Resources.LABEL_NEXT_LINE;
+            //
+            this.prevLineItem = new ToolStripMenuItem();
+            this.prevLineItem.Text = Resources.LABEL_PREV_LINE;
+             */
 
             this.fdjpMenu.DropDownItems.Add(this.nextItem);
             this.fdjpMenu.DropDownItems.Add(this.prevItem);
@@ -204,8 +214,9 @@ namespace FDjpPlugin
             }
             if (settingObj.WordSelect && sci.GetWordFromPosition(sci.SelectionStart) != null)
             {
-                nword = sci.GetWordFromPosition(sci.SelectionStart);
-                sci.SelectText(nword, sci.SelectionStart - nword.Length);
+                int epos = sci.CurrentPos;
+                sci.WordLeft();
+                sci.SelectionEnd = epos;
             }
         }
 
@@ -227,8 +238,9 @@ namespace FDjpPlugin
             while ((nword == null || cword == nword) && sci.CurrentPos > 0);
             if (settingObj.WordSelect && sci.GetWordFromPosition(sci.SelectionStart) != null)
             {
-                nword = sci.GetWordFromPosition(sci.SelectionStart);
-                sci.SelectText(nword, sci.SelectionStart - nword.Length);
+                int epos = sci.CurrentPos;
+                sci.WordLeft();
+                sci.SelectionEnd = epos;
             }
             return ;
         }

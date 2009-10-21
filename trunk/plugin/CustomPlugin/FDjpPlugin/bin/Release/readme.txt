@@ -50,11 +50,14 @@
 		Google Code のSVNを作った。
 	2009/10/20	07:46	bkzen	(1.0.0.3)
 		WordSelect を True にしたときの文頭、文末での範囲外エラーを修正。
+	2009/10/21	09:02	bkzen	(1.0.0.4)
+		WordSelect を True にしたときの日本語越えバグを修正。
 
 
 TODO
+	行移動
 	ScintillaControl をラップしてショートカットを即時反映させるクラスを作成。
 	WonderFD を作る。
-	ASCompressor はちょっとむずい。
 	コメントを書く。
+	ASCompressor はちょっとむずい。
 

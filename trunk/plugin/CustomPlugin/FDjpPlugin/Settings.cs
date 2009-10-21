@@ -9,6 +9,8 @@ namespace FDjpPlugin
     {
         private Keys nextWordKey = Keys.Control | Keys.OemPeriod;
         private Keys prevWordKey = Keys.Control | Keys.Oemcomma;
+        private Keys nextLineKey = Keys.Alt | Keys.Down;
+        private Keys prevLineKey = Keys.Alt | Keys.Up;
         private bool wordSelect = false;
         private Keys alwaysCompileKey = Keys.Alt | Keys.A;
         private bool alwaysCompileAfterCompile = false;
@@ -31,13 +33,29 @@ namespace FDjpPlugin
         }
 
         [Category("ワード移動")]
-        [Description("移動した際にワードをセレクトする設定"), DefaultValue(false)]
+        [Description("移動した際にワードをセレクトする設定。"), DefaultValue(false)]
         public bool WordSelect
         {
             get { return this.wordSelect; }
             set { this.wordSelect = value; }
         }
+        /*
+        [Category("行移動")]
+        [Description("下に行を移動する。"), DefaultValue(Keys.Alt | Keys.Down)]
+        public Keys NextLineKey
+        {
+            get { return this.nextLineKey; }
+            set { this.nextLineKey = value; }
+        }
 
+        [Category("行移動")]
+        [Description("下に行を移動する。"), DefaultValue(Keys.Alt | Keys.Up)]
+        public Keys PrevLineKey
+        {
+            get { return this.prevLineKey; }
+            set { this.prevLineKey = value; }
+        }
+        */
 
         [Category("Always Compile")]
         [Description("Always Compile を現在のドキュメントに設定するショートカット"), DefaultValue(Keys.Alt | Keys.A)]
