@@ -403,10 +403,10 @@
     <value>KB</value>
   </data>
   <data name="FileExplorer.Info.NewFileName" xml:space="preserve">
-    <value>新しいファイル</value>
+    <value>新規ファイル</value>
   </data>
   <data name="FileExplorer.Info.NewFolderName" xml:space="preserve">
-    <value>新しいフォルダ</value>
+    <value>新規フォルダ</value>
   </data>
   <data name="FileExplorer.Label.CommandPromptHere" xml:space="preserve">
     <value>コマンドプロンプト(&amp;P)...</value>
@@ -1124,7 +1124,7 @@
     <value>後で通知する(&amp;N)</value>
   </data>
   <data name="FlashDevelop.Label.Ok" xml:space="preserve">
-    <value>OK(&amp;O)</value>
+    <value>&amp;OK</value>
   </data>
   <data name="FlashDevelop.Label.Open" xml:space="preserve">
     <value>開く(&amp;O)...</value>
@@ -1733,7 +1733,7 @@
     <value>Flash IDE スクリプト( .jsf l) が Tools¥flashide ディレクトリに見つかりませんでした。</value>
   </data>
   <data name="ProjectManager.Info.NewProject" xml:space="preserve">
-    <value>新しいプロジェクト</value>
+    <value>NewProject</value>
   </data>
   <data name="ProjectManager.Info.NoOutput" xml:space="preserve">
     <value>ムービーを出力しない。ビルド前･後のコマンドラインのみ実行する</value>
@@ -1742,7 +1742,7 @@
     <value>このプロジェクトはなにも出力せず、設定されたコマンドも実行しません。</value>
   </data>
   <data name="ProjectManager.Info.NoProjectsOpenLink" xml:space="preserve">
-    <value>|新しいプロジェクトを作成|{0}または{0}|既存のプロジェクトを開く|{0}または{0}|Flex Builder プロジェクトをインポート|</value>
+    <value>|新規プロジェクトを作成|{0}または{0}|既存のプロジェクトを開く|{0}または{0}|Flex Builder プロジェクトをインポート|</value>
   </data>
   <data name="ProjectManager.Info.NoTemplatesFound" xml:space="preserve">
     <value>テンプレートディレクトリの中にテンプレートが見つかりません。新規プロジェクトが作成できない可能性があります。FlashDevelop を再インストールしてください。</value>
@@ -1823,7 +1823,7 @@
     <value>ごみ箱に移動されます。</value>
   </data>
   <data name="ProjectManager.Label.Add" xml:space="preserve">
-    <value>追加(&amp;A)</value>
+    <value>新規作成(&amp;A)</value>
   </data>
   <data name="ProjectManager.Label.AddAsPreloader" xml:space="preserve">
     <value>プリローダとして追加(&amp;P)</value>
@@ -1838,7 +1838,7 @@
     <value>ライブラリアセットを追加</value>
   </data>
   <data name="ProjectManager.Label.AddNew" xml:space="preserve">
-    <value>新規追加</value>
+    <value>新規</value>
   </data>
   <data name="ProjectManager.Label.AddToLibrary" xml:space="preserve">
     <value>ライブラリに追加(&amp;L)</value>
@@ -1904,7 +1904,7 @@
     <value>実行(&amp;E)</value>
   </data>
   <data name="ProjectManager.Label.ExistingFile" xml:space="preserve">
-    <value>既存のファイル(&amp;E)...</value>
+    <value>既存のファイルを追加(&amp;E)...</value>
   </data>
   <data name="ProjectManager.Label.ExplainTheseOptions" xml:space="preserve">
     <value>これらのオプションの説明</value>
@@ -1946,13 +1946,13 @@
     <value>常に更新されるソースファイル(&amp;K):</value>
   </data>
   <data name="ProjectManager.Label.LibraryAsset" xml:space="preserve">
-    <value>ライブラリアセット(&amp;A)...</value>
+    <value>ライブラリアセットを追加(&amp;A)...</value>
   </data>
   <data name="ProjectManager.Label.LoadAtRuntime" xml:space="preserve">
     <value>共有ライブラリとしてランタイムに読み込み(&amp;R)</value>
   </data>
   <data name="ProjectManager.Label.Location" xml:space="preserve">
-    <value>場所(&amp;):</value>
+    <value>場所(&amp;L):</value>
   </data>
   <data name="ProjectManager.Label.MainMenuItem" xml:space="preserve">
     <value>プロジェクトマネージャ(&amp;P)</value>
@@ -1961,13 +1961,13 @@
     <value>名前(&amp;N):</value>
   </data>
   <data name="ProjectManager.Label.New" xml:space="preserve">
-    <value>新規</value>
+    <value />
   </data>
   <data name="ProjectManager.Label.NewFile" xml:space="preserve">
-    <value>新規ファイル</value>
+    <value>NewFile</value>
   </data>
   <data name="ProjectManager.Label.NewFolder" xml:space="preserve">
-    <value>新規フォルダ(&amp;F)...</value>
+    <value>フォルダ</value>
   </data>
   <data name="ProjectManager.Label.NewProject" xml:space="preserve">
     <value>新規プロジェクト(&amp;N)...</value>
@@ -1979,7 +1979,7 @@
     <value>アクションは利用できません。</value>
   </data>
   <data name="ProjectManager.Label.OK" xml:space="preserve">
-    <value>OK(&amp;O)</value>
+    <value>&amp;OK</value>
   </data>
   <data name="ProjectManager.Label.Open" xml:space="preserve">
     <value>開く(&amp;O)</value>
@@ -2030,7 +2030,7 @@
     <value>コマンドラインビルダー</value>
   </data>
   <data name="ProjectManager.Title.ConfigurationRequired" xml:space="preserve">
-    <value>コンパイラ構成に必須</value>
+    <value>コンパイラ指定が必須</value>
   </data>
   <data name="ProjectManager.Title.CustomTestMovieCommand" xml:space="preserve">
     <value>コマンドラインを入力</value>
@@ -2779,7 +2779,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>エディタスタイル</value>
   </data>
   <data name="FlashDevelop.Info.SampleText" xml:space="preserve">
-    <value>サンプルテキスト</value>
+    <value>Sample Text</value>
   </data>
   <data name="FlashDevelop.Info.SaveCurrentLanguage" xml:space="preserve">
     <value>現在の言語を保存しますか？</value>
@@ -3089,7 +3089,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Button.Ok" xml:space="preserve">
-    <value>OK(&amp;O)</value>
+    <value>&amp;OK</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Button.Remove" xml:space="preserve">
@@ -3133,11 +3133,11 @@ Never - 起動時にスタートページを表示しません。</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Label.NewAs2Class" xml:space="preserve">
-    <value>新しい ActionScript 2 クラス</value>
+    <value>新規 ActionScript 2 クラス</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Label.NewAs3Class" xml:space="preserve">
-    <value>新しい ActionScript 3 クラス</value>
+    <value>新規 ActionScript 3 クラス</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Label.OpenType" xml:space="preserve">
