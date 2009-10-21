@@ -79,11 +79,29 @@ namespace FDjpPlugin.Properties {
         }
         
         /// <summary>
+        ///   次の行へ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LABEL_NEXT_LINE {
+            get {
+                return ResourceManager.GetString("LABEL_NEXT_LINE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   次のワードへ に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string LABEL_NEXT_WORD {
             get {
                 return ResourceManager.GetString("LABEL_NEXT_WORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   前の行へ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LABEL_PREV_LINE {
+            get {
+                return ResourceManager.GetString("LABEL_PREV_LINE", resourceCulture);
             }
         }
         
