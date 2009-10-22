@@ -319,7 +319,7 @@
     <value>空</value>
   </data>
   <data name="ASCompletion.Label.ConvertToIntrinsic" xml:space="preserve">
-    <value>Intrinsicクラスに変換(&amp;I)</value>
+    <value>Intrinsic クラスに変換(&amp;I)</value>
   </data>
   <data name="ASCompletion.Label.DocBoxTemplate" xml:space="preserve">
     <value>ドキュメンテーションボックステンプレート</value>
@@ -965,7 +965,7 @@
     <value>CR+LF(&amp;C)</value>
   </data>
   <data name="FlashDevelop.Label.CSSValidator" xml:space="preserve">
-    <value>CSSの検証(&amp;C)...</value>
+    <value>CSS の検証(&amp;C)...</value>
   </data>
   <data name="FlashDevelop.Label.Cut" xml:space="preserve">
     <value>切り取り(&amp;T)</value>
