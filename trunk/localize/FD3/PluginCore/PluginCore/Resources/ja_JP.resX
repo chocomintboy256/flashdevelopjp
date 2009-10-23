@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AS2Context.Description.DefaultFlashVersion" xml:space="preserve">
-    <value>既定の Flash Player バージョン</value>
+    <value>既定の Flash Player バージョンです。</value>
   </data>
   <data name="AS2Context.Description.MMClassPath" xml:space="preserve">
-    <value>Adobe Flash IDEクラスパスへのファイルパス</value>
+    <value>Adobe Flash IDEクラスパスへのファイルパスです。</value>
   </data>
   <data name="AS2Context.Description.MtascCheckParameters" xml:space="preserve">
-    <value>構文チェックのための MTASC コンパイラ設定</value>
+    <value>構文チェックのための MTASC コンパイラ設定です。</value>
   </data>
   <data name="AS2Context.Description.MtascPath" xml:space="preserve">
-    <value>MTASC コンパイラへのパス</value>
+    <value>MTASC コンパイラへのパスです。</value>
   </data>
   <data name="AS2Context.Description.UseMtascIntrinsic" xml:space="preserve">
     <value>Flash IDE の組み込み関数の代わりに MTASC コンパイラ固有のクラスを使用します。これは通常、MTASC より厳密であるとして推奨されている Flash プラグインのいくつかの機能をサポートしていません。</value>
@@ -151,7 +151,7 @@
     <value>AS3 の固有のクラスへのパスです。</value>
   </data>
   <data name="AS3Context.Description.DefaultFlashVersion" xml:space="preserve">
-    <value>既定の Flash Player バージョン</value>
+    <value>既定の Flash Player バージョンです。</value>
   </data>
   <data name="AS3Context.Description.FlexSDK" xml:space="preserve">
     <value>Flex SDK のパス</value>
@@ -187,103 +187,103 @@
     <value>開始中括弧を新しい行に移動します。</value>
   </data>
   <data name="ASCompletion.Description.CheckSyntaxOnSave" xml:space="preserve">
-    <value>保存後シンタックスをチェックする。</value>
+    <value>保存後シンタックスをチェックします。</value>
   </data>
   <data name="ASCompletion.Description.CompactChars" xml:space="preserve">
-    <value>リフォーマットされた時、これらの文字の周りにあるホワイトスペースを削除します。</value>
+    <value>リフォーマットされたとき、これらの文字の周りにあるホワイトスペースを削除します。</value>
   </data>
   <data name="ASCompletion.Description.CompletionEnabled" xml:space="preserve">
-    <value>補完を有効にする。</value>
+    <value>補完を有効にします。</value>
   </data>
   <data name="ASCompletion.Description.CompletionListAllTypes" xml:space="preserve">
-    <value>補完リストにプロジェクト内で指定できる全てのタイプを含める。</value>
+    <value>補完リストにプロジェクト内で指定できる全てのタイプを含めます。</value>
   </data>
   <data name="ASCompletion.Description.CompletionLooseMatching" xml:space="preserve">
-    <value>補完リストでスマートテキストマッチングを使用する。</value>
+    <value>補完リストでスマートテキストマッチングを使用すします。</value>
   </data>
   <data name="ASCompletion.Description.CompletionShowQualifiedTypes" xml:space="preserve">
-    <value>補完リストに、パッケージを含めたタイプ名を表示する。(例. package + type)</value>
+    <value>補完リストに、パッケージを含めたタイプ名を表示します。(例. package + type)</value>
   </data>
   <data name="ASCompletion.Description.CondenseWhitespace" xml:space="preserve">
-    <value>テキストの余計なホワイトスペースを削除する。必要なホワイトスペースだけ残す。</value>
+    <value>テキストの余計なホワイトスペースを削除します。必要なホワイトスペースだけ残します。</value>
   </data>
   <data name="ASCompletion.Description.DescriptionLinesLimit" xml:space="preserve">
-    <value>表示された Tips の説明文の文字数の設定。</value>
+    <value>表示された Tips の説明文の文字数です。</value>
   </data>
   <data name="ASCompletion.Description.DisableAutoCloseBraces" xml:space="preserve">
-    <value>自動的にブロックを閉じる設定を無効にする設定。</value>
+    <value>自動的にブロックを閉じる機能を無効にします。</value>
   </data>
   <data name="ASCompletion.Description.DisableCache" xml:space="preserve">
-    <value>クラスパスの解析を早くするために、キャッシュファイルを FlashDevelop のユーザーファイルズ内にそれぞれのパスを作ります。この設定はそれを無効にする設定。</value>
+    <value>クラスパスの解析を高速化を目的としたキャッシュの生成を無効化します。</value>
   </data>
   <data name="ASCompletion.Description.DisableCodeReformat" xml:space="preserve">
-    <value>&lt;Enter&gt; や &lt;;&gt; を入力した後に自動的にフォーマットされる機能を無効にする設定。</value>
+    <value>"Enter" や ";" を入力した後に自動的にフォーマットされる機能を無効にします。</value>
   </data>
   <data name="ASCompletion.Description.DisableFDB" xml:space="preserve">
-    <value>FlashDevelop の　コマンドライン Flex debugger (FDB) のホスト設定を無効にする設定。</value>
+    <value>FlashDevelop の　コマンドライン Flex debugger (FDB) のホスト設定を無効にします。</value>
   </data>
   <data name="ASCompletion.Description.DocumentationCommandLine" xml:space="preserve">
-    <value>&lt;F1&gt; を押した時にヘルプを実行するプログラムまたはURL。</value>
+    <value>"F1" を押したときにヘルプを実行するプログラムまたは URL です。</value>
   </data>
   <data name="ASCompletion.Description.GenerateImports" xml:space="preserve">
-    <value>パッケージ名をフルで書いた時に自動的にインポートしてくれる設定。</value>
+    <value>パッケージ名をフルで書いたときに自動的にインポートします。</value>
   </data>
   <data name="FlashDevelop.Description.CommentBlockStyle" xml:space="preserve">
-    <value>javadoc コメント行にスペースを追加するかどうかを指定します。</value>
+    <value>javadoc コメント行にスペースを追加します。</value>
   </data>
   <data name="ASCompletion.Description.JavadocTags" xml:space="preserve">
-    <value>Javadoc の タグの補完リスト。</value>
+    <value>Javadoc の タグの補完リストです。</value>
   </data>
   <data name="ASCompletion.Description.JavadocTagsEnabled" xml:space="preserve">
-    <value>Javadoc のタグの補完を ドキュメンテーションブロックで有効にする設定。</value>
+    <value>Javadoc のタグの補完を ドキュメンテーションブロックで有効にします。</value>
   </data>
   <data name="ASCompletion.Description.LazyClasspathExploration" xml:space="preserve">
-    <value>True の場合は プロジェクトの Classpath の全てを探索して解析します。</value>
+    <value>プロジェクトのクラスパスの全てを探索して解析します。</value>
   </data>
   <data name="ASCompletion.Description.OutlineViewShowExtends" xml:space="preserve">
-    <value>継承元をアウトラインビューに表示する。</value>
+    <value>継承元をアウトラインビューに表示します。</value>
   </data>
   <data name="ASCompletion.Description.OutlineViewShowImplements" xml:space="preserve">
-    <value>実装したインターフェースをアウトラインビューに表示する。</value>
+    <value>実装したインターフェースをアウトラインビューに表示します。</value>
   </data>
   <data name="ASCompletion.Description.OutlineViewShowImports" xml:space="preserve">
-    <value>インポートしたクラスをアウトラインビューに表示する。</value>
+    <value>インポートしたクラスをアウトラインビューに表示します。</value>
   </data>
   <data name="ASCompletion.Description.PathToFlashIDE" xml:space="preserve">
-    <value>Adobe Flash IDE のパスを設定する。</value>
+    <value>Adobe Flash IDE のパスです。</value>
   </data>
   <data name="ASCompletion.Description.PlayAfterBuild" xml:space="preserve">
-    <value>クイックビルドをしたあと、作成された SWF を自動的に再生する。</value>
+    <value>クイックビルドをしたあと、作成された SWF を自動的に再生します。</value>
   </data>
   <data name="ASCompletion.Description.ShortcutBackFromDeclaration" xml:space="preserve">
     <value>「定義元へ移動」の移動前の位置に戻る。</value>
   </data>
   <data name="ASCompletion.Description.ShortcutGotoDeclaration" xml:space="preserve">
-    <value>キャレット位置にある要素の定義元へ移動する。</value>
+    <value>カーソル位置にある要素の定義元へ移動します。</value>
   </data>
   <data name="ASCompletion.Description.ShortcutQuickBuild" xml:space="preserve">
-    <value>現在のファイルをコンパイルする。この操作は、ソース内でコンパイラの指定が必要かもしれません。</value>
+    <value>現在のファイルをコンパイルします。この操作は、ソース内でのコンパイラの指定が必要です。</value>
   </data>
   <data name="ASCompletion.Description.ShortcutSyntaxChecking" xml:space="preserve">
-    <value>現在のファイルのシンタックスをチェックする。</value>
+    <value>現在のファイルのシンタックスをチェックします。</value>
   </data>
   <data name="ASCompletion.Description.ShortcutTypesExplorer" xml:space="preserve">
     <value>プロジェクトタイプエクスプローラを開きます。</value>
   </data>
   <data name="ASCompletion.Description.SmartTipsEnabled" xml:space="preserve">
-    <value>補完機能を強化するためにドキュメンテーションブロック内の Javadoc タグを解析する。</value>
+    <value>補完機能を強化するためにドキュメンテーションブロック内の Javadoc タグを解析します。</value>
   </data>
   <data name="ASCompletion.Description.SortingMode" xml:space="preserve">
-    <value>アウトラインパネル内のメンバーをどのように並び変えるかの設定。</value>
+    <value>アウトラインパネル内のメンバーをどのように並び変えるか設定します。</value>
   </data>
   <data name="ASCompletion.Description.SpaceBeforeFunctionCall" xml:space="preserve">
-    <value>ファンクション名と括弧の間にスペースが入るように再フォーマットする。</value>
+    <value>ファンクション名と括弧の間にスペースが入るように再フォーマットします。</value>
   </data>
   <data name="ASCompletion.Description.SpacedChars" xml:space="preserve">
-    <value>再フォーマット時、これらの文字をスペースで囲む。</value>
+    <value>再フォーマット時、これらの文字をスペースで囲みます。</value>
   </data>
   <data name="ASCompletion.Description.UserClasspath" xml:space="preserve">
-    <value>グローバル言語クラスパス。</value>
+    <value>グローバル言語クラスパスを指定します。</value>
   </data>
   <data name="ASCompletion.Info.ConfigurationRequired" xml:space="preserve">
     <value>Flash IDE を定義する必要があります。</value>
@@ -370,13 +370,13 @@
     <value>FlashDevelop に、特定のファイルを正常に表示するために変換する機能を追加します。</value>
   </data>
   <data name="FileExplorer.Description.FilePath" xml:space="preserve">
-    <value>最後に閲覧したファイルのパス。</value>
+    <value>最後に閲覧したファイルのパスです。</value>
   </data>
   <data name="FileExplorer.Description.SortColumn" xml:space="preserve">
-    <value>現在のカラムがソートされている。</value>
+    <value>現在アクティブなカラムです。</value>
   </data>
   <data name="FileExplorer.Description.SortOrder" xml:space="preserve">
-    <value>現在のカラムのソート順序。</value>
+    <value>現在のカラムのソート順序です。</value>
   </data>
   <data name="FileExplorer.Header.Files" xml:space="preserve">
     <value>ファイル</value>
@@ -391,7 +391,7 @@
     <value>タイプ</value>
   </data>
   <data name="FileExplorer.Info.BrowseDescription" xml:space="preserve">
-    <value>フォルダを開いてフォルダ内のファイルをリストする。</value>
+    <value>フォルダを開いてフォルダ内のファイルをリストします。</value>
   </data>
   <data name="FileExplorer.Info.ConfirmDelete" xml:space="preserve">
     <value>選択した項目を削除してもよろしいですか？</value>
@@ -403,28 +403,31 @@
     <value>KB</value>
   </data>
   <data name="FileExplorer.Info.NewFileName" xml:space="preserve">
-    <value>新規ファイル</value>
+    <value>NewFile</value>
   </data>
   <data name="FileExplorer.Info.NewFolderName" xml:space="preserve">
-    <value>新規フォルダ</value>
+    <value>NewFolder</value>
   </data>
   <data name="FileExplorer.Label.CommandPromptHere" xml:space="preserve">
     <value>コマンドプロンプト(&amp;P)...</value>
   </data>
   <data name="FileExplorer.Label.Copy" xml:space="preserve">
-    <value>コピー(&amp;O)</value>
+    <value>コピー(&amp;C)</value>
+    <comment>O</comment>
   </data>
   <data name="FileExplorer.Label.CreateFileHere" xml:space="preserve">
-    <value>新規ファイルを作成(&amp;C)...</value>
+    <value>新規ファイル(&amp;N)...</value>
+    <comment>C</comment>
   </data>
   <data name="FileExplorer.Label.CreateFolderHere" xml:space="preserve">
-    <value>新規フォルダを作成(&amp;F)...</value>
+    <value>新規フォルダ(&amp;F)...</value>
   </data>
   <data name="FileExplorer.Label.Delete" xml:space="preserve">
     <value>削除(&amp;D)</value>
   </data>
   <data name="FileExplorer.Label.Edit" xml:space="preserve">
-    <value>編集(&amp;E)</value>
+    <value>開く(&amp;O)</value>
+    <comment>編集(&amp;E)</comment>
   </data>
   <data name="FileExplorer.Label.ExploreHere" xml:space="preserve">
     <value>エクスプローラで開く(&amp;X)...</value>
@@ -436,10 +439,11 @@
     <value>再読み込み(&amp;R)</value>
   </data>
   <data name="FileExplorer.Label.Rename" xml:space="preserve">
-    <value>リネーム(&amp;N)</value>
+    <value>名前の変更(&amp;M)</value>
   </data>
   <data name="FileExplorer.Label.Run" xml:space="preserve">
-    <value>実行(&amp;R)</value>
+    <value>実行(&amp;E)</value>
+    <comment>R</comment>
   </data>
   <data name="FileExplorer.Label.SynchronizeView" xml:space="preserve">
     <value>プロジェクトとシンクロ(&amp;S)</value>
@@ -466,7 +470,7 @@
     <value>接続のホスト。</value>
   </data>
   <data name="FlashConnect.Description.Port" xml:space="preserve">
-    <value>接続のポート番号。</value>
+    <value>接続のポート番号です。</value>
   </data>
   <data name="FlashConnect.Info.Description" xml:space="preserve">
     <value>FlashDevelop に、外部の Flash Movie と通信するための機能を追加します。</value>
@@ -478,31 +482,31 @@
     <value>XML メッセージの受信が無効です。</value>
   </data>
   <data name="FlashDevelop.Category.Controls" xml:space="preserve">
-    <value>操作</value>
+    <value>1| 操作</value>
   </data>
   <data name="FlashDevelop.Category.Display" xml:space="preserve">
-    <value>表示</value>
+    <value>2| 表示</value>
   </data>
   <data name="FlashDevelop.Category.Editor" xml:space="preserve">
     <value>エディタ</value>
   </data>
   <data name="FlashDevelop.Category.Features" xml:space="preserve">
-    <value>特徴</value>
+    <value>3| 特徴</value>
   </data>
   <data name="FlashDevelop.Category.Folding" xml:space="preserve">
-    <value>折りたたみ</value>
+    <value>4| 折りたたみ</value>
   </data>
   <data name="FlashDevelop.Category.Formatting" xml:space="preserve">
-    <value>フォーマット</value>
+    <value>5| フォーマット</value>
   </data>
   <data name="FlashDevelop.Category.General" xml:space="preserve">
     <value>総合</value>
   </data>
   <data name="FlashDevelop.Category.Indenting" xml:space="preserve">
-    <value>インデント</value>
+    <value>6| インデント</value>
   </data>
   <data name="FlashDevelop.Category.State" xml:space="preserve">
-    <value>状態</value>
+    <value>7| 状態</value>
   </data>
   <data name="FlashDevelop.Description.ApplyFileExtension" xml:space="preserve">
     <value>デフォルトの拡張子をファイル名に適用します。</value>
@@ -520,19 +524,19 @@
     <value>合致する括弧を背景色でハイライトします。</value>
   </data>
   <data name="FlashDevelop.Description.CaretLineVisible" xml:space="preserve">
-    <value>キャレットを含む行を背景色でハイライトします。</value>
+    <value>カーソルを含む行を背景色でハイライトします。</value>
   </data>
   <data name="FlashDevelop.Description.CaretPeriod" xml:space="preserve">
-    <value>キャレットの点滅間隔です。</value>
+    <value>カーソルの点滅間隔です。</value>
   </data>
   <data name="FlashDevelop.Description.CaretWidth" xml:space="preserve">
-    <value>キャレットの幅です。</value>
+    <value>カーソルの幅です。</value>
   </data>
   <data name="FlashDevelop.Description.CodingStyle" xml:space="preserve">
     <value>改行処理のコーディングスタイルを定義します。</value>
   </data>
   <data name="FlashDevelop.Description.ComboBoxFlatStyle" xml:space="preserve">
-    <value>使用するツールバーの外観です。</value>
+    <value>インターフェースの外観を指定します。この機能はまだ完全に実装されていません。</value>
   </data>
   <data name="FlashDevelop.Description.CustomArguments" xml:space="preserve">
     <value>文字列処理のためにユーザーが定義した引数の一覧です。</value>
@@ -553,7 +557,7 @@
     <value>補完リストが出現するまでの遅延時間です。</value>
   </data>
   <data name="FlashDevelop.Description.EnableAutoHide" xml:space="preserve">
-    <value>目障りでない補完リストです。</value>
+    <value>目障りでない補完リストを有効にします。</value>
   </data>
   <data name="FlashDevelop.Description.EnsureConsistentLineEnds" xml:space="preserve">
     <value>ドキュメントが一貫した改行コードを持つようにします。</value>
@@ -565,7 +569,7 @@
     <value>行末に追加される改行文字です。</value>
   </data>
   <data name="FlashDevelop.Description.RedirectFilesResults" xml:space="preserve">
-    <value>Find in Files の結果から結果パネルへリダイレクトする。</value>
+    <value>Find in Files の結果から結果パネルへリダイレクトします。</value>
   </data>
   <data name="FlashDevelop.Description.FoldAtElse" xml:space="preserve">
     <value>else 文を折りたたみます。</value>
@@ -574,67 +578,67 @@
     <value>コメントを折りたたみます。</value>
   </data>
   <data name="FlashDevelop.Description.FoldCompact" xml:space="preserve">
-    <value>空白行も折りたたみ範囲に含める。</value>
+    <value>空白行も折りたたみ範囲に含めます。</value>
   </data>
   <data name="FlashDevelop.Description.FoldFlags" xml:space="preserve">
-    <value>折りたたみの挙動</value>
+    <value>折りたたみの挙動です。</value>
   </data>
   <data name="FlashDevelop.Description.FoldHtml" xml:space="preserve">
-    <value>html ソースコードを折りたたむ</value>
+    <value>html ソースコードを折りたたみます。</value>
   </data>
   <data name="FlashDevelop.Description.FoldPreprocessor" xml:space="preserve">
-    <value>プリプロセッサ命令文を折りたたむ</value>
+    <value>プリプロセッサ命令文を折りたたみます。</value>
   </data>
   <data name="FlashDevelop.Description.HighlightAllColor" xml:space="preserve">
-    <value>クイック検索でのパターンハイライト色</value>
+    <value>クイック検索でのハイライト色です。</value>
   </data>
   <data name="FlashDevelop.Description.HighlightGuide" xml:space="preserve">
-    <value>現在のコードブロックでのハイライトガイドを無効にする。</value>
+    <value>現在のコードブロックでのハイライトガイドを無効にします。</value>
   </data>
   <data name="FlashDevelop.Description.HoverDelay" xml:space="preserve">
-    <value>マウスオン時のヒント表示までの待ち時間。</value>
+    <value>マウスオン時のヒント表示までの待ち時間です。</value>
   </data>
   <data name="FlashDevelop.Description.IndentSize" xml:space="preserve">
-    <value>字下げ補助線の表示間隔。</value>
+    <value>字下げ補助線の表示間隔です。</value>
   </data>
   <data name="FlashDevelop.Description.LatestCommand" xml:space="preserve">
-    <value>最新バージョンのスタートアップコマンド。</value>
+    <value>最後に使用したスタートアップコマンドです。</value>
   </data>
   <data name="FlashDevelop.Description.LatestDialogPath" xml:space="preserve">
-    <value>最後に使用したパス。</value>
+    <value>最後に使用したパスです。</value>
   </data>
   <data name="FlashDevelop.Description.LineCommentsAfterIndent" xml:space="preserve">
-    <value>ラインコメントする際にインデントの後にコメントをする設定。</value>
+    <value>ラインコメントする際にインデントの後にコメントします。</value>
   </data>
   <data name="FlashDevelop.Description.LocaleVersion" xml:space="preserve">
-    <value>プログラムの現在のローカル。変更にはリスタートが必要。</value>
+    <value>プログラムの現在のロケールです。変更には再起動が必要です。</value>
   </data>
   <data name="FlashDevelop.Description.MoveCursorAfterComment" xml:space="preserve">
-    <value>コメントした後、次の行に移動するかどうかの設定。</value>
+    <value>コメントした後、次の行に移動します。</value>
   </data>
   <data name="FlashDevelop.Description.PreviousDocuments" xml:space="preserve">
-    <value>以前開いたドキュメント</value>
+    <value>以前開いたドキュメントです。</value>
   </data>
   <data name="FlashDevelop.Description.RenderMode" xml:space="preserve">
-    <value>Common UI のレンダリング方法の設定。リスタートを必要とします。</value>
+    <value>Common UI のレンダリング方法の設定です。再起動を必要とします。</value>
   </data>
   <data name="FlashDevelop.Description.RestoreFileSession" xml:space="preserve">
-    <value>起動時に開いたファイルのリストアを行う設定。</value>
+    <value>起動時に開くファイルを初期化します。</value>
   </data>
   <data name="FlashDevelop.Description.RestoreFileStates" xml:space="preserve">
-    <value>起動時にファイルの状態のリストアを行う設定。</value>
+    <value>起動時にファイルの状態を初期化します。</value>
   </data>
   <data name="FlashDevelop.Description.ScrollWidth" xml:space="preserve">
-    <value>ドキュメントの初期幅の設定。(px単位)</value>
+    <value>ドキュメントの初期幅です。(px単位)</value>
   </data>
   <data name="FlashDevelop.Description.SequentialTabbing" xml:space="preserve">
-    <value>タブでの移動の設定。</value>
+    <value>タブ移動の設定です。</value>
   </data>
   <data name="FlashDevelop.Description.ShowDetails" xml:space="preserve">
-    <value>詳細なツールチップを表示する。</value>
+    <value>詳細なツールチップを表示します。</value>
   </data>
   <data name="FlashDevelop.Description.SmartIndentType" xml:space="preserve">
-    <value>自動インデントのタイプ。</value>
+    <value>自動インデントのタイプです。</value>
   </data>
   <data name="FlashDevelop.Description.StripTrailingSpaces" xml:space="preserve">
     <value>行末の半角スペースやタブを取り除きます。</value>
@@ -643,10 +647,10 @@
     <value>タブキーでコードをインデントします。</value>
   </data>
   <data name="FlashDevelop.Description.TabWidth" xml:space="preserve">
-    <value>タブの文字数。</value>
+    <value>タブの文字数です。</value>
   </data>
   <data name="FlashDevelop.Description.UseFolding" xml:space="preserve">
-    <value>このドキュメントのコードを折りたたむ。</value>
+    <value>このドキュメントのコードを折りたたみます。</value>
   </data>
   <data name="FlashDevelop.Description.UseTabs" xml:space="preserve">
     <value>タブの代わりに連続した半角スペースを使用します。</value>
@@ -655,7 +659,7 @@
     <value>ブックマークシンボルを余白に表示します。もし表示しない場合、ブックマークされた行を強調することで示します。</value>
   </data>
   <data name="FlashDevelop.Description.ViewEOL" xml:space="preserve">
-    <value>改行文字を記号で表示する。</value>
+    <value>改行文字を記号で表示します。</value>
   </data>
   <data name="FlashDevelop.Description.ViewIndentationGuides" xml:space="preserve">
     <value>インデントの位置を示す線を表示します。</value>
@@ -664,16 +668,16 @@
     <value>余白に行番号を表示します。</value>
   </data>
   <data name="FlashDevelop.Description.ViewToolBar" xml:space="preserve">
-    <value>デフォルトのツールバーを表示する。</value>
+    <value>デフォルトのツールバーを表示します。</value>
   </data>
   <data name="FlashDevelop.Description.ViewWhitespace" xml:space="preserve">
-    <value>半角スペースを記号で表示する。</value>
+    <value>半角スペースを記号で表示します。</value>
   </data>
   <data name="FlashDevelop.Description.WindowPosition" xml:space="preserve">
-    <value>最大化や最小化されていないウインドウの時、ウインドウの位置を記憶し、次回開いたときに復元します。</value>
+    <value>最大化や最小化されていないウインドウのとき、ウインドウの位置を記憶し、次回開いたときに復元します。</value>
   </data>
   <data name="FlashDevelop.Description.WindowSize" xml:space="preserve">
-    <value>最大化や最小化されていないウインドウの時、ウインドウの大きさを記憶し、次回開いたときに復元します。</value>
+    <value>最大化や最小化されていないウインドウのとき、ウインドウの大きさを記憶し、次回開いたときに復元します。</value>
   </data>
   <data name="FlashDevelop.Description.WindowState" xml:space="preserve">
     <value>ウインドウを閉じたとき、ウインドウが最大化や最小化されているかを記憶し、次回開いたときに復元します。</value>
@@ -682,7 +686,7 @@
     <value>キーボードを使用して操作したときにリストをループさせます。</value>
   </data>
   <data name="FlashDevelop.Description.WrapText" xml:space="preserve">
-    <value>右端で折り返す。</value>
+    <value>右端で折り返します。</value>
   </data>
   <data name="FlashDevelop.Group.Main" xml:space="preserve">
     <value>メイン</value>
@@ -691,7 +695,7 @@
     <value>プラグイン</value>
   </data>
   <data name="FlashDevelop.Info.AppDescription" xml:space="preserve">
-    <value>メインアプリケーションと、共有プラグインコア。</value>
+    <value>メインアプリケーション、共有プラグインコアです。</value>
   </data>
   <data name="FlashDevelop.Info.AreYouSureToReload" xml:space="preserve">
     <value>本当にファイルをリロードしますか？変更は保存されません。</value>
@@ -754,7 +758,7 @@
     <value>現在のドキュメント</value>
   </data>
   <data name="FlashDevelop.Info.GiveProperInt32Value" xml:space="preserve">
-    <value>適切な整数値を与えます。</value>
+    <value>適切な整数値を指定してください。</value>
   </data>
   <data name="FlashDevelop.Info.Help" xml:space="preserve">
     <value>ヘルプ</value>
@@ -787,7 +791,7 @@
     <value>(項目は未選択)</value>
   </data>
   <data name="FlashDevelop.Info.NoMatches" xml:space="preserve">
-    <value>適切な一致は利用できません。</value>
+    <value>一致する項目は見つかりません。</value>
   </data>
   <data name="FlashDevelop.Info.NoMatchesFound" xml:space="preserve">
     <value>一致するものが見つかりませんでした。</value>
@@ -892,7 +896,7 @@
     <value>FlashDevelop について(&amp;A)...</value>
   </data>
   <data name="FlashDevelop.Label.ApplicationFiles" xml:space="preserve">
-    <value>アプリケーションファイル(&amp;A)...</value>
+    <value>アプリケーションファイルを表示(&amp;A)...</value>
   </data>
   <data name="FlashDevelop.Label.ASDocGen" xml:space="preserve">
     <value>ASDoc ジェネレータ(&amp;D)...</value>
@@ -907,7 +911,7 @@
     <value>全てブックマーク(&amp;B)</value>
   </data>
   <data name="FlashDevelop.Label.Cancel" xml:space="preserve">
-    <value>キャンセル(&amp;N)</value>
+    <value>キャンセル</value>
   </data>
   <data name="FlashDevelop.Label.CheckUpdates" xml:space="preserve">
     <value>アップデートの確認...</value>
@@ -922,7 +926,8 @@
     <value>最近開いたファイルをクリア(&amp;C)</value>
   </data>
   <data name="FlashDevelop.Label.Close" xml:space="preserve">
-    <value>閉じる(&amp;C)</value>
+    <value>閉じる</value>
+    <comment>C</comment>
   </data>
   <data name="FlashDevelop.Label.CloseAll" xml:space="preserve">
     <value>全て閉じる(&amp;E)</value>
@@ -1001,7 +1006,7 @@
     <value>エスケープ文字(&amp;E)</value>
   </data>
   <data name="FlashDevelop.Label.Exit" xml:space="preserve">
-    <value>閉じる(&amp;X)</value>
+    <value>終了(&amp;X)</value>
   </data>
   <data name="FlashDevelop.Label.ExpandAll" xml:space="preserve">
     <value>すべて展開(&amp;X)</value>
@@ -1016,7 +1021,7 @@
     <value>ファイル(&amp;F)</value>
   </data>
   <data name="FlashDevelop.Label.FileDetails" xml:space="preserve">
-    <value>ファイル詳細(&amp;D)</value>
+    <value>ファイルの詳細(&amp;D)</value>
   </data>
   <data name="FlashDevelop.Label.Find" xml:space="preserve">
     <value>検索(&amp;F)...</value>
@@ -1118,13 +1123,13 @@
     <value>次へ(&amp;N)</value>
   </data>
   <data name="FlashDevelop.Label.NextBookmark" xml:space="preserve">
-    <value>次のブックマーク(&amp;X)</value>
+    <value>次のブックマークへ(&amp;X)</value>
   </data>
   <data name="FlashDevelop.Label.NotifyLater" xml:space="preserve">
     <value>後で通知する(&amp;N)</value>
   </data>
   <data name="FlashDevelop.Label.Ok" xml:space="preserve">
-    <value>&amp;OK</value>
+    <value>OK</value>
   </data>
   <data name="FlashDevelop.Label.Open" xml:space="preserve">
     <value>開く(&amp;O)...</value>
@@ -1142,7 +1147,7 @@
     <value>位置(&amp;P)</value>
   </data>
   <data name="FlashDevelop.Label.PrevBookmark" xml:space="preserve">
-    <value>前のブックマーク(&amp;E)</value>
+    <value>前のブックマークへ(&amp;E)</value>
   </data>
   <data name="FlashDevelop.Label.Previous" xml:space="preserve">
     <value>前へ(&amp;P)</value>
@@ -1214,7 +1219,8 @@
     <value>テンプレートとして保存...</value>
   </data>
   <data name="FlashDevelop.Label.Search" xml:space="preserve">
-    <value>検索(&amp;S)</value>
+    <value>検索(&amp;F)</value>
+    <comment>S</comment>
   </data>
   <data name="FlashDevelop.Label.SelectAll" xml:space="preserve">
     <value>すべて選択(&amp;S)</value>
@@ -1229,7 +1235,7 @@
     <value>スニペット(&amp;S)</value>
   </data>
   <data name="FlashDevelop.Label.CodeSnippets" xml:space="preserve">
-    <value>コードスニペット(&amp;C)</value>
+    <value>スニペットの編集(&amp;C)</value>
   </data>
   <data name="FlashDevelop.Label.SOReader" xml:space="preserve">
     <value>Shared Object リーダ(&amp;S)...</value>
@@ -1250,13 +1256,13 @@
     <value>タイムスタンプ(&amp;T)</value>
   </data>
   <data name="FlashDevelop.Label.ToggleBookmark" xml:space="preserve">
-    <value>ブックマークをトグル(&amp;T)</value>
+    <value>ブックマーク(&amp;T)</value>
   </data>
   <data name="FlashDevelop.Label.ToggleBreakpoint" xml:space="preserve">
-    <value>ブレークポイントをトグル</value>
+    <value>ブレークポイント</value>
   </data>
   <data name="FlashDevelop.Label.ToggleFold" xml:space="preserve">
-    <value>折りたたみをトグル(&amp;F)</value>
+    <value>折りたたむ(&amp;F)</value>
   </data>
   <data name="FlashDevelop.Label.ToLowercase" xml:space="preserve">
     <value>小文字に変換(&amp;W)</value>
@@ -1277,7 +1283,7 @@
     <value>UTF-8(&amp;U)</value>
   </data>
   <data name="FlashDevelop.Label.View" xml:space="preserve">
-    <value>ウインドウ(&amp;V)</value>
+    <value>ウインドウ(&amp;W)</value>
   </data>
   <data name="FlashDevelop.Label.WebTools" xml:space="preserve">
     <value>ウェブ ツール(&amp;W)</value>
@@ -1349,13 +1355,13 @@
     <value>ムービーを表示できません。Flash Player ActiveX control content debugger (for IE) バージョン9以上をインストールする必要があります。(http://www.adobe.com/support/flashplayer/downloads.html)</value>
   </data>
   <data name="HaXeContext.Description.DefaultFlashVersion" xml:space="preserve">
-    <value>既定の Flash Player バージョン</value>
+    <value>既定の Flash Player バージョンです。</value>
   </data>
   <data name="HaXeContext.Description.HaXeCheckParameters" xml:space="preserve">
-    <value>構文チェックのための HaXe コンパイラパラメータ。</value>
+    <value>構文チェックのための HaXe コンパイラパラメータです。</value>
   </data>
   <data name="HaXeContext.Description.HaXePath" xml:space="preserve">
-    <value>HaXe コンパイラのパスを設定します。</value>
+    <value>HaXe コンパイラのパスです。</value>
   </data>
   <data name="HaXeContext.Info.InvalidForQuickBuild" xml:space="preserve">
     <value>このファイルには有効な HaXe クラスが無いか、または @haxe ビルドコマンドが含まれません。</value>
@@ -1409,10 +1415,12 @@
     <value>FlashDevelop にデバッグメッセージを表示するための出力パネルを表示します。</value>
   </data>
   <data name="OutputPanel.Label.ClearOutput" xml:space="preserve">
-    <value>出力をクリア(&amp;C)</value>
+    <value>クリア(&amp;D)</value>
+    <comment>C</comment>
   </data>
   <data name="OutputPanel.Label.CopyOutput" xml:space="preserve">
-    <value>出力をコピー(&amp;O)</value>
+    <value>コピー(&amp;C)</value>
+    <comment>O</comment>
   </data>
   <data name="OutputPanel.Label.ViewMenuItem" xml:space="preserve">
     <value>出力(&amp;O)</value>
@@ -1445,7 +1453,7 @@
     <value>コンパイラ設定</value>
   </data>
   <data name="ProjectManager.Category.Exclusions" xml:space="preserve">
-    <value>除外</value>
+    <value>2| 除外</value>
   </data>
   <data name="ProjectManager.Category.General" xml:space="preserve">
     <value>総合</value>
@@ -1454,10 +1462,10 @@
     <value>総合設定</value>
   </data>
   <data name="ProjectManager.Category.OtherOptions" xml:space="preserve">
-    <value>その他の設定</value>
+    <value>3| その他の設定</value>
   </data>
   <data name="ProjectManager.Category.ProjectTree" xml:space="preserve">
-    <value>プロジェクトツリー</value>
+    <value>1| プロジェクトツリー</value>
   </data>
   <data name="ProjectManager.Category.Trace" xml:space="preserve">
     <value>トレース</value>
@@ -1469,7 +1477,7 @@
     <value>値</value>
   </data>
   <data name="ProjectManager.Description.Accessible" xml:space="preserve">
-    <value>Flexアプリケーションまたは SWC ファイルをコンパイルするときにアクセシビリティ機能を有効にします。</value>
+    <value>Flex アプリケーションまたは SWC ファイルをコンパイルするときにアクセシビリティ機能を有効にします。</value>
   </data>
   <data name="ProjectManager.Description.Additional" xml:space="preserve">
     <value>高度なコンパイラオプションを設定します。(非推奨)</value>
@@ -1490,7 +1498,7 @@
     <value>別の Flex SDK を指定します。(オプション)</value>
   </data>
   <data name="ProjectManager.Description.DeclareOverride" xml:space="preserve">
-    <value>オーバーライドしたメソッドが確実に "override" 付きで宣言されるようにする。</value>
+    <value>オーバーライドしたメソッドが確実に "override" 付きで宣言されるようにします。</value>
   </data>
   <data name="ProjectManager.Description.Directives" xml:space="preserve">
     <value>ユーザにより定義さたコンパイラ命令を指定します。</value>
@@ -1502,25 +1510,25 @@
     <value>プロトタイププロパティを動的にオーバーライドできるように、ECMAScript Edition 3 のプロトタイプに基づくオブジェクトモデルを使用します。</value>
   </data>
   <data name="ProjectManager.Description.ExcludedDirectories" xml:space="preserve">
-    <value>プロジェクトのツリービューから完全に除外するディレクトリを設定します。</value>
+    <value>プロジェクトのツリービューから完全に除外するディレクトリです。</value>
   </data>
   <data name="ProjectManager.Description.ExcludedFileTypes" xml:space="preserve">
-    <value>プロジェクトのツリービューから完全に除外するファイル形式を設定します。</value>
+    <value>プロジェクトのツリービューから完全に除外するファイル形式です。</value>
   </data>
   <data name="ProjectManager.Description.ExcludeFile" xml:space="preserve">
     <value>コンパイル時に除外するクラスを指定します。完全なクラスパスを1行に一つ記述してください。</value>
   </data>
   <data name="ProjectManager.Description.ExecutableFileTypes" xml:space="preserve">
-    <value>アイテムを開いたときに"実行"するファイル形式を設定します。</value>
+    <value>アイテムを開いたときに"実行"するファイル形式です。</value>
   </data>
   <data name="ProjectManager.Description.ExternalLibraryPaths" xml:space="preserve">
-    <value>SWFファイルをコンパイルする際、リンク対象外とする SWC ファイルやディレクトリのリストを指定する。</value>
+    <value>SWFファイルをコンパイルする際、リンク対象外とする SWC ファイルやディレクトリのリストを指定します。</value>
   </data>
   <data name="ProjectManager.Description.FlashStrict" xml:space="preserve">
     <value>より厳格なタイプの FlashAPI 。</value>
   </data>
   <data name="ProjectManager.Description.Frame" xml:space="preserve">
-    <value>ターゲットのフレームにエクスポートする( SWF 内にコードが存在しいてる場合のみ)。</value>
+    <value>ターゲットのフレームにエクスポートします( SWF 内にコードが存在しいてる場合のみ)。</value>
   </data>
   <data name="ProjectManager.Description.GroupClasses" xml:space="preserve">
     <value>複数のクラスを一つのムービークリップに統合します。これにより SWF サイズを減らせますが、"コードインジェクション"機能や UseMX コンパイラオプションを使用している場合は問題を生じるかもしれません。</value>
@@ -1535,10 +1543,10 @@
     <value>1つまたは複数のパッケージを、常にムービーにコンパイルされるよう指定します。</value>
   </data>
   <data name="ProjectManager.Description.Includes" xml:space="preserve">
-    <value>それらのクラスがコンパイル時に必要であるか否かに関係なく、生成する SWF ファイルにクラスをリンクする。</value>
+    <value>それらのクラスがコンパイル時に必要であるか否かに関係なく、生成する SWF ファイルにクラスをリンクします。</value>
   </data>
   <data name="ProjectManager.Description.Infer" xml:space="preserve">
-    <value>True にした場合、コンパイラ "var" キーワードで宣言されたローカル変数のタイプを推論します。</value>
+    <value>True に設定すると、コンパイラ "var" キーワードで宣言されたローカル変数のタイプを推論します。</value>
   </data>
   <data name="ProjectManager.Description.IntrinsicPaths" xml:space="preserve">
     <value>コード補完で使用するための追加クラスを指定します。</value>
@@ -1553,7 +1561,7 @@
     <value>ライブラリに固有の文字列を指定します。このプロジェクトが共有ライブラリとして使用される場合、名前空間の衝突を防ぐために有用です。</value>
   </data>
   <data name="ProjectManager.Description.LoadConfig" xml:space="preserve">
-    <value>コンパイラオプションを定義する設定ファイルの場所を指定する。設定ファイルを指定すると、個々のオプションをコマンドラインから変更できます。</value>
+    <value>コンパイラオプションを定義する設定ファイルの場所を指定します。設定ファイルを指定すると、個々のオプションをコマンドラインから変更できます。</value>
   </data>
   <data name="ProjectManager.Description.Locale" xml:space="preserve">
     <value>ロケールを指定します( ja_JP、en_US など)。</value>
@@ -1571,19 +1579,19 @@
     <value>ランタイム共有ライブラリ( RSL )を指定します。ランタイム共有ライブラリはランタイム時に動的にリンクされます。</value>
   </data>
   <data name="ProjectManager.Description.ShowActionScriptWarnings" xml:space="preserve">
-    <value>ActionScript クラスに関する警告を表示する。</value>
+    <value>ActionScript クラスに関する警告を表示します。</value>
   </data>
   <data name="ProjectManager.Description.ShowBindingWarnings" xml:space="preserve">
     <value>Flash Player がバインドされたプロパティへの変更を検出できない場合に警告を表示します。</value>
   </data>
   <data name="ProjectManager.Description.ShowDeprecationWarnings" xml:space="preserve">
-    <value>Flexコンポーネントに関する非推奨であることを通知する警告を表示する。</value>
+    <value>Flex コンポーネントに関する非推奨であることを通知する警告を表示します。</value>
   </data>
   <data name="ProjectManager.Description.ShowGlobalClasspaths" xml:space="preserve">
-    <value>プロジェクトツリーにグローバルクラスパスディレクトリを表示するかどうかを設定します。</value>
+    <value>プロジェクトツリーにグローバルクラスパスディレクトリを表示します。</value>
   </data>
   <data name="ProjectManager.Description.ShowProjectClasspaths" xml:space="preserve">
-    <value>プロジェクトツリーにクラスパスディレクトリを表示するどうかを設定します。</value>
+    <value>プロジェクトツリーにクラスパスディレクトリを表示します。</value>
   </data>
   <data name="ProjectManager.Description.ShowUnusedTypeSelectorWarnings" xml:space="preserve">
     <value>スタイルシートのタイプセレクタまたは&lt;mx:Style&gt;ブロックがアプリケーション内の任意のコンポーネントによって使用されていない場合に警告します。</value>
@@ -1604,7 +1612,7 @@
     <value>True に設定すると、プログラムのエントリポイントとなる1つの静的な main メソッドを必ず定義しなければなりません。</value>
   </data>
   <data name="ProjectManager.Description.UseMX" xml:space="preserve">
-    <value>True に設定した場合、すべての mx.* 名前空間は出力の SWF ファイルにコンパイルされることはありません。</value>
+    <value>True に設定すると、すべての mx.* 名前空間は出力の SWF ファイルにコンパイルされることはありません。</value>
   </data>
   <data name="ProjectManager.Description.UseNetwork" xml:space="preserve">
     <value>現在のアプリケーションでのネットワークサービスの使用を設定します。</value>
@@ -1619,7 +1627,7 @@
     <value>行番号が含まれたソースコードを生成します。ランタイムエラーが発生すると、スタックトレースで行番号を表示することができます。このオプションを有効にすると、SWF ファイルのサイズが肥大化します。</value>
   </data>
   <data name="ProjectManager.Description.Warnings" xml:space="preserve">
-    <value>すべての警告を有効にします。 False に設定すると、すべての警告を無効にします。</value>
+    <value>すべての警告を有効にします。False に設定すると、すべての警告を無効にします。</value>
   </data>
   <data name="ProjectManager.Description.WarnUnusedImports" xml:space="preserve">
     <value>True に設定すると、コンパイラは "キーワードを不必要に"インポートを使用した 場合に警告します。</value>
@@ -1823,7 +1831,7 @@
     <value>ごみ箱に移動されます。</value>
   </data>
   <data name="ProjectManager.Label.Add" xml:space="preserve">
-    <value>新規作成(&amp;A)</value>
+    <value>新規作成(&amp;N)</value>
   </data>
   <data name="ProjectManager.Label.AddAsPreloader" xml:space="preserve">
     <value>プリローダとして追加(&amp;P)</value>
@@ -1847,7 +1855,7 @@
     <value>高度な設定</value>
   </data>
   <data name="ProjectManager.Label.AlwaysCompile" xml:space="preserve">
-    <value>常にコンパイル(&amp;C)</value>
+    <value>ドキュメントクラスに設定(&amp;A)</value>
   </data>
   <data name="ProjectManager.Label.Apply" xml:space="preserve">
     <value>適用(&amp;L)</value>
@@ -1865,7 +1873,7 @@
     <value>プロジェクトのビルド(&amp;B)</value>
   </data>
   <data name="ProjectManager.Label.Cancel" xml:space="preserve">
-    <value>キャンセル(&amp;C)</value>
+    <value>キャンセル</value>
   </data>
   <data name="ProjectManager.Label.ClearRecentProjects" xml:space="preserve">
     <value>最近開いたプロジェクトをクリア(&amp;C)</value>
@@ -1874,7 +1882,8 @@
     <value>プロジェクトを閉じる(&amp;C)</value>
   </data>
   <data name="ProjectManager.Label.Copy" xml:space="preserve">
-    <value>コピー(&amp;Y)</value>
+    <value>コピー(&amp;C)</value>
+    <comment>O</comment>
   </data>
   <data name="ProjectManager.Label.CopyOf" xml:space="preserve">
     <value>{0} のコピー</value>
@@ -1892,7 +1901,7 @@
     <value>サイズ(&amp;D):</value>
   </data>
   <data name="ProjectManager.Label.EditGlobalClasspaths" xml:space="preserve">
-    <value>グローバルクラスパスを編集(&amp;E)...</value>
+    <value>グローバルクラスパスの編集(&amp;E)...</value>
   </data>
   <data name="ProjectManager.Label.EmbedAllChars" xml:space="preserve">
     <value>すべての文字を埋め込む(&amp;A)</value>
@@ -1922,16 +1931,16 @@
     <value>フレームレート(F):</value>
   </data>
   <data name="ProjectManager.Label.GlobalClasspaths" xml:space="preserve">
-    <value>グローバルクラスパス(&amp;G)...</value>
+    <value>グローバルクラスパスの編集(&amp;G)...</value>
   </data>
   <data name="ProjectManager.Label.HideFile" xml:space="preserve">
     <value>ファイルを隠す(&amp;H)</value>
   </data>
   <data name="ProjectManager.Label.HideFolder" xml:space="preserve">
-    <value>フォルダを隠す(&amp;H)</value>
+    <value>隠す(&amp;H)</value>
   </data>
   <data name="ProjectManager.Label.HideItems" xml:space="preserve">
-    <value>アイテムを隠す(&amp;H)</value>
+    <value>隠す(&amp;H)</value>
   </data>
   <data name="ProjectManager.Label.Insert" xml:space="preserve">
     <value>挿入（&amp;I）</value>
@@ -1979,7 +1988,7 @@
     <value>アクションは利用できません。</value>
   </data>
   <data name="ProjectManager.Label.OK" xml:space="preserve">
-    <value>&amp;OK</value>
+    <value>OK</value>
   </data>
   <data name="ProjectManager.Label.Open" xml:space="preserve">
     <value>開く(&amp;O)</value>
@@ -1994,7 +2003,7 @@
     <value>書き出し先(&amp;O):</value>
   </data>
   <data name="ProjectManager.Label.Paste" xml:space="preserve">
-    <value>ペースト(&amp;P)</value>
+    <value>貼り付け(&amp;P)</value>
   </data>
   <data name="ProjectManager.Label.Project" xml:space="preserve">
     <value>プロジェクト(&amp;P)</value>
@@ -2009,10 +2018,10 @@
     <value>最近開いたプロジェクト(&amp;J)</value>
   </data>
   <data name="ProjectManager.Label.Remove" xml:space="preserve">
-    <value>削除(&amp;R)</value>
+    <value>取り除く(&amp;R)</value>
   </data>
   <data name="ProjectManager.Label.Rename" xml:space="preserve">
-    <value>リネーム(&amp;M)</value>
+    <value>名前の変更(&amp;M)</value>
   </data>
   <data name="ProjectManager.Label.ShowHiddenItems" xml:space="preserve">
     <value>隠したファイルを表示(&amp;S)</value>
@@ -2039,7 +2048,7 @@
     <value>テキスト入力</value>
   </data>
   <data name="ProjectManager.Title.GlobalClasspaths" xml:space="preserve">
-    <value>グローバルクラスパス</value>
+    <value>グローバルクラスパスの編集</value>
   </data>
   <data name="ProjectManager.Title.GlobalClasspathsBox" xml:space="preserve">
     <value>グローバル {0} クラスパス</value>
@@ -2078,7 +2087,7 @@
     <value>説明</value>
   </data>
   <data name="ResultsPanel.Header.File" xml:space="preserve">
-    <value>場所</value>
+    <value>リソース</value>
   </data>
   <data name="ResultsPanel.Header.Line" xml:space="preserve">
     <value>行</value>
@@ -2090,7 +2099,8 @@
     <value>FlashDevelop に結果パネルを追加します。</value>
   </data>
   <data name="ResultsPanel.Label.ClearEntries" xml:space="preserve">
-    <value>クリア(C)</value>
+    <value>クリア(&amp;D)</value>
+    <comment>C</comment>
   </data>
   <data name="ResultsPanel.Label.CopyEntry" xml:space="preserve">
     <value>コピー(&amp;C)</value>
@@ -2108,34 +2118,34 @@
     <value>結果</value>
   </data>
   <data name="StartPage.Category.Common" xml:space="preserve">
-    <value>共通</value>
+    <value>1| 共通</value>
   </data>
   <data name="StartPage.Category.Custom" xml:space="preserve">
-    <value>カスタム</value>
+    <value>2| カスタム</value>
   </data>
   <data name="StartPage.Description.CloseOnProjectOpen" xml:space="preserve">
     <value>プロジェクトが開かれたとき、スタートページを自動的に閉じます。</value>
   </data>
   <data name="StartPage.Description.CustomRssFeed" xml:space="preserve">
-    <value>任意の RSS フィードのパスを設定します。</value>
+    <value>任意の RSS フィードのパスです。</value>
   </data>
   <data name="StartPage.Description.CustomStartPage" xml:space="preserve">
-    <value>任意のスタートページへのパスを設定します。</value>
+    <value>任意のスタートページへのパスです。</value>
   </data>
   <data name="StartPage.Description.ShowStartPageInsteadOfUntitled" xml:space="preserve">
     <value>表示するドキュメントがなくなったとき、無題のドキュメントの代わりにスタートページを表示します。</value>
   </data>
   <data name="StartPage.Description.ShowStartPageOnStartup" xml:space="preserve">
-    <value>FlashDevelop を起動したとき、スタートページを表示するかを設定します。:
+    <value>FlashDevelop を起動時のスタートページの表示:
 Always - セッションを復元しないで、代わりにスタートページを表示します。
 NotRestoringSession - 復元するセッションがないときにスタートページを表示します。
 Never - 起動時にスタートページを表示しません。</value>
   </data>
   <data name="StartPage.Description.UseCustomRssFeed" xml:space="preserve">
-    <value>デフォルトのスタートページのフィードのかわりに、任意の RSS フィードを使用するかどうかを設定します。</value>
+    <value>デフォルトのスタートページのフィードのかわりに、任意の RSS フィードを使用します。</value>
   </data>
   <data name="StartPage.Description.UseCustomStartPage" xml:space="preserve">
-    <value>デフォルトのスタートページのかわりに、任意のスタートページを使用するかどうかを設定します。</value>
+    <value>デフォルトのスタートページのかわりに、任意のスタートページを使用します。</value>
   </data>
   <data name="StartPage.Label.ViewMenuItem" xml:space="preserve">
     <value>スタートページ(&amp;S)</value>
@@ -2144,10 +2154,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>スタートページ</value>
   </data>
   <data name="TaskListPanel.Column.Description" xml:space="preserve">
-    <value>詳細</value>
+    <value>説明</value>
   </data>
   <data name="TaskListPanel.Column.File" xml:space="preserve">
-    <value>ファイル</value>
+    <value>リソース</value>
   </data>
   <data name="TaskListPanel.Column.Path" xml:space="preserve">
     <value>パス</value>
@@ -2165,7 +2175,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>グループ値を監視します。</value>
   </data>
   <data name="TaskListPanel.Description.ImageIndexes" xml:space="preserve">
-    <value>検索結果のインデックスイメージ。</value>
+    <value>検索結果のインデックスイメージです。</value>
   </data>
   <data name="TaskListPanel.Info.Processing" xml:space="preserve">
     <value>処理中 {0} / {1}</value>
@@ -2177,7 +2187,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>エラー: プラグインの設定を確認してください。</value>
   </data>
   <data name="TaskListPanel.Label.ViewMenuItem" xml:space="preserve">
-    <value>タスクリスト(&amp;T)</value>
+    <value>タスク一覧(&amp;T)</value>
   </data>
   <data name="TaskListPanel.Title.PluginPanel" xml:space="preserve">
     <value>タスク</value>
@@ -2189,19 +2199,19 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>xml ファイルの補完を有効にします。</value>
   </data>
   <data name="XMLCompletion.Description.InsertQuotes" xml:space="preserve">
-    <value>属性に自動的にクオート(")を挿入する。</value>
+    <value>属性に自動的にクオート(")を挿入します。</value>
   </data>
   <data name="XMLCompletion.Description.SmartIndenter" xml:space="preserve">
-    <value>自動的にソースをインデントする。</value>
+    <value>自動的にソースをインデントします。</value>
   </data>
   <data name="XMLCompletion.Description.UpperCaseHtmlTags" xml:space="preserve">
-    <value>生成されたコードを大文字のタグにする。</value>
+    <value>生成されたコードを大文字のタグにします。</value>
   </data>
   <data name="XMLCompletion.Info.Description" xml:space="preserve">
     <value>FlashDevelop にシンプルな HTML や XML の補完機能を追加します。</value>
   </data>
   <data name="ASCompletion.Description.ContextualGenerator" xml:space="preserve">
-    <value>Contextual Code Generator を呼び出すショートカットの設定。</value>
+    <value>Contextual Code Generator を呼び出すショートカットです。</value>
   </data>
   <data name="ASCompletion.Label.GenerateFunction" xml:space="preserve">
     <value>関数を生成</value>
@@ -2264,22 +2274,22 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>FlashDevelop にスタートページを追加します。</value>
   </data>
   <data name="TaskListPanel.Info.Description" xml:space="preserve">
-    <value>FlashDevelop にタスクリストパネルを追加します。</value>
+    <value>FlashDevelop にタスク一覧パネルを追加します。</value>
   </data>
   <data name="ProjectManager.Category.Shortcuts" xml:space="preserve">
-    <value>ショートカット</value>
+    <value>4| ショートカット</value>
   </data>
   <data name="ProjectManager.Description.ShortcutBuild" xml:space="preserve">
-    <value>プロジェクトのビルドのショートカットキーを選択してください。</value>
+    <value>プロジェクトのビルドのショートカットキーです。</value>
   </data>
   <data name="ProjectManager.Description.ShortcutTestMovie" xml:space="preserve">
-    <value>プロジェクトのテストのショートカットキーを選択してください。</value>
+    <value>プロジェクトのテストのショートカットキーです。</value>
   </data>
   <data name="ResultsPanel.Description.NextError" xml:space="preserve">
-    <value>次の結果にジャンプするショートカットキーを設定します。</value>
+    <value>次の結果にジャンプするショートカットキーです。</value>
   </data>
   <data name="ResultsPanel.Description.PreviousError" xml:space="preserve">
-    <value>前の結果にジャンプするショートカットキーを設定します。</value>
+    <value>前の結果にジャンプするショートカットキーです。</value>
   </data>
   <data name="ResultsPanel.Label.NextEntry" xml:space="preserve">
     <value>次のエントリ(&amp;N)</value>
@@ -2317,10 +2327,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ファイルの先頭に BOM が無い場合にデフォルトで検出する文字セットです。</value>
   </data>
   <data name="ASCompletion.Description.VerboseFDB" xml:space="preserve">
-    <value>Flexデバッガのすべての出力を表示する。</value>
+    <value>Flex デバッガのすべての出力を表示します。</value>
   </data>
   <data name="ASCompletion.Description.DisableCallTip" xml:space="preserve">
-    <value>'(' や ',' を入力した時に自動的に表示されているコールチップ(メソッドのTips)を表示を無効にする設定。表示させるには Ctrl + Shift + Space を押さなければならなくなります。</value>
+    <value>"(" や "," を入力した時に自動的に表示されているコールチップ(メソッドの Tips )を表示を無効にします。表示させるには Ctrl + Shift + Space を押さなければならなくなります。</value>
   </data>
   <data name="ProjectManager.Description.MissingEntryPoint" xml:space="preserve">
     <value>このプロジェクトをビルドするには、プロジェクトツリー上で AS か MXML のエントリポイントを"常にコンパイル"として指定する必要があります。</value>
@@ -2371,10 +2381,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>エクスプローラ(&amp;X)</value>
   </data>
   <data name="ASCompletion.Description.ShowRegions" xml:space="preserve">
-    <value>アウトラインパネルのリスト内で範囲グループ化を使用する。</value>
+    <value>アウトラインパネルのリスト内で範囲グループ化を使用します。</value>
   </data>
   <data name="FlashDevelop.Label.CustomArguments" xml:space="preserve">
-    <value>カスタム アーギュメント(&amp;U)...</value>
+    <value>カスタムアーギュメントの編集(&amp;U)...</value>
   </data>
   <data name="FlashDevelop.Group.Arguments" xml:space="preserve">
     <value>アーギュメント</value>
@@ -2398,7 +2408,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>削除(&amp;D)</value>
   </data>
   <data name="FlashDevelop.Title.ArgumentDialog" xml:space="preserve">
-    <value>カスタムアーギュメント</value>
+    <value>カスタムアーギュメントの編集</value>
   </data>
   <data name="FlashDevelop.Info.ArgumentsTakeEffect" xml:space="preserve">
     <value>変更された設定はすぐに反映されます。</value>
@@ -2416,7 +2426,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>Adobe Flex Builder プロジェクト (.actionScriptProperties)|.actionScriptProperties</value>
   </data>
   <data name="FlashDevelop.Info.RedirectFilesResults" xml:space="preserve">
-    <value>結果を結果パネルに表示</value>
+    <value>結果パネルに表示</value>
   </data>
   <data name="FlashDevelop.Description.DefaultFont" xml:space="preserve">
     <value>デフォルトで使用するUIフォントを定義します。</value>
@@ -2425,7 +2435,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ブックマークされた行の背景色です。この色はブックマークマージンが非表示のときのみ現れます。</value>
   </data>
   <data name="FlashDevelop.Description.ModifiedLineColor" xml:space="preserve">
-    <value>コードに変更があった行のマージンハイライトカラーの設定。</value>
+    <value>コードに変更があった行のマージンハイライトカラーです。</value>
   </data>
   <data name="FlashDevelop.Description.ViewModifiedLines" xml:space="preserve">
     <value>セーブされていないとき、変更された行の余白部分を指定された色で強調して表示します。</value>
@@ -2443,7 +2453,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ダイナミックなシンタックスカラーリングを無効にします。</value>
   </data>
   <data name="FlashDevelop.Description.ViewStatusBar" xml:space="preserve">
-    <value>デフォルトのステータスバーを表示する。</value>
+    <value>デフォルトのステータスバーを表示します。</value>
   </data>
   <data name="ProjectManager.Description.MinorVersion" xml:space="preserve">
     <value>必要に応じて明示的に Flash Player のマイナーバージョンを定義します。(例 "0.60" で "9.0.60" を指定).</value>
@@ -2458,7 +2468,8 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>続ける(&amp;C)</value>
   </data>
   <data name="FdbPlugin.Label.Copy" xml:space="preserve">
-    <value>コピー(&amp;O)</value>
+    <value>コピー(&amp;C)</value>
+    <comment>O</comment>
   </data>
   <data name="FdbPlugin.Label.DebugMenuItem" xml:space="preserve">
     <value>デバッグ(&amp;D)</value>
@@ -2470,7 +2481,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ステップオーバー(&amp;S)</value>
   </data>
   <data name="FdbPlugin.Label.Pause" xml:space="preserve">
-    <value>停止(&amp;P)</value>
+    <value>一時停止(&amp;P)</value>
   </data>
   <data name="FdbPlugin.Label.Start" xml:space="preserve">
     <value>開始(&amp;S)</value>
@@ -2491,43 +2502,43 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ローカル変数</value>
   </data>
   <data name="FdbPlugin.Category.Misc" xml:space="preserve">
-    <value>その他</value>
+    <value>3| その他</value>
   </data>
   <data name="FdbPlugin.Category.Shortcuts" xml:space="preserve">
-    <value>ショートカット</value>
+    <value>2| ショートカット</value>
   </data>
   <data name="FdbPlugin.Category.View" xml:space="preserve">
-    <value>ビュー</value>
+    <value>1| ビュー</value>
   </data>
   <data name="FdbPlugin.Description.AlwaysCheckDebugStop" xml:space="preserve">
     <value>デバッグの停止を常に確認します。</value>
   </data>
   <data name="FdbPlugin.Description.Continue" xml:space="preserve">
-    <value>続けるのショートカットを設定します。</value>
+    <value>続けるのショートカットです。</value>
   </data>
   <data name="FdbPlugin.Description.DebugFlashPlayerPath" xml:space="preserve">
-    <value>デバッグプレーヤの設定。</value>
+    <value>デバッグプレーヤのパスです。</value>
   </data>
   <data name="FdbPlugin.Description.DebugLineColor" xml:space="preserve">
-    <value>デバッグ行の色を設定します。</value>
+    <value>デバッグ行の色です。</value>
   </data>
   <data name="FdbPlugin.Description.DebugWithCompile" xml:space="preserve">
     <value>デバッグとコンパイルを開始</value>
   </data>
   <data name="FdbPlugin.Description.Next" xml:space="preserve">
-    <value>次へのショートカットを設定します。</value>
+    <value>次へのショートカットです。</value>
   </data>
   <data name="FdbPlugin.Description.Pause" xml:space="preserve">
-    <value>停止のショートカットを設定します。</value>
+    <value>一時停止のショートカットです。</value>
   </data>
   <data name="FdbPlugin.Description.StartNoDebug" xml:space="preserve">
-    <value>デバッグなしで開始のショートカットを設定します。</value>
+    <value>デバッグなしで開始のショートカットです。</value>
   </data>
   <data name="FdbPlugin.Description.Step" xml:space="preserve">
-    <value>ステップ実行のショートカットを設定します。</value>
+    <value>ステップ実行のショートカットです。</value>
   </data>
   <data name="FdbPlugin.Description.Stop" xml:space="preserve">
-    <value>停止のショートカットを設定します。</value>
+    <value>停止のショートカットです。</value>
   </data>
   <data name="FdbPlugin.Info.AssociateFilesWith" xml:space="preserve">
     <value>.swf ファイルを結合 {0}</value>
@@ -2566,28 +2577,28 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ASCompletion エンジンに PHP のコンテキストを追加します。</value>
   </data>
   <data name="ASCompletion.Category.Common" xml:space="preserve">
-    <value>共通</value>
+    <value>1| 共通</value>
   </data>
   <data name="ASCompletion.Category.Documentation" xml:space="preserve">
-    <value>ドキュメンテーション</value>
+    <value>2| ドキュメンテーション</value>
   </data>
   <data name="ASCompletion.Category.Language" xml:space="preserve">
-    <value>言語</value>
+    <value>3| 言語</value>
   </data>
   <data name="ASCompletion.Category.Advanced" xml:space="preserve">
-    <value>高度な設定</value>
+    <value>8| 高度な設定</value>
   </data>
   <data name="ASCompletion.Category.FlashIDE" xml:space="preserve">
-    <value>Flash IDE</value>
+    <value>4| Flash IDE</value>
   </data>
   <data name="ASCompletion.Category.Helpers" xml:space="preserve">
-    <value>ヘルパー</value>
+    <value>6| ヘルパー</value>
   </data>
   <data name="ASCompletion.Category.OutlineView" xml:space="preserve">
-    <value>アウトラインビュー</value>
+    <value>7| アウトラインビュー</value>
   </data>
   <data name="ASCompletion.Category.Shortcuts" xml:space="preserve">
-    <value>ショートカット</value>
+    <value>9| ショートカット</value>
   </data>
   <data name="ASCompletion.Info.TypeDeclMissing" xml:space="preserve">
     <value>'{0}' の型宣言が見つかりません。</value>
@@ -2599,7 +2610,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>フルスクリーン(&amp;U)</value>
   </data>
   <data name="ASCompletion.Description.ReformatBraces" xml:space="preserve">
-    <value>メイン設定にあるコーディングスタイル改行設定に従って括弧を自動で再フォーマットする。</value>
+    <value>メイン設定にあるコーディングスタイル改行設定に従って括弧を自動で再フォーマットします。</value>
   </data>
   <data name="ProjectManager.Description.UseProjectSessions" xml:space="preserve">
     <value>セッションを利用します。プロジェクトファイルを閉じるときに開いていたファイルを保持し、再度に開いたときに再現します。</value>
@@ -2617,10 +2628,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>その他</value>
   </data>
   <data name="ResultsPanel.Category.Shortcuts" xml:space="preserve">
-    <value>ショートカット</value>
+    <value>1| ショートカット</value>
   </data>
   <data name="ASCompletion.Description.DisableLiveSyntaxChecking" xml:space="preserve">
-    <value>ライブシンタックスチェックを無効にする設定。</value>
+    <value>ライブシンタックスチェックを無効にします。</value>
   </data>
   <data name="FlashDevelop.Info.CurrentSelection" xml:space="preserve">
     <value>現在の選択範囲</value>
@@ -2641,13 +2652,13 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>コンパイル時に省略するシンボルが記述されたリンカーレポートを指定します。</value>
   </data>
   <data name="FlashDevelop.Description.InsertionTriggers" xml:space="preserve">
-    <value>このオプションは補完リストを決定す文字を設定できます。Tab や Enter の場合はエスケースしなければなりません。(例. \t \n) デフォルトでは A-Z0-0 以外の何でも決定になっています。</value>
+    <value>このオプションは補完リストを決定す文字を設定できます。Tab や Enter の場合はエスケープしなければなりません。(例. \t \n) デフォルトでは A-Z0-0 以外の何でも決定になっています。</value>
   </data>
   <data name="TaskListPanel.Info.InvalidFile" xml:space="preserve">
-    <value>ファイルが見つかりませんでした。タスクリストが更新されます。</value>
+    <value>ファイルが見つかりませんでした。タスク一覧が更新されます。</value>
   </data>
   <data name="FlashDevelop.Description.PrintMarginColumn" xml:space="preserve">
-    <value>プリントマージンを右に何文字分ずらすかの設定。</value>
+    <value>印刷マージンを右に何文字分ずらすか設定します。</value>
   </data>
   <data name="FileExplorer.Description.SynchronizeToProject" xml:space="preserve">
     <value>開いているプロジェクトとファイルビューをシンクロさせます。</value>
@@ -2662,10 +2673,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>エラーや警告を色づけして表示します。</value>
   </data>
   <data name="FlashLogViewer.Description.FlashLogFile" xml:space="preserve">
-    <value>Flash Player のログファイルへのパスを設定します。</value>
+    <value>Flash Player のログファイルへのパスです。</value>
   </data>
   <data name="FlashLogViewer.Description.PolicyLogFile" xml:space="preserve">
-    <value>Flash Player のポリシーファイルへのパスを設定します。</value>
+    <value>Flash Player のポリシーファイルへのパスです。</value>
   </data>
   <data name="FlashLogViewer.Info.Description" xml:space="preserve">
     <value>FlashDevelop に Flash Player のログ、ポリシーファイルの追跡機能を追加します。</value>
@@ -2674,7 +2685,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ログのクリア(&amp;C)</value>
   </data>
   <data name="FlashLogViewer.Label.CopyOutput" xml:space="preserve">
-    <value>出力をコピー(&amp;C)</value>
+    <value>コピー(&amp;C)</value>
   </data>
   <data name="FlashLogViewer.Label.ViewMenuItem" xml:space="preserve">
     <value>Flash ログビューア(&amp;V)</value>
@@ -2692,10 +2703,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>トラッキングの停止</value>
   </data>
   <data name="FlashLogViewer.Category.Files" xml:space="preserve">
-    <value>ファイル</value>
+    <value>2| ファイル</value>
   </data>
   <data name="FlashLogViewer.Description.TrackingStartType" xml:space="preserve">
-    <value>ログファイルの追跡を開始するかタイミングを指定します。</value>
+    <value>ログファイルの追跡を開始するタイミングを指定します。</value>
   </data>
   <data name="FlashLogViewer.ToolTip.PopupToTopMost" xml:space="preserve">
     <value>ポップアップで開く</value>
@@ -2716,7 +2727,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>警告を取得する正規表現を設定します。</value>
   </data>
   <data name="FlashLogViewer.Category.Regex" xml:space="preserve">
-    <value>正規表現</value>
+    <value>1| 正規表現</value>
   </data>
   <data name="FlashLogViewer.ToolTip.ClearFilterText" xml:space="preserve">
     <value>フィルタテキストのクリア</value>
@@ -2755,7 +2766,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>テンプレート設定: あなたの名前を入力してください</value>
   </data>
   <data name="FlashDevelop.Label.SyntaxColoring" xml:space="preserve">
-    <value>シンタックスカラーリング(&amp;S)...</value>
+    <value>シンタックスカラーリングの編集(&amp;S)...</value>
   </data>
   <data name="FlashDevelop.Info.Background" xml:space="preserve">
     <value>背景:</value>
@@ -2794,7 +2805,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>ファイルのエクスポート...</value>
   </data>
   <data name="FlashDevelop.Title.SyntaxEditDialog" xml:space="preserve">
-    <value>シンタックスカラーリング</value>
+    <value>シンタックスカラーリングの編集</value>
   </data>
   <data name="FlashDevelop.Title.SyntaxExportDialog" xml:space="preserve">
     <value>構文ファイルをエクスポート</value>
@@ -2815,10 +2826,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>選択範囲のテキスト:</value>
   </data>
   <data name="FlashDevelop.Info.ZipConfirmExtract" xml:space="preserve">
-    <value>以下のzipファイルを抽出することができます:</value>
+    <value>以下の Zip ファイルを抽出することができます:</value>
   </data>
   <data name="ResultsPanel.Description.ScrollToBottom" xml:space="preserve">
-    <value>結果を表示いちばん下にスクロールします。</value>
+    <value>結果を表示したとき、いちばん下にスクロールします。</value>
   </data>
   <data name="FlashDevelop.Label.Apply" xml:space="preserve">
     <value>適用(&amp;A)</value>
@@ -2848,10 +2859,10 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>スニペット名:</value>
   </data>
   <data name="FlashDevelop.Title.SnippetDialog" xml:space="preserve">
-    <value>コードスニペット</value>
+    <value>スニペットの編集</value>
   </data>
   <data name="FlashDevelop.Info.CouldNotBeRecycled" xml:space="preserve">
-    <value>ゴミ箱に入れることができません:</value>
+    <value>ごみ箱に移動することができません:</value>
   </data>
   <data name="FlashDevelop.Info.SaveCurrentSnippet" xml:space="preserve">
     <value>現在のスニペットを保存しますか？</value>
@@ -2860,7 +2871,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>本当に全ての言語のスニペットファイルを規定値に戻しますか？</value>
   </data>
   <data name="FlashDevelop.Description.PrintMarginColor" xml:space="preserve">
-    <value>プリントマージンのカラー設定。</value>
+    <value>印刷マージンの色です。</value>
   </data>
   <data name="FlashDevelop.Description.AutoReloadModifiedFiles" xml:space="preserve">
     <value>外部で変更されたファイルをプロンプト表示無しにリロードします。</value>
@@ -2869,7 +2880,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>スクリプトが正しく実行できませんでした:</value>
   </data>
   <data name="MacroManager.Description.UserMacros" xml:space="preserve">
-    <value>現在有効なマクロのリスト</value>
+    <value>現在有効なマクロのリストです。</value>
   </data>
   <data name="MacroManager.Group.Macros" xml:space="preserve">
     <value>マクロ</value>
@@ -2914,7 +2925,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>マクロ</value>
   </data>
   <data name="MacroManager.Description.EditShortcut" xml:space="preserve">
-    <value>メニュー"マクロの編集"のショートカットを設定します。</value>
+    <value>メニュー"マクロの編集"のショートカットです。</value>
   </data>
   <data name="MacroManager.Description.AutoRun" xml:space="preserve">
     <value>FlashDevelop 起動時に自動的にマクロを実行します。有効な場合、メニューにその項目は表示されません。</value>
@@ -2923,28 +2934,28 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>マクロの固有のコマンドを設定します。</value>
   </data>
   <data name="MacroManager.Description.Label" xml:space="preserve">
-    <value>このマクロのメニューのラベルを設定します。</value>
+    <value>このマクロのメニューのラベルです。</value>
   </data>
   <data name="MacroManager.Description.Shortcut" xml:space="preserve">
-    <value>このマクロのショートカットを設定します。</value>
+    <value>このマクロのショートカットです。</value>
   </data>
   <data name="ProjectManager.Label.BuildProjectFile" xml:space="preserve">
     <value>プロジェクトファイルをビルド(&amp;B)</value>
   </data>
   <data name="MacroManager.Description.Image" xml:space="preserve">
-    <value>このマクロのメニューのアイコンを設定します。</value>
+    <value>このマクロのメニューのアイコンです。</value>
   </data>
   <data name="ASCompletion.Category.Generation" xml:space="preserve">
-    <value>コード生成</value>
+    <value>5| コード生成</value>
   </data>
   <data name="ASCompletion.Description.EventListenersAutoRemove" xml:space="preserve">
-    <value>自動的に removeEventListener をイベントハンドラー内に作成する EventType</value>
+    <value>自動的に removeEventListener をイベントハンドラー内に作成するイベントタイプのリストです。</value>
   </data>
   <data name="TaskListPanel.Info.InvalidItem" xml:space="preserve">
-    <value>選択した項目を見つけることができませんでした。タスクリストが更新されます。</value>
+    <value>選択した項目を見つけることができませんでした。タスク一覧が更新されます。</value>
   </data>
   <data name="ProjectManager.Description.FilteredDirectoryNames" xml:space="preserve">
-    <value>クラスパス名を解析する際、フィルター対象となるディレクトリ名。</value>
+    <value>クラスパス名を解析する際、フィルタ対象となるディレクトリ名です。</value>
   </data>
   <data name="AS2Context.Info.PackageDontMatchFilePath" xml:space="preserve">
     <value>このパッケージ '{0}' はファイルパスと一致しません:</value>
@@ -2977,7 +2988,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>構文チェックの開始:</value>
   </data>
   <data name="AS3Context.Info.StartMxmlcRunner" xml:space="preserve">
-    <value>Flexコンパイラのプロセス開始:</value>
+    <value>Flex コンパイラのプロセス開始:</value>
   </data>
   <data name="ASCompletion.Info.CallingFlashIDE" xml:space="preserve">
     <value>Flash IDE を呼び出し中</value>
@@ -3046,7 +3057,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <comment>Added after 3.0.0</comment>
   </data>
   <data name="ASCompletion.Description.StartWithModifiers" xml:space="preserve">
-    <value>生成された宣言は必ずアクセス修飾子を先頭にする。（例：常に "static" や "override" の前に)</value>
+    <value>生成された宣言は必ずアクセス修飾子を先頭にします。（例：常に "static" や "override" の前に)</value>
   </data>
   <data name="ProjectManager.Info.DuplicatingFile" xml:space="preserve">
     <value>複製 '{0}':</value>
@@ -3069,7 +3080,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <comment>Added after 3.0.1</comment>
   </data>
   <data name="ASCompletion.Description.PropertiesGenerationLocation" xml:space="preserve">
-    <value>どこに新しいプロパティ( getter, setter) を作成するかの設定。</value>
+    <value>どこに新しいプロパティ( getter, setter) を作成するか設定します。</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Info.Description" xml:space="preserve">
@@ -3085,15 +3096,15 @@ Never - 起動時にスタートページを表示しません。</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Button.Cancel" xml:space="preserve">
-    <value>キャンセル(&amp;C)</value>
+    <value>キャンセル</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Button.Ok" xml:space="preserve">
-    <value>&amp;OK</value>
+    <value>OK</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Button.Remove" xml:space="preserve">
-    <value>削除(&amp;R)</value>
+    <value>取り除く(&amp;R)</value>
     <comment>Added after 3.0.2</comment>
   </data>
   <data name="ASClassWizard.Wizard.Button.SelectNone" xml:space="preserve">
@@ -3165,7 +3176,7 @@ Never - 起動時にスタートページを表示しません。</value>
     <comment>Added after 3.0.4</comment>
   </data>
   <data name="CodeRefactor.Info.RenamingReferences" xml:space="preserve">
-    <value>参照をリネーム...</value>
+    <value>参照の名前を変更...</value>
     <comment>Added after 3.0.4</comment>
   </data>
   <data name="CodeRefactor.Info.ResolvingReferences" xml:space="preserve">
@@ -3201,15 +3212,15 @@ Never - 起動時にスタートページを表示しません。</value>
     <comment>Added after 3.0.4</comment>
   </data>
   <data name="CodeRefactor.Label.Rename" xml:space="preserve">
-    <value>リネーム...</value>
+    <value>名前の変更...</value>
     <comment>Added after 3.0.4</comment>
   </data>
   <data name="CodeRefactor.Title.RenameDialog" xml:space="preserve">
-    <value>リネーム '{0}'</value>
+    <value>名前の変更 '{0}'</value>
     <comment>Added after 3.0.4</comment>
   </data>
   <data name="FlashDevelop.Description.DisableReplaceFilesConfirm" xml:space="preserve">
-    <value>ファイルを指定して置換する時の確認を無効にします。</value>
+    <value>ファイルを指定して置換するときの確認を無効にします。</value>
     <comment>Added after 3.0.4</comment>
   </data>
   <data name="FlashDevelop.Info.AreYouSureToReplaceInFiles" xml:space="preserve">
