@@ -20,6 +20,7 @@ namespace FDjpPlugin
         private string pluginAuth = "bkzen";
         private string pluginDesc = "FlashDevelop.jpプラグイン";
         private string pluginGuid = "4308cb28-d1d1-4ac5-aaee-ebd7dc6fa4da";
+        private string pluginVer = "1.0.0.5";
         private string pluginHelp = "";
         private string pluginName = "FDjpPlugin";
         private Settings settingObj = null;
@@ -120,6 +121,7 @@ namespace FDjpPlugin
             {
                 Object obj = ObjectSerializer.Deserialize(this.settingFilename, this.settingObj);
                 this.settingObj = (Settings)obj;
+                this.settingObj.checkVersion(pluginVer);
             }
             else
             {
@@ -149,17 +151,19 @@ namespace FDjpPlugin
             this.alwaysItem = new ToolStripMenuItem();
             this.alwaysItem.Text = Resources.LABEL_ALWAYS_COMPILE;
             this.alwaysItem.Click += new EventHandler(this.alwaysCompile);
-            /*
+
             this.nextLineItem = new ToolStripMenuItem();
             this.nextLineItem.Text = Resources.LABEL_NEXT_LINE;
-            //
+            this.nextLineItem.Click += new EventHandler(this.nextLine);
             this.prevLineItem = new ToolStripMenuItem();
             this.prevLineItem.Text = Resources.LABEL_PREV_LINE;
-             */
+            this.prevLineItem.Click += new EventHandler(this.prevLine);
 
             this.fdjpMenu.DropDownItems.Add(this.nextItem);
             this.fdjpMenu.DropDownItems.Add(this.prevItem);
             this.fdjpMenu.DropDownItems.Add(this.alwaysItem);
+            this.fdjpMenu.DropDownItems.Add(this.nextLineItem);
+            this.fdjpMenu.DropDownItems.Add(this.prevLineItem);
             mainMenu.Items.Add(this.fdjpMenu);
         }
 
@@ -171,17 +175,23 @@ namespace FDjpPlugin
 
         private void AddKeyEventHandler()
         {
-            Keys alwaysKey = settingObj.AlwaysCompileKey;
-            Keys nextKey   = settingObj.NextWordKey;
-            Keys prevKey   = settingObj.PrevWordKey;
+            Keys alwaysKey   = settingObj.AlwaysCompileKey;
+            Keys nextKey     = settingObj.NextWordKey;
+            Keys prevKey     = settingObj.PrevWordKey;
+            Keys nextLineKey = settingObj.NextLineKey;
+            Keys prevLineKey = settingObj.PrevLineKey;
 
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(alwaysKey)) { PluginBase.MainForm.IgnoredKeys.Add(alwaysKey); }
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(nextKey)) { PluginBase.MainForm.IgnoredKeys.Add(nextKey); }
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(prevKey)) { PluginBase.MainForm.IgnoredKeys.Add(prevKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(alwaysKey))   { PluginBase.MainForm.IgnoredKeys.Add(alwaysKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(nextKey))     { PluginBase.MainForm.IgnoredKeys.Add(nextKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(prevKey))     { PluginBase.MainForm.IgnoredKeys.Add(prevKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(nextLineKey)) { PluginBase.MainForm.IgnoredKeys.Add(nextLineKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(prevLineKey)) { PluginBase.MainForm.IgnoredKeys.Add(prevLineKey); }
 
-            this.alwaysItem.ShortcutKeys = alwaysKey;
-            this.nextItem.ShortcutKeys = nextKey;
-            this.prevItem.ShortcutKeys = prevKey;
+            this.alwaysItem.ShortcutKeys   = alwaysKey;
+            this.nextItem.ShortcutKeys     = nextKey;
+            this.prevItem.ShortcutKeys     = prevKey;
+            this.nextLineItem.ShortcutKeys = nextLineKey;
+            this.prevLineItem.ShortcutKeys = prevLineKey;
         }
 
         private void nextWord(Object sender, EventArgs e)
@@ -243,6 +253,40 @@ namespace FDjpPlugin
                 sci.SelectionEnd = epos;
             }
             return ;
+        }
+
+        private void nextLine(Object sender, EventArgs e)
+        {
+            int start = sci.SelectionStart < sci.SelectionEnd ? sci.SelectionStart : sci.SelectionEnd;
+            int end = sci.SelectionStart > sci.SelectionEnd ? sci.SelectionStart : sci.SelectionEnd;
+            int len = sci.LineFromPosition(end) - sci.LineFromPosition(start);
+            sci.BeginUndoAction();
+            sci.SelectionStart = sci.PositionFromLine(sci.LineFromPosition(start));
+            sci.SelectionEnd = sci.PositionFromLine(sci.LineFromPosition(end) + 1);
+            string selectStr = sci.SelText;
+            sci.Clear();
+            sci.LineDown();
+            sci.InsertText(sci.PositionFromLine(sci.LineFromPosition(sci.CurrentPos)), selectStr);
+            sci.SelectionStart = sci.PositionFromLine(start = sci.LineFromPosition(sci.CurrentPos));
+            sci.SelectionEnd = sci.LineEndPosition(start + len);
+            sci.EndUndoAction();
+        }
+
+        private void prevLine(Object sender, EventArgs e)
+        {
+            int start = sci.SelectionStart < sci.SelectionEnd ? sci.SelectionStart : sci.SelectionEnd;
+            int end = sci.SelectionStart > sci.SelectionEnd ? sci.SelectionStart : sci.SelectionEnd;
+            int len = sci.LineFromPosition(end) - sci.LineFromPosition(start);
+            sci.BeginUndoAction();
+            sci.SelectionStart = sci.PositionFromLine(sci.LineFromPosition(start));
+            sci.SelectionEnd = sci.PositionFromLine(sci.LineFromPosition(end) + 1);
+            string selectStr = sci.SelText;
+            sci.Clear();
+            sci.LineUp();
+            sci.InsertText(sci.PositionFromLine(sci.LineFromPosition(sci.CurrentPos)), selectStr);
+            sci.SelectionStart = sci.PositionFromLine(start = sci.LineFromPosition(sci.CurrentPos));
+            sci.SelectionEnd = sci.LineEndPosition(start + len);
+            sci.EndUndoAction();
         }
 
         private void alwaysCompile(Object sender, EventArgs e)

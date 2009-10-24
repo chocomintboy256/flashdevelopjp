@@ -7,17 +7,26 @@ namespace FDjpPlugin
     [Serializable]
     class Settings
     {
-        private Keys nextWordKey = Keys.Control | Keys.OemPeriod;
-        private Keys prevWordKey = Keys.Control | Keys.Oemcomma;
-        private Keys nextLineKey = Keys.Alt | Keys.Down;
-        private Keys prevLineKey = Keys.Alt | Keys.Up;
-        private bool wordSelect = false;
-        private Keys alwaysCompileKey = Keys.Alt | Keys.A;
-        private bool alwaysCompileAfterCompile = false;
+        public const Keys NEXT_WORD_KEY = Keys.Control | Keys.OemPeriod;
+        public const Keys PREV_WORD_KEY = Keys.Control | Keys.Oemcomma;
+        public const Keys NEXT_LINE_KEY = Keys.Alt | Keys.Down;
+        public const Keys PREV_LINE_KEY = Keys.Alt | Keys.Up;
+        public const bool WORD_SELECT = true;
+        public const Keys ALWAYS_COMP_KEY = Keys.Alt | Keys.A;
+        public const bool ALWAYS_COMP_AFTER_COMP = false;
+
+        private Keys nextWordKey = NEXT_WORD_KEY;
+        private Keys prevWordKey = PREV_WORD_KEY;
+        private Keys nextLineKey = NEXT_LINE_KEY;
+        private Keys prevLineKey = PREV_LINE_KEY;
+        private bool wordSelect = WORD_SELECT;
+        private Keys alwaysCompileKey = ALWAYS_COMP_KEY;
+        private bool alwaysCompileAfterCompile = ALWAYS_COMP_AFTER_COMP;
+        private string version = "";
 
 
         [Category("ワード移動")]
-        [Description("次のワードに移動するショートカットの設定。"), DefaultValue(Keys.Control | Keys.OemPeriod)]
+        [Description("次のワードに移動するショートカットの設定。"), DefaultValue(NEXT_WORD_KEY)]
         public Keys NextWordKey
         {
             get { return this.nextWordKey; }
@@ -25,7 +34,7 @@ namespace FDjpPlugin
         }
 
         [Category("ワード移動")]
-        [Description("前のワードに移動するショートカットの設定。"), DefaultValue(Keys.Control | Keys.Oemcomma)]
+        [Description("前のワードに移動するショートカットの設定。"), DefaultValue(PREV_WORD_KEY)]
         public Keys PrevWordKey
         {
             get { return this.prevWordKey; }
@@ -33,15 +42,15 @@ namespace FDjpPlugin
         }
 
         [Category("ワード移動")]
-        [Description("移動した際にワードをセレクトする設定。"), DefaultValue(false)]
+        [Description("移動した際にワードをセレクトする設定。"), DefaultValue(WORD_SELECT)]
         public bool WordSelect
         {
             get { return this.wordSelect; }
             set { this.wordSelect = value; }
         }
-        /*
+
         [Category("行移動")]
-        [Description("下に行を移動する。"), DefaultValue(Keys.Alt | Keys.Down)]
+        [Description("下に行を移動する。"), DefaultValue(NEXT_LINE_KEY)]
         public Keys NextLineKey
         {
             get { return this.nextLineKey; }
@@ -49,16 +58,15 @@ namespace FDjpPlugin
         }
 
         [Category("行移動")]
-        [Description("下に行を移動する。"), DefaultValue(Keys.Alt | Keys.Up)]
+        [Description("下に行を移動する。"), DefaultValue(PREV_LINE_KEY)]
         public Keys PrevLineKey
         {
             get { return this.prevLineKey; }
             set { this.prevLineKey = value; }
         }
-        */
 
         [Category("Always Compile")]
-        [Description("Always Compile を現在のドキュメントに設定するショートカット"), DefaultValue(Keys.Alt | Keys.A)]
+        [Description("Always Compile を現在のドキュメントに設定するショートカット"), DefaultValue(ALWAYS_COMP_KEY)]
         public Keys AlwaysCompileKey
         {
             get { return this.alwaysCompileKey; }
@@ -66,11 +74,31 @@ namespace FDjpPlugin
         }
 
         [Category("Always Compile")]
-        [Description("切り替えた後コンパイルする。"), DefaultValue(false)]
+        [Description("切り替えた後コンパイルする。"), DefaultValue(ALWAYS_COMP_AFTER_COMP)]
         public bool AlwaysCompileAfterCompile
         {
             get { return this.alwaysCompileAfterCompile; }
             set { this.alwaysCompileAfterCompile = value; }
+        }
+
+        [Browsable(false)]
+        public string Version
+        {
+            get { return this.version; }
+            set { this.version = value; }
+        }
+
+        public void checkVersion(string v)
+        {
+            if (version != v)
+            {
+                if (nextLineKey == Keys.None) nextLineKey = NEXT_LINE_KEY;
+                if (nextWordKey == Keys.None) nextWordKey = NEXT_WORD_KEY;
+                if (prevLineKey == Keys.None) prevLineKey = PREV_LINE_KEY;
+                if (prevWordKey == Keys.None) prevWordKey = PREV_WORD_KEY;
+                if (alwaysCompileKey == Keys.None) alwaysCompileKey = ALWAYS_COMP_KEY;
+                version = v;
+            }
         }
     }
 }

@@ -17,12 +17,16 @@
 現在の機能
 
 	・ワードジャンプ
-		Ctrl + Tab で 次のワードへ
-		Ctrl + Shift + Tab で前のワードへ
+		Ctrl + . で 次のワードへ
+		Ctrl + , で前のワードへ
 		WrodSelect を設定することで、移動したときにワードを選択できます。
 	・Always Compile
 		Alt + A で 現在のドキュメントを AlwaysCompile に設定します。。
 		AlwaysCompileAfterCompile を設定することで 設定を切り替えた後コンパイルされます。
+	・行移動
+		Alt + ArrowDown で次の行へ移動
+		Alt + ArrowUp で前の行へ移動
+		複数行の選択も可
 
 	それぞれの設定は Tools -> Program Settings(F10) -> FDjpPlugin で設定・確認ができます。
 	現在はショートカットが変更された場合は FlashDevelop を再起動するか、
@@ -52,10 +56,13 @@
 		WordSelect を True にしたときの文頭、文末での範囲外エラーを修正。
 	2009/10/21	09:02	bkzen	(1.0.0.4)
 		WordSelect を True にしたときの日本語越えバグを修正。
+	2009/10/24	13:17	bkzen	(1.0.0.4)
+		行移動を実装。
+		バージョンチェックで異なるバージョンの時は、
+		Keys.NONE からデフォルトのキーを設定する機能を実装。
 
 
 TODO
-	行移動
 	ScintillaControl をラップしてショートカットを即時反映させるクラスを作成。
 	WonderFD を作る。
 	コメントを書く。
