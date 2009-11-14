@@ -3107,10 +3107,6 @@ Never - 起動時にスタートページを表示しません。</value>
     <value>取り除く(&amp;R)</value>
     <comment>Added after 3.0.2</comment>
   </data>
-  <data name="ASClassWizard.Wizard.Button.SelectNone" xml:space="preserve">
-    <value>選択しない(&amp;S)</value>
-    <comment>Added after 3.0.2</comment>
-  </data>
   <data name="ASClassWizard.Wizard.Error.InvalidClassName" xml:space="preserve">
     <value>クラス名に無効な文字列が含まれていません。</value>
     <comment>Added after 3.0.2</comment>
@@ -3248,5 +3244,13 @@ Never - 起動時にスタートページを表示しません。</value>
   <data name="ProjectManager.Label.FindHere" xml:space="preserve">
     <value>検索と置換</value>
     <comment>Added after 3.0.5</comment>
+  </data>
+  <data name="TaskListPanel.Description.ExcludedPaths" xml:space="preserve">
+    <value>タスクリストから除外するパスを指定します。</value>
+    <comment>Added after 3.0.6</comment>
+  </data>
+  <data name="HaXeContext.Description.DisableCompletionOnDemand" xml:space="preserve">
+    <value>False に設定すると、haXe のコード補完は Ctrl + Space または Ctrl + Shift + Space を押下したときにのみ表示されます。</value>
+    <comment>Added after 3.0.6</comment>
   </data>
 </root>
