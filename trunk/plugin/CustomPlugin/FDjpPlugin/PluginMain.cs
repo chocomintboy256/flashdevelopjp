@@ -1,17 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
-using PluginCore;
-using System.IO;
-using PluginCore.Helpers;
-using PluginCore.Utilities;
-using PluginCore.Managers;
-using System.Windows.Forms;
 using System.Diagnostics;
-using ProjectManager.Projects;
-using ProjectManager.Controls.TreeView;
+using System.IO;
 using System.Text.RegularExpressions;
-using ProjectManager;
+using System.Windows.Forms;
 using FDjpPlugin.Properties;
+using FlashDevelop.Managers;
+using PluginCore;
+using PluginCore.FRService;
+using PluginCore.Helpers;
+using PluginCore.Managers;
+using PluginCore.Utilities;
+using ProjectManager;
+using ProjectManager.Controls.TreeView;
+using ProjectManager.Projects;
+using ScintillaNet;
 
 namespace FDjpPlugin
 {
@@ -20,7 +24,7 @@ namespace FDjpPlugin
         private string pluginAuth = "bkzen";
         private string pluginDesc = "FlashDevelop.jpプラグイン";
         private string pluginGuid = "4308cb28-d1d1-4ac5-aaee-ebd7dc6fa4da";
-        private string pluginVer = "1.0.0.5";
+        private string pluginVer = "1.0.0.6";
         private string pluginHelp = "";
         private string pluginName = "FDjpPlugin";
         private Settings settingObj = null;
@@ -33,7 +37,8 @@ namespace FDjpPlugin
         private ToolStripMenuItem alwaysItem = null;
         private ToolStripMenuItem nextLineItem = null;
         private ToolStripMenuItem prevLineItem = null;
-
+        private ToolStripMenuItem foldAllCommentsItem = null;
+        private ToolStripMenuItem expandAllCommentsItem = null;
 
 
         #region IPlugin メンバ
@@ -158,12 +163,20 @@ namespace FDjpPlugin
             this.prevLineItem = new ToolStripMenuItem();
             this.prevLineItem.Text = Resources.LABEL_PREV_LINE;
             this.prevLineItem.Click += new EventHandler(this.prevLine);
+            this.foldAllCommentsItem = new ToolStripMenuItem();
+            this.foldAllCommentsItem.Text = Resources.LABEL_FOLD_ALL_COMMENTS;
+            this.foldAllCommentsItem.Click += new EventHandler(this.foldAllComments);
+            this.expandAllCommentsItem = new ToolStripMenuItem();
+            this.expandAllCommentsItem.Text = Resources.LABEL_EXPAND_ALL_COMMENTS;
+            this.expandAllCommentsItem.Click += new EventHandler(this.expandAllComments);
 
             this.fdjpMenu.DropDownItems.Add(this.nextItem);
             this.fdjpMenu.DropDownItems.Add(this.prevItem);
             this.fdjpMenu.DropDownItems.Add(this.alwaysItem);
             this.fdjpMenu.DropDownItems.Add(this.nextLineItem);
             this.fdjpMenu.DropDownItems.Add(this.prevLineItem);
+            this.fdjpMenu.DropDownItems.Add(this.foldAllCommentsItem);
+            this.fdjpMenu.DropDownItems.Add(this.expandAllCommentsItem);
             mainMenu.Items.Add(this.fdjpMenu);
         }
 
@@ -175,23 +188,29 @@ namespace FDjpPlugin
 
         private void AddKeyEventHandler()
         {
-            Keys alwaysKey   = settingObj.AlwaysCompileKey;
-            Keys nextKey     = settingObj.NextWordKey;
-            Keys prevKey     = settingObj.PrevWordKey;
-            Keys nextLineKey = settingObj.NextLineKey;
-            Keys prevLineKey = settingObj.PrevLineKey;
+            Keys alwaysKey            = settingObj.AlwaysCompileKey;
+            Keys nextKey              = settingObj.NextWordKey;
+            Keys prevKey              = settingObj.PrevWordKey;
+            Keys nextLineKey          = settingObj.NextLineKey;
+            Keys prevLineKey          = settingObj.PrevLineKey;
+            Keys foldAllCommentsKey   = settingObj.FoldAllCommentsKey;
+            Keys expandAllCommentsKey = settingObj.ExpandAllCommentsKey;
 
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(alwaysKey))   { PluginBase.MainForm.IgnoredKeys.Add(alwaysKey); }
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(nextKey))     { PluginBase.MainForm.IgnoredKeys.Add(nextKey); }
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(prevKey))     { PluginBase.MainForm.IgnoredKeys.Add(prevKey); }
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(nextLineKey)) { PluginBase.MainForm.IgnoredKeys.Add(nextLineKey); }
-            if (!PluginBase.MainForm.IgnoredKeys.Contains(prevLineKey)) { PluginBase.MainForm.IgnoredKeys.Add(prevLineKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(alwaysKey))            { PluginBase.MainForm.IgnoredKeys.Add(alwaysKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(nextKey))              { PluginBase.MainForm.IgnoredKeys.Add(nextKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(prevKey))              { PluginBase.MainForm.IgnoredKeys.Add(prevKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(nextLineKey))          { PluginBase.MainForm.IgnoredKeys.Add(nextLineKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(prevLineKey))          { PluginBase.MainForm.IgnoredKeys.Add(prevLineKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(foldAllCommentsKey))   { PluginBase.MainForm.IgnoredKeys.Add(foldAllCommentsKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(expandAllCommentsKey)) { PluginBase.MainForm.IgnoredKeys.Add(expandAllCommentsKey); }
 
-            this.alwaysItem.ShortcutKeys   = alwaysKey;
-            this.nextItem.ShortcutKeys     = nextKey;
-            this.prevItem.ShortcutKeys     = prevKey;
-            this.nextLineItem.ShortcutKeys = nextLineKey;
-            this.prevLineItem.ShortcutKeys = prevLineKey;
+            this.alwaysItem.ShortcutKeys            = alwaysKey;
+            this.nextItem.ShortcutKeys              = nextKey;
+            this.prevItem.ShortcutKeys              = prevKey;
+            this.nextLineItem.ShortcutKeys          = nextLineKey;
+            this.prevLineItem.ShortcutKeys          = prevLineKey;
+            this.foldAllCommentsItem.ShortcutKeys   = foldAllCommentsKey;
+            this.expandAllCommentsItem.ShortcutKeys = expandAllCommentsKey;
         }
 
         private void nextWord(Object sender, EventArgs e)
@@ -331,6 +350,70 @@ namespace FDjpPlugin
             {
                 ErrorManager.ShowWarning(path + "は、現在の Project のファイルではありません。", null);
             }
+        }
+
+
+        private void foldAllComments(Object sender, EventArgs e)
+        {
+            foldAllComments(true);
+        }
+
+        private void expandAllComments(Object sender, EventArgs e)
+        {
+            foldAllComments(false);
+        }
+
+        private void foldAllComments(Boolean fold)
+        {
+            // スクロール位置を保持
+            Int32 scrollTop = sci.FirstVisibleLine;
+
+            // コメントの開始を検索。検索だと重いので他の方法がいいんですけどわからなくて・・・
+            //String commentStart = ScintillaManager.GetCommentStart(sci.ConfigurationLanguage); //これ使いたいんですけどプロテクトがかかってる・・・
+            String commentStart = "/*"; 
+            List<SearchMatch> matches = this.searchString(sci, commentStart);
+
+            if (matches != null && matches.Count != 0)
+            {
+                Int32 lexer = sci.Lexer;
+                foreach (SearchMatch match in matches)
+                {
+                    Int32 pos = sci.MBSafePosition(match.Index);
+                    Int32 line = sci.LineFromPosition(pos);
+                    Int32 foldParentLine = sci.FoldParent(line + 1);
+                    if (foldParentLine == line)
+                    {
+                        Boolean isExpanded = sci.FoldExpanded(foldParentLine);
+                        if (fold)
+                        {
+                            if (isExpanded)
+                            {
+                                sci.ToggleFold(line);
+                            }
+                        }
+                        else
+                        {
+                            if (!isExpanded)
+                            {
+                                sci.ToggleFold(line);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // スクロール位置を元に戻す
+            if (scrollTop != sci.FirstVisibleLine)
+            {
+                sci.LineScroll(0, scrollTop - sci.FirstVisibleLine);
+            }
+        }
+
+        // 文字列検索
+        private List<SearchMatch> searchString(ScintillaControl sci, String text)
+        {
+            FRSearch search = new FRSearch(text);
+            return search.Matches(sci.Text);
         }
     }
 }

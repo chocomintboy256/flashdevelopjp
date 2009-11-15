@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FDjpPlugin", "FDjpPlugin.csproj", "{E04303A1-A0A1-4E34-A37A-409E7F92109E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{61885F70-B4DC-4B44-852D-5D6D03F2A734} = {61885F70-B4DC-4B44-852D-5D6D03F2A734}
+		{EFD07485-9A64-4EEC-94E7-ACBD4DA5CA93} = {EFD07485-9A64-4EEC-94E7-ACBD4DA5CA93}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginCore", "..\..\PluginCore\PluginCore.csproj", "{61885F70-B4DC-4B44-852D-5D6D03F2A734}"

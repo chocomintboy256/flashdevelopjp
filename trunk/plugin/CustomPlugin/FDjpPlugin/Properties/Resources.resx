@@ -120,6 +120,12 @@
   <data name="LABEL_ALWAYS_COMPILE" xml:space="preserve">
     <value>Always Compileに設定</value>
   </data>
+  <data name="LABEL_EXPAND_ALL_COMMENTS" xml:space="preserve">
+    <value>すべての複数行コメントを展開(&amp;E)</value>
+  </data>
+  <data name="LABEL_FOLD_ALL_COMMENTS" xml:space="preserve">
+    <value>すべての複数行コメントを折りたたむ(&amp;F)</value>
+  </data>
   <data name="LABEL_MENU" xml:space="preserve">
     <value>カスタム(&amp;D)</value>
   </data>

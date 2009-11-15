@@ -14,6 +14,8 @@ namespace FDjpPlugin
         public const bool WORD_SELECT = true;
         public const Keys ALWAYS_COMP_KEY = Keys.Alt | Keys.A;
         public const bool ALWAYS_COMP_AFTER_COMP = false;
+        public const Keys FOLD_ALL_COMMENTS_KEY = Keys.Control | Keys.Alt | Keys.F;
+        public const Keys EXPAND_ALL_COMMENTS_KEY = Keys.Control | Keys.Alt | Keys.E;
 
         private Keys nextWordKey = NEXT_WORD_KEY;
         private Keys prevWordKey = PREV_WORD_KEY;
@@ -22,6 +24,8 @@ namespace FDjpPlugin
         private bool wordSelect = WORD_SELECT;
         private Keys alwaysCompileKey = ALWAYS_COMP_KEY;
         private bool alwaysCompileAfterCompile = ALWAYS_COMP_AFTER_COMP;
+        private Keys foldAllCommentsKey = FOLD_ALL_COMMENTS_KEY;
+        private Keys expandAllCommentsKey = EXPAND_ALL_COMMENTS_KEY;
         private string version = "";
 
 
@@ -81,6 +85,22 @@ namespace FDjpPlugin
             set { this.alwaysCompileAfterCompile = value; }
         }
 
+        [Category("折りたたみ")]
+        [Description("すべての複数コメント行を折りたたむ。"), DefaultValue(FOLD_ALL_COMMENTS_KEY)]
+        public Keys FoldAllCommentsKey
+        {
+            get { return this.foldAllCommentsKey; }
+            set { this.foldAllCommentsKey = value; }
+        }
+
+        [Category("折りたたみ")]
+        [Description("すべての複数コメント行を展開する。"), DefaultValue(EXPAND_ALL_COMMENTS_KEY)]
+        public Keys ExpandAllCommentsKey
+        {
+            get { return this.expandAllCommentsKey; }
+            set { this.expandAllCommentsKey = value; }
+        }
+
         [Browsable(false)]
         public string Version
         {
@@ -97,6 +117,8 @@ namespace FDjpPlugin
                 if (prevLineKey == Keys.None) prevLineKey = PREV_LINE_KEY;
                 if (prevWordKey == Keys.None) prevWordKey = PREV_WORD_KEY;
                 if (alwaysCompileKey == Keys.None) alwaysCompileKey = ALWAYS_COMP_KEY;
+                if (foldAllCommentsKey == Keys.None) foldAllCommentsKey = FOLD_ALL_COMMENTS_KEY;
+                if (expandAllCommentsKey == Keys.None) expandAllCommentsKey = EXPAND_ALL_COMMENTS_KEY;
                 version = v;
             }
         }
