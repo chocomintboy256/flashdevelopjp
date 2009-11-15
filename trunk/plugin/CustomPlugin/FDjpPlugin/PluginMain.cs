@@ -24,8 +24,8 @@ namespace FDjpPlugin
         private string pluginAuth = "bkzen";
         private string pluginDesc = "FlashDevelop.jpプラグイン";
         private string pluginGuid = "4308cb28-d1d1-4ac5-aaee-ebd7dc6fa4da";
-        private string pluginVer = "1.0.0.6";
-        private string pluginHelp = "";
+        private string pluginVer = "1.0.0.7";
+        private string pluginHelp = "http://code.google.com/p/flashdevelopjp/";
         private string pluginName = "FDjpPlugin";
         private Settings settingObj = null;
         private string settingFilename = "";
@@ -411,7 +411,7 @@ namespace FDjpPlugin
                 }
 				
 				// 折りたたみ・展開するものがなかったら逆の動きをする
-                if (expNum == matches.Count)
+                if (expNum == matches.Count && settingObj.FoldCommentsToggle)
                 {
                     foldAllComments(!fold);
                     return;
