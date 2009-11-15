@@ -376,6 +376,7 @@ namespace FDjpPlugin
             if (matches != null && matches.Count != 0)
             {
                 Int32 lexer = sci.Lexer;
+                Int32 expNum = 0;
                 foreach (SearchMatch match in matches)
                 {
                     Int32 pos = sci.MBSafePosition(match.Index);
@@ -390,6 +391,10 @@ namespace FDjpPlugin
                             {
                                 sci.ToggleFold(line);
                             }
+                            else
+                            {
+                                expNum++;
+                            }
                         }
                         else
                         {
@@ -397,8 +402,19 @@ namespace FDjpPlugin
                             {
                                 sci.ToggleFold(line);
                             }
+                            else
+                            {
+                                expNum++;
+                            }
                         }
                     }
+                }
+				
+				// 折りたたみ・展開するものがなかったら逆の動きをする
+                if (expNum == matches.Count)
+                {
+                    foldAllComments(!fold);
+                    return;
                 }
             }
 
