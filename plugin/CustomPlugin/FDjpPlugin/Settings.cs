@@ -16,6 +16,7 @@ namespace FDjpPlugin
         public const bool ALWAYS_COMP_AFTER_COMP = false;
         public const Keys FOLD_ALL_COMMENTS_KEY = Keys.Control | Keys.Alt | Keys.F;
         public const Keys EXPAND_ALL_COMMENTS_KEY = Keys.Control | Keys.Alt | Keys.E;
+        public const bool FOLD_COMMENTS_TOGGLE = false;
 
         private Keys nextWordKey = NEXT_WORD_KEY;
         private Keys prevWordKey = PREV_WORD_KEY;
@@ -26,6 +27,7 @@ namespace FDjpPlugin
         private bool alwaysCompileAfterCompile = ALWAYS_COMP_AFTER_COMP;
         private Keys foldAllCommentsKey = FOLD_ALL_COMMENTS_KEY;
         private Keys expandAllCommentsKey = EXPAND_ALL_COMMENTS_KEY;
+        private bool foldCommentsToggle = FOLD_COMMENTS_TOGGLE;
         private string version = "";
 
 
@@ -99,6 +101,14 @@ namespace FDjpPlugin
         {
             get { return this.expandAllCommentsKey; }
             set { this.expandAllCommentsKey = value; }
+        }
+
+        [Category("折りたたみ")]
+        [Description("コメントの折りたたみ/展開をトグルさせるようにする。"), DefaultValue(FOLD_COMMENTS_TOGGLE)]
+        public bool FoldCommentsToggle
+        {
+            get { return this.foldCommentsToggle; }
+            set { this.foldCommentsToggle = value; }
         }
 
         [Browsable(false)]
