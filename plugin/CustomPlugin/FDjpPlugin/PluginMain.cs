@@ -24,7 +24,7 @@ namespace FDjpPlugin
         private string pluginAuth = "bkzen";
         private string pluginDesc = "FlashDevelop.jpプラグイン";
         private string pluginGuid = "4308cb28-d1d1-4ac5-aaee-ebd7dc6fa4da";
-        private string pluginVer = "1.0.0.7";
+        private string pluginVer = "1.0.0.8";
         private string pluginHelp = "http://code.google.com/p/flashdevelopjp/";
         private string pluginName = "FDjpPlugin";
         private Settings settingObj = null;
@@ -376,7 +376,8 @@ namespace FDjpPlugin
             if (matches != null && matches.Count != 0)
             {
                 Int32 lexer = sci.Lexer;
-                Int32 expNum = 0;
+                Int32 fldNum = 0; // 折りたたみ/展開の対象になった個数
+                Int32 expNum = 0; // 折りたたみ/展開されなかった個数
                 foreach (SearchMatch match in matches)
                 {
                     Int32 pos = sci.MBSafePosition(match.Index);
@@ -384,6 +385,7 @@ namespace FDjpPlugin
                     Int32 foldParentLine = sci.FoldParent(line + 1);
                     if (foldParentLine == line)
                     {
+                        fldNum++;
                         Boolean isExpanded = sci.FoldExpanded(foldParentLine);
                         if (fold)
                         {
@@ -409,11 +411,12 @@ namespace FDjpPlugin
                         }
                     }
                 }
-				
+
 				// 折りたたみ・展開するものがなかったら逆の動きをする
-                if (expNum == matches.Count && settingObj.FoldCommentsToggle)
+                if (fldNum == expNum && settingObj.FoldCommentsToggle)
                 {
                     foldAllComments(!fold);
+                    
                     return;
                 }
             }
