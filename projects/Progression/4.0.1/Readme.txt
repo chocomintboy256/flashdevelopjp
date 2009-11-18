@@ -20,11 +20,17 @@
 	(4) 同梱されている「リリースビルドマクロ_インストール.fdm」を指定します。
 	これでマクロがインストールされます。
 
-	【マクロのセットアップがうまくいかない場合】
+	【マクロの登録がうまくいかない場合】
 	うまくいかない場合は、手動で登録してください。
 	Entriesに以下のように指定します。
-
+	--
 	ExecuteScript|Development;$(UserAppDir)\Macros\P4ReleaseBuild.cs
+	--
+
+	FlashDevelopをStandalone Modeで使用されている場合は、以下のように変更します。
+	--
+	ExecuteScript|Development;$(AppDir)\Macros\P4ReleaseBuild.cs
+	--
 
 	【仕上げ】
 	仕上げに、FlashDevelopをいったん閉じて、再度起動します。
@@ -63,6 +69,21 @@
 	なります。Progression 4のTraceコマンドを使用している場合はトレースされません。
 	直接trace()を使用した場合は表示されます。
 	
+■アンインストール
+	FlashDevelopメニューの [Tools] から [Application Files..] を選びます。
+	開いたフォルダから、以下のファイルを削除します。
+	・Macrosフォルダ
+		P4ReleaseBuild.cs ファイルを削除
+	・Projectsフォルダ
+		201 Progression - Progression 4.0.1 Project フォルダを削除
+	・Templatesフォルダ
+		AS3Project
+			Progression 4.0.1 フォルダを削除
+
+	FlashDevelopメニューの [Macros] から [Edit Macros...] を選びます。
+	登録したマクロ、[Progression 4 リリースビルド]を選択します。
+	[Delete]を押下します。
+
 ■更新履歴
 	2009.11.18 改変
 		インストール先を変更
