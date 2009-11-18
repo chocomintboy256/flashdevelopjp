@@ -14,25 +14,25 @@
 
 	【マクロのセットアップ手順】
 	リリースビルドの書き出しに必要なマクロを、以下の手順で登録します。
+	※FlashDevelopをStandalone Modeで使用されている場合は、後述の手動による
+	  方法でマクロを設定してください。
 	(1) メニューの [Macros] から [Edit Macros...] を開きます。
 	(2) 表示されたウィンドウの左側にある一覧リストのあたりで右クリックします。
 	(3) [Import Macros...] をクリックします。
 	(4) 同梱されている「リリースビルドマクロ_インストール.fdm」を指定します。
 	(5) エラーが出た場合は、かまわず [Continue] をクリックして進みます。
 	これでマクロがインストールされます。
-	fdmファイルは今後使わないので破棄してもかまいません。
+	インストールが終われば、fdmファイルは今後使わないので破棄してもかまいません。
 
 	【マクロの登録がうまくいかない場合】
 	どうしてもうまくいかない場合は、手動で登録してください。
 	Entriesに以下のように指定します。
-	--
-	ExecuteScript|Development;$(UserAppDir)\Macros\P4ReleaseBuild.cs
-	--
 	
-	FlashDevelopをStandalone Modeでお使いの場合は以下のようにします。
-	--
+	■デフォルトの設定でインストールしている場合（通常はこちらです）
+	ExecuteScript|Development;$(UserAppDir)\Macros\P4ReleaseBuild.cs
+
+	■Standalone Modeで使用されている場合
 	ExecuteScript|Development;$(AppDir)\Macros\P4ReleaseBuild.cs
-	--
 
 	【仕上げ】
 	仕上げに、FlashDevelopをいったん閉じて、再度起動します。
@@ -61,7 +61,7 @@
 	などしてリリース時のswfファイルを軽量化しています。
 	このテンプレートでは、マクロを使用することでそれを再現しています。
 
-	メインメニューの「Macros」->「Progression4 リリースビルド」をクリックすると、
+	メインメニューの「Macros」->「Progression 4 リリースビルド」をクリックすると、
 	リリース用のビルドが開始されます。
 	Outputパネルに「Build succeeded」と表示されたら成功です。
 	ビルド後、swfファイルは開きませんので、適宜必要なファイルを開いて確認します。
