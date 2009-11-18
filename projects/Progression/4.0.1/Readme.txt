@@ -28,10 +28,10 @@
 	どうしてもうまくいかない場合は、手動で登録してください。
 	Entriesに以下のように指定します。
 	
-	■デフォルトの設定でインストールしている場合（通常はこちらです）
+	◆デフォルトの設定でインストールしている場合（通常はこちらです）
 	ExecuteScript|Development;$(UserAppDir)\Macros\P4ReleaseBuild.cs
 
-	■Standalone Modeで使用されている場合
+	◆Standalone Modeで使用されている場合
 	ExecuteScript|Development;$(AppDir)\Macros\P4ReleaseBuild.cs
 
 	【仕上げ】
