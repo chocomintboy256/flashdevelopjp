@@ -18,16 +18,20 @@
 	(2) 表示されたウィンドウの左側にある一覧リストのあたりで右クリックします。
 	(3) [Import Macros...] をクリックします。
 	(4) 同梱されている「リリースビルドマクロ_インストール.fdm」を指定します。
+	    Standalone Modeの場合は「リリースビルドマクロ_インストール_for_Standalone_Mode.fdm」
+	    をお使いください。
+	(5) エラーが出た場合は、かまわず [Continue] をクリックして進みます。
 	これでマクロがインストールされます。
+	fdmファイルは今後使わないので破棄してもかまいません。
 
 	【マクロの登録がうまくいかない場合】
-	うまくいかない場合は、手動で登録してください。
+	どうしてもうまくいかない場合は、手動で登録してください。
 	Entriesに以下のように指定します。
 	--
 	ExecuteScript|Development;$(UserAppDir)\Macros\P4ReleaseBuild.cs
 	--
-
-	FlashDevelopをStandalone Modeで使用されている場合は、以下のように変更します。
+	
+	Standalone Modeの場合
 	--
 	ExecuteScript|Development;$(AppDir)\Macros\P4ReleaseBuild.cs
 	--
