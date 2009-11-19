@@ -1,6 +1,6 @@
 ﻿===============================================================================
 	FlashDevelop用 Progression 4.0.1 Public Beta 1.2 プロジェクトテンプレート
-	http://d.hatena.ne.jp/ActionScript/20090921/fd_progression4_project
+	http://j.mp/flashdevelop_progression_project_template
 ===============================================================================
 
 ■インストール方法
@@ -46,7 +46,7 @@
 
 	※注意
 	FlashDevelopでは、Flash IDEで使用するProgression 4のように便利な新規作成パネル
-	はありません。「FlashPlayerのバージョン」「ステージの横幅、縦幅」「背景色」
+	はありません。「Flash Playerのバージョン」「ステージの横幅、縦幅」「背景色」
 	「フレームレート」などを変更する場合は、通常のプロジェクト設定に加えて
 	Preloader.as3proj、出力先のindex.htmlファイルも一緒に変更する必要があります。
 
