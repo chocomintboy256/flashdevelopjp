@@ -79,8 +79,9 @@
 	・Projectsフォルダ
 		201 Progression - Progression 4.0.1 Project フォルダを削除
 	・Templatesフォルダ
-		AS3Project
-			Progression 4.0.1 フォルダを削除
+		ProjectFiles
+			AS3Project
+				Progression 4.0.1 フォルダを削除
 
 	FlashDevelopメニューの [Macros] から [Edit Macros...] を選びます。
 	登録したマクロ、[Progression 4 リリースビルド]を選択します。
