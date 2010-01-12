@@ -30,12 +30,7 @@
 		/**
 		 * SWF ファイルの読み込みが完了し、stage 及び loaderInfo にアクセス可能になった場合に送出されます。
 		 */
-		protected override function atReady():void $(CSLB){
-			// ステージ設定を初期化します。
-			stage.align = StageAlign.TOP_LEFT;
-			stage.quality = StageQuality.HIGH;
-			stage.scaleMode = StageScaleMode.NO_SCALE;
-			
+		override protected function atReady():void $(CSLB){			
 			// 開発者用に Progression の動作状況を出力します。
 			Debugger.addTarget( manager );
 			
