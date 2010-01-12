@@ -1,8 +1,8 @@
 ﻿/**
  * Progression 4
  * 
- * @author Copyright (C) 2007-2009 taka:nium.jp, All Rights Reserved.
- * @version 4.0.1 Public Beta 1.2
+ * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
+ * @version 4.0.1 Public Beta 1.3
  * @see http://progression.jp/
  * 
  * Progression Software is released under the Progression Software License:
@@ -17,7 +17,7 @@ package jp.progression.debug {
 	/**
 	 * @private
 	 */
-	public class Debugger {
+	public final class Debugger {
 		
 		/**
 		 * @private

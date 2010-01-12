@@ -1,8 +1,8 @@
 ﻿/**
  * Progression 4
  * 
- * @author Copyright (C) 2007-2009 taka:nium.jp, All Rights Reserved.
- * @version 4.0.1 Public Beta 1.2
+ * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
+ * @version 4.0.1 Public Beta 1.3
  * @see http://progression.jp/
  * 
  * Progression Software is released under the Progression Software License:
@@ -16,13 +16,21 @@ package jp.progression.core.L10N {
 	/**
 	 * @private
 	 */
-	public class L10NProgressionMsg {
+	public final class L10NProgressionMsg {
 		
 		public static const INFO_000:String = null;
 		public static const INFO_001:String = null;
 		public static const INFO_002:String = null;
+		public static const INFO_003:String = null;
+		public static const INFO_004:String = null;
+		public static const INFO_005:String = null;
+		public static const INFO_006:String = null;
+		public static const INFO_007:String = null;
+		public static const INFO_008:String = null;
 		public static const WARN_000:String = null;
 		public static const WARN_001:String = null;
+		public static const WARN_002:String = null;
+		public static const WARN_003:String = null;
 		public static const ERROR_000:String = null;
 		public static const ERROR_001:String = null;
 		public static const ERROR_002:String = null;
@@ -44,6 +52,10 @@ package jp.progression.core.L10N {
 		public static const ERROR_018:String = null;
 		public static const ERROR_019:String = null;
 		public static const ERROR_020:String = null;
+		public static const ERROR_021:String = null;
+		public static const ERROR_022:String = null;
+		public static const ERROR_023:String = null;
+		public static const ERROR_024:String = null;
 		
 		
 		
