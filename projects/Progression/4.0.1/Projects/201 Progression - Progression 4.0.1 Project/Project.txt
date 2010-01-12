@@ -1,1 +1,1 @@
-A project written in ActionScript 3 with Progression 4.0.1 Public Beta 1.2
+A project written in ActionScript 3 with Progression 4.0.1 Public Beta 1.3
