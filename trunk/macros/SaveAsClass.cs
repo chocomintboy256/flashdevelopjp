@@ -35,7 +35,14 @@ public class SaveAsClass
 		IASContext context = ASContext.Context;
 		ClassModel cClass = context.CurrentClass;
 		string package = context.CurrentModel.Package;
-
+		
+		sci.BeginUndoAction();
+		
+		if (sci.SelText == "") { 			
+			sci.SelectionStart = sci.PositionFromLine(cClass.LineFrom);
+			sci.SelectionEnd = sci.PositionFromLine(cClass.LineTo + 1);
+		}
+		
 		String content = Regex.Replace(
 		sci.SelText,
 		@"^",
@@ -43,10 +50,14 @@ public class SaveAsClass
 		RegexOptions.Multiline);
 
 		String contents = "package " + package + " {\n" + content + "\n}";
-		//TraceManager.Add(contents);
-
+		TraceManager.Add(contents);
+		//TraceManager.Add(cClass.LineTo.ToString());
+		
 		Encoding encoding = sci.Encoding;
 		String file = dir + "\\" + cClass.Name + ".as";
 		FileHelper.WriteFile(file, contents, encoding);
+		
+		sci.Clear();
+		sci.EndUndoAction();
 	}
 }
