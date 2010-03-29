@@ -41,7 +41,7 @@
 		 * インスタンスのコピーを作成して、各プロパティの値を元のプロパティの値と一致するように設定します。
 		 */
 		public override function clone():Command $(CSLB){
-			return new MyCommand( this );
+			return new $(FileName)( this );
 		}
 	}
 }
