@@ -2,14 +2,11 @@
  * Progression 4
  * 
  * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
- * @version 4.0.1 Public Beta 1.3
+ * @version 4.0.1 RC1
  * @see http://progression.jp/
  * 
- * Progression Software is released under the Progression Software License:
- * http://progression.jp/ja/overview/license
- * 
- * Progression Libraries is released under the MIT License:
- * http://www.opensource.org/licenses/mit-license.php
+ * Progression Libraries is dual licensed under the "Progression Library License" and "GPL".
+ * http://progression.jp/license
  */
 
 var progression; ( function() {
@@ -70,42 +67,54 @@ var progression; ( function() {
 		$decamelize = function( name ) {
 			return name.replace( new RegExp( "[A-Z]", "g" ), function( $0 ) { return "-" + $0.toLowerCase(); } );
 		},
-		$initCSS = function( config ) {
+		$render = function( config ) {
 			var node = d.getElementById( config.htmlContentId );
 			if ( node ) {
 				node.parentNode.removeChild( node );
 			}
 			
-			var css = { width:"100%", height:"100%", overflow:"auto", margin:"0", padding:"0", background:config.bgcolor };
-			$css( "html", css );
-			$css( "body", css );
-			
-			switch ( config.hscale ) {
-				case "window"	: { var w = "100%", left = "0", marginLeft = "0"; break; }
-				default			: {
-					var w = config.width + "px";
-					switch ( config.halign ) {
-						case "center"	: { var left = "50%", marginLeft = "-" + Math.ceil( config.width / 2 ) + "px"; break; }
-						case "right"	: { var left = "100%", marginLeft = "-" + config.width + "px"; break; }
-						default			: { var left = "0", marginLeft = "0"; }
+			if ( config.hscale != "none" || config.vscale != "none" ) {
+				var css = { width:"100%", height:"100%", overflow:"auto", margin:"0", padding:"0", background:config.bgcolor };
+				$css( "html", css );
+				$css( "body", css );
+				
+				switch ( config.hscale ) {
+					case "window"	: { var width = "100%", minWidth = config.width + "px", left = "0", marginLeft = "0"; break; }
+					case "default"	: {
+						var width = config.width + "px", minWidth = width;
+						switch ( config.halign ) {
+							case "center"	: { var left = "50%", marginLeft = "-" + Math.ceil( config.width / 2 ) + "px"; break; }
+							case "right"	: { var left = "100%", marginLeft = "-" + config.width + "px"; break; }
+							default			: { var left = "0", marginLeft = "0"; }
+						}
+						break;
 					}
+					case "none"		:
+					default			: { break; }
 				}
-			}
-			
-			switch ( config.vscale ) {
-				case "window"	: { var h = "100%", top = "0", marginTop = "0"; break; }
-				default			: {
-					var h = config.height + "px";
-					switch ( config.valign ) {
-						case "middle"	: { var top = "50%", marginTop = "-" + Math.ceil( config.height / 2 ) + "px"; break; }
-						case "bottom"	: { var top = "100%", marginTop = "-" + config.height + "px"; break; }
-						default			: { var top = "0", marginTop = "0"; }
+				
+				switch ( config.vscale ) {
+					case "window"	: { var height = "100%", minHeight = config.height + "px", top = "0", marginTop = "0"; break; }
+					case "default"	: {
+						var height = config.height + "px", minHeight = height;
+						switch ( config.valign ) {
+							case "middle"	: { var top = "50%", marginTop = "-" + Math.ceil( config.height / 2 ) + "px"; break; }
+							case "bottom"	: { var top = "100%", marginTop = "-" + config.height + "px"; break; }
+							default			: { var top = "0", marginTop = "0"; }
+						}
+						break;
 					}
+					case "none"		:
+					default			: { break; }
 				}
+				
+				$css( "#" + config.attributes.id, { minWidth:minWidth, minHeight:minHeight } );
+				$css( "#" + config.contentId, { position:"absolute", width:width, height:height, left:left, top:top, marginLeft:marginLeft, marginTop:marginTop, lineHeight:0 } );
+				$css( "#" + config.htmlContentId, { position:"absolute", width:"0", height:"0", left:"0", top:"0", display:"none", visibility:"hidden" } );
 			}
-			
-			$css( "#" + config.contentId, { position:"absolute", width:w, height:h, left:left, top:top, marginLeft:marginLeft, marginTop:marginTop, lineHeight:0 } );
-			$css( "#" + config.htmlContentId, { position:"absolute", width:"0", height:"0", left:"0", top:"0", display:"none", visibility:"hidden" } );
+			else {
+				$css( "#" + config.contentId, { width:config.width + "px", height:config.height + "px" } );
+			}
 		},
 		config = {},
 		defaultConfig = {
@@ -120,7 +129,7 @@ var progression; ( function() {
 			contentId			:"content",
 			htmlContentId		:"htmlcontent",
 			flashContentId		:"flashcontent",
-			useExpressInstall	:true,
+			expressInstallPath	:"commons/scripts/swfobject/expressinstall.swf",
 			bgcolor				:"#FFFFFF",
 			params				:{ allowscriptaccess:"always" },
 			flashvars			:{},
@@ -135,17 +144,15 @@ var progression; ( function() {
 		config.params.wmode = "window";
 		config.params.allowfullscreen = "true";
 		
-		var xiURL = config.useExpressInstall ? "commons/scripts/swfobject/expressinstall.swf" : undefined;
+		$render( config );
 		
-		$initCSS( config );
-		
-		swf.embedSWF( config.url, config.flashContentId, "100%", "100%", config.version, xiURL, config.flashvars, config.params, config.attributes, complete );
+		swf.embedSWF( config.url, config.flashContentId, "100%", "100%", config.version, config.expressInstallPath, config.flashvars, config.params, config.attributes, complete );
 	};
 	
 	var complete = function( e ) {
 		$p( $( "disabled_javascript" ), { style:{ display:"none" } } );
 		
-		$initCSS( config );
+		$render( config );
 		
 		if ( e.success ) {
 			var target = d.getElementById( config.attributes.id );

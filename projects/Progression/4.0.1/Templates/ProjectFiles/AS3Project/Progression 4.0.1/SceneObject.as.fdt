@@ -5,6 +5,7 @@
 	import jp.progression.commands.net.*;
 	import jp.progression.commands.tweens.*;
 	import jp.progression.commands.*;
+	import jp.progression.data.*;
 	import jp.progression.events.*;
 	import jp.progression.loader.*;
 	import jp.progression.*;

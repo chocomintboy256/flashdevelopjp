@@ -2,25 +2,24 @@
  * Progression 4
  * 
  * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
- * @version 4.0.1 Public Beta 1.3
+ * @version 4.0.1 RC1
  * @see http://progression.jp/
  * 
- * Progression Software is released under the Progression Software License:
- * http://progression.jp/en/overview/license
- * 
- * Progression Libraries is released under the MIT License:
- * http://www.opensource.org/licenses/mit-license.php
+ * Progression Libraries is dual licensed under the "Progression Library License" and "GPL".
+ * http://progression.jp/license
  */
 package jp.progression.core.L10N {
+	import jp.nium.core.L10N.L10NMsg;
 	
 	/**
 	 * @private
 	 */
-	public final class L10NCommandMsg {
+	public dynamic final class L10NCommandMsg extends L10NMsg {
 		
-		public static const WARN_000:String = null;
-		public static const WARN_001:String = null;
-		public static const ERROR_000:String = null;
+		/**
+		 * @private
+		 */
+		private static var _instance:L10NCommandMsg = new L10NCommandMsg();
 		
 		
 		
@@ -30,6 +29,17 @@ package jp.progression.core.L10N {
 		 * @private
 		 */
 		public function L10NCommandMsg() {
+		}
+		
+		
+		
+		
+		
+		/**
+		 * @private
+		 */
+		public static function getInstance():L10NCommandMsg {
+			return _instance;
 		}
 	}
 }
