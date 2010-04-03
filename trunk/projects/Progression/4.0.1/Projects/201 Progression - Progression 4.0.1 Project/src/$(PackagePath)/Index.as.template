@@ -34,7 +34,7 @@ package $(PackageName) $(CSLB){
 			Debugger.addTarget( manager );
 			
 			// 外部同期機能を有効化します。
-			//manager.sync = true;
+			manager.sync = true;
 			
 			// 最初のシーンに移動します。
 			manager.goto( manager.syncedSceneId );

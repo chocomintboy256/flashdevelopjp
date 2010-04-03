@@ -8,22 +8,20 @@
  * jp.nium Classes is released under the MIT License:
  * http://www.opensource.org/licenses/mit-license.php
  */
-package jp.nium.core.debug {
+package jp.nium.core.L10N {
+	import flash.utils.flash_proxy;
+	import flash.utils.Proxy;
 	
 	/**
 	 * @private
 	 */
-	public class Log {
+	public dynamic class L10NMsg extends Proxy {
 		
 		/**
 		 * @private
 		 */
-		public function get id():String { return ""; }
+		public function get className():String { return ""; }
 		
-		/**
-		 * @private
-		 */
-		public function get message():String { return ""; }
 		
 		
 		
@@ -31,18 +29,19 @@ package jp.nium.core.debug {
 		/**
 		 * @private
 		 */
-		public function Log( id:String, message:String ) {
+		public function L10NMsg() {
 		}
 		
 		
 		
 		
 		
+		
 		/**
 		 * @private
 		 */
-		public function toString( ... replaces:Array ):String {
-			return "";
+		override flash_proxy function getProperty( name:* ):* {
+			return null;
 		}
 	}
 }

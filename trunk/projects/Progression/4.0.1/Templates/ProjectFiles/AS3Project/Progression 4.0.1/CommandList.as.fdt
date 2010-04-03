@@ -13,28 +13,18 @@
 	$(CBI)* ...
 	$(CBI)* @author $(DefaultUser)
 	$(CBI)*/
-	public class $(FileName) extends Command $(CSLB){
+	public class $(FileName) extends SerialList $(CSLB){
 		
 		/**
 		 * 新しい $(FileName) インスタンスを作成します。
 		 */
 		public function $(FileName)( initObject:Object = null ) $(CSLB){
 			// 親クラスを初期化します。
-			super( _execute, _interrupt, initObject );
-		}
-		
-		/**
-		 * 実行されるコマンドの実装です。
-		 */
-		private function _execute():void $(CSLB){
-			// 
-			executeComplete();
-		}
-		
-		/**
-		 * 中断されるコマンドの実装です。
-		 */
-		private function _interrupt():void $(CSLB){
+			super( initObject );
+			
+			// 実行したいコマンド群を登録します。
+			addCommand(
+			);
 		}
 		
 		/**

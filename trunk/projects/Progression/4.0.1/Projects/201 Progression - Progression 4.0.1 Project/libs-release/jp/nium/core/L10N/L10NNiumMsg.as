@@ -16,32 +16,12 @@ package jp.nium.core.L10N {
 	/**
 	 * @private
 	 */
-	public final class L10NNiumMsg {
+	public dynamic final class L10NNiumMsg extends L10NMsg {
 		
-		public static const ERROR_000:String = null;
-		public static const ERROR_001:String = null;
-		public static const ERROR_002:String = null;
-		public static const ERROR_003:String = null;
-		public static const ERROR_004:String = null;
-		public static const ERROR_005:String = null;
-		public static const ERROR_006:String = null;
-		public static const ERROR_007:String = null;
-		public static const ERROR_008:String = null;
-		public static const ERROR_009:String = null;
-		public static const ERROR_010:String = null;
-		public static const ERROR_011:String = null;
-		public static const ERROR_012:String = null;
-		public static const ERROR_013:String = null;
-		public static const ERROR_014:String = null;
-		public static const ERROR_015:String = null;
-		public static const ERROR_016:String = null;
-		public static const ERROR_017:String = null;
-		public static const ERROR_018:String = null;
-		public static const ERROR_019:String = null;
-		public static const ERROR_020:String = null;
-		public static const ERROR_021:String = null;
-		public static const ERROR_022:String = null;
-		public static const ERROR_023:String = null;
+		/**
+		 * @private
+		 */
+		private static var _instance:L10NNiumMsg = new L10NNiumMsg();
 		
 		
 		
@@ -51,6 +31,17 @@ package jp.nium.core.L10N {
 		 * @private
 		 */
 		public function L10NNiumMsg() {
+		}
+		
+		
+		
+		
+		
+		/**
+		 * @private
+		 */
+		public static function getInstance():L10NNiumMsg {
+			return _instance;
 		}
 	}
 }

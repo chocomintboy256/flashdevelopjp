@@ -1,5 +1,5 @@
 ﻿===============================================================================
-	FlashDevelop用 Progression 4.0.1 Public Beta 1.3 プロジェクトテンプレート
+	FlashDevelop用 Progression 4.0.1 RC1 プロジェクトテンプレート
 	http://j.mp/flashdevelop_progression_project_template
 ===============================================================================
 
@@ -87,18 +87,22 @@
 	登録したマクロ、[Progression 4 リリースビルド]を選択します。
 	[Delete]を押下します。
 
-■更新履歴
+■リリースノート
+	2010/04/03 更新 dkgkAs
+		Progression 4.0.1 RC1 リリースに伴う更新。
+	2010/03/29 修正 matsumos
+		クラス生成用テンプレートの command.as.fdt においてクラス名を指定する部分にアーギュメントが設定されていなかったのを修正。
 	2010/01/12 更新 matsumos
-		Progression 4.0.1 Public Beta 1.3 リリースに伴う更新
-	2009.11.22 修正 matsumos
+		Progression 4.0.1 Public Beta 1.3 リリースに伴う更新。
+	2009/11/22 修正 matsumos
 		クラス生成用テンプレートのフォルダ配置が間違っていたのを修正。
-	2009.11.18 改変 matsumos
+	2009/11/18 改変 matsumos
 		インストール先を変更
-		リリースビルド用マクロ P4ReleaseBuild 1.0.1 を導入
-	2009.11.13 公開 dkgkAs
-		FlashDevelop用 Progression 4.0.1 Public Beta 1.2 プロジェクトテンプレート
-	2009.09.21 公開 dkgkAs
-		FlashDevelop用 Progression 4.0.1 Public Beta 1.1 プロジェクトテンプレート
+		リリースビルド用マクロ P4ReleaseBuild 1.0.1 を導入。
+	2009/11/13 更新 dkgkAs
+		Progression 4.0.1 Public Beta 1.2 リリースに伴う更新。
+	2009/09/21 公開 dkgkAs
+		FlashDevelop 用 Progression 4.0.1 Public Beta 1.1 プロジェクトテンプレートを作成。
 
 ■使用条件・免責事項
 	・当テンプレートを使用する際はProgression 4のライセンスを遵守してください。
