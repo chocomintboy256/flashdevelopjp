@@ -88,6 +88,8 @@
 	[Delete]を押下します。
 
 ■リリースノート
+	2010/04/16 修正 dkgkAs
+		プロジェクトプロパティのCompiler OptionsにおいてIntrinsic Librariesの部分にFlash IDE用のパスが含まれていたのを削除。
 	2010/04/03 更新 dkgkAs
 		Progression 4.0.1 RC1 リリースに伴う更新。
 	2010/03/29 修正 matsumos
