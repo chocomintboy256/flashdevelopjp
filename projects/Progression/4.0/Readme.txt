@@ -11,6 +11,7 @@
 	・Projects
 	・Templates
 	の3つのフォルダを移動（上書き）します。
+	※Progression 4.0.1 以前から 4.0.2 にバージョンアップする際は、フォルダ構成が一部変わっているため、後述のアンインストール方法でアンインストールを行ってから上書きしてください。
 
 	【マクロのセットアップ手順】
 	リリースビルドの書き出しに必要なマクロを、以下の手順で登録します。
@@ -41,7 +42,7 @@
 	【プロジェクトの新規作成】
 	FlashDevelopのメニューの [Project] から [New Project...] を選択します。
 	すると、[New Project] ウィンドウが開かれるので、[Installed Templates] の
-	[Progression] の項目から「Progression 4.0.2 Project」を選択します。
+	[Progression] の項目から「Progression 4.0 Project」を選択します。
 	あとは、通常のAS3 Projectと同様の手順でプロジェクトを新規作成します。
 
 	※注意
@@ -52,7 +53,7 @@
 
 	【ファイルテンプレート】
 	Progressionでよく使う新規クラスを作成する場合は、テンプレートを利用できます。
-	Projectパネルの任意の場所で [右クリック] -> [Add] -> [Progression 4.0.2] から
+	Projectパネルの任意の場所で [右クリック] -> [Add] -> [Progression 4.0] から
 	任意のスーパークラスを選択します。
 	ファイル名(クラス名)を指定すると、クラスが作成されます。
 
@@ -77,11 +78,11 @@
 	・Macrosフォルダ
 		P4ReleaseBuild.cs ファイルを削除
 	・Projectsフォルダ
-		201 Progression - Progression 4.0.2 Project フォルダを削除
+		201 Progression - Progression 4.0 Project フォルダを削除
 	・Templatesフォルダ
 		ProjectFiles
 			AS3Project
-				Progression 4.0.2 フォルダを削除
+				Progression 4.0 フォルダを削除
 
 	FlashDevelopメニューの [Macros] から [Edit Macros...] を選びます。
 	登録したマクロ、[Progression 4 リリースビルド]を選択します。
@@ -90,7 +91,8 @@
 ■リリースノート
 	2010/04/22 更新 dkgkAs
 		Progression 4.0.2 リリースに伴う更新。
-		クラス生成用テンプレートの名称を変更。
+		プロジェクト作成画面やクラス生成テンプレートに表示される Progression のバージョン表記を 3 桁から 2 桁（「4.0.1」→「4.0」）に変更。
+		クラス生成用テンプレートのファイル名に接頭辞「My」を追加。
 	2010/04/16 修正 dkgkAs
 		プロジェクトプロパティのCompiler OptionsにおいてIntrinsic Librariesの部分にFlash IDE用のパスが含まれていたのを削除。
 	2010/04/03 更新 dkgkAs
