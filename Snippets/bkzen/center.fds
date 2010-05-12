@@ -1,0 +1,5 @@
+$$(t=$(SelText),$(CurWord)).x = ($$(w=stage.stageWidth,width,800) - $$(t).width) / 2;
+$$(t).y = ($$(h=stage.stageHeight,height,400) - $$(t).height) / 2;
+$(EntryPoint)
+
+
