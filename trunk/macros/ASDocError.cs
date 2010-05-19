@@ -47,7 +47,7 @@ public class ASDocError {
   	  dialog.InitialDirectory = @"C:\";
   	  
   	  //ファイルの種類の設定
-  	  dialog.Filter ="HTMLファイル(*.html;*.htm)|*.html;*.htm|すべてのファイル(*.*)|*.*";
+  	  dialog.Filter ="エラーログファイル(*.log)|*.log";
       
       dialog.FilterIndex = 2;
       
