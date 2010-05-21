@@ -1,7 +1,7 @@
 ﻿/**
 *　@author flabaka
 *　@see http://flabaka.com/blog/
-*　@version 1.1.0
+*　@version 1.1.1
 *
 *　■FlashDevelopのASDocジェネレーターを使って、ASDocを作成■
 *
@@ -72,18 +72,30 @@ public class ASDocError
             {
                 string path = node.InnerText + "\\" + "validation_errors.log";
                 //TraceManager.Add(path);
-                System.IO.StreamReader sr = new System.IO.StreamReader(
+
+                //エラーログがある場合
+                if (File.Exists(path))
+                {
+                    System.IO.StreamReader sr = new System.IO.StreamReader(
                     path,
                     System.Text.Encoding.GetEncoding("utf-8"));
 
-                //ログの内容を、すべて読み込む
-                string s = sr.ReadToEnd();
+                    //ログの内容を、すべて読み込む
+                    string s = sr.ReadToEnd();
 
-                //閉じる
-                sr.Close();
+                    //閉じる
+                    sr.Close();
 
-                //エラーログの内容を、出力パネルに表示する
-                TraceManager.Add(s);
+                    //エラーログの内容を、出力パネルに表示する
+                    TraceManager.Add(s);
+
+                }
+                //エラーログがない場合
+                else
+                {
+                    TraceManager.Add("エラーログファイルはありません！");
+                }
+
             }
         }
     }
