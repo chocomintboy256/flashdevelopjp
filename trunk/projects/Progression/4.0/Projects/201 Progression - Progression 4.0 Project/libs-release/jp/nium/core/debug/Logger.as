@@ -2,7 +2,7 @@
  * jp.nium Classes
  * 
  * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
- * @version 4.0.2
+ * @version 4.0.12
  * @see http://classes.nium.jp/
  * 
  * jp.nium Classes is released under the MIT License:
@@ -29,6 +29,11 @@ package jp.nium.core.debug {
 		 * @private
 		 */
 		public static const ERROR:int = 2;
+		
+		/**
+		 * @private
+		 */
+		public static const DUMMY_LOG:Log = new Log( "", "" );
 		
 		
 		
@@ -75,18 +80,18 @@ package jp.nium.core.debug {
 		/**
 		 * @private
 		 */
-		public static function getLog( id:String ):* {
+		public static function getLog( id:String ):Log {
 			id;
-			return "";
+			return DUMMY_LOG;
 		}
 		
 		/**
 		 * @private
 		 */
-		public static function getLogByLang( id:String, language:String ):* {
+		public static function getLogByLang( id:String, language:String ):Log {
 			id;
 			language;
-			return "";
+			return DUMMY_LOG;
 		}
 		
 		/**
