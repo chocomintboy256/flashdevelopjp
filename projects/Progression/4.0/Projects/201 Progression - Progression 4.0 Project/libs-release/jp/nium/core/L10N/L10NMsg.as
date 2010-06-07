@@ -2,7 +2,7 @@
  * jp.nium Classes
  * 
  * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
- * @version 4.0.2
+ * @version 4.0.12
  * @see http://classes.nium.jp/
  * 
  * jp.nium Classes is released under the MIT License:
