@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FDjpPlugin.Properties;
 using FlashDevelop.Managers;
 using PluginCore;
 using PluginCore.FRService;
@@ -16,6 +15,9 @@ using ProjectManager;
 using ProjectManager.Controls.TreeView;
 using ProjectManager.Projects;
 using ScintillaNet;
+using FDjpPlugin.Commands;
+using PluginCore.Localization;
+using FDjpPlugin.Resources;
 
 namespace FDjpPlugin
 {
@@ -24,7 +26,7 @@ namespace FDjpPlugin
         private string pluginAuth = "bkzen";
         private string pluginDesc = "FlashDevelop.jpプラグイン";
         private string pluginGuid = "4308cb28-d1d1-4ac5-aaee-ebd7dc6fa4da";
-        private string pluginVer = "1.0.0.8";
+        private string pluginVer = "1.0.0.10";
         private string pluginHelp = "http://code.google.com/p/flashdevelopjp/";
         private string pluginName = "FDjpPlugin";
         private Settings settingObj = null;
@@ -39,6 +41,7 @@ namespace FDjpPlugin
         private ToolStripMenuItem prevLineItem = null;
         private ToolStripMenuItem foldAllCommentsItem = null;
         private ToolStripMenuItem expandAllCommentsItem = null;
+        private ToolStripMenuItem alignAssignmentItem = null;
 
 
         #region IPlugin メンバ
@@ -94,6 +97,10 @@ namespace FDjpPlugin
                     case EventType.ApplySettings:
                         AddKeyEventHandler();
                     break;
+                    case EventType.Keys:
+                        if(settingObj.HideMenu)
+                            e.Handled = HandleKeyEvent(e as KeyEvent);
+                    break;
                 }
             }
             catch (Exception ex)
@@ -102,12 +109,36 @@ namespace FDjpPlugin
             }
         }
 
+        private bool HandleKeyEvent(KeyEvent ke)
+        {
+            if (ke.Value == settingObj.AlwaysCompileKey)
+                alwaysCompile(null, null);
+            else if (ke.Value == settingObj.NextWordKey)
+                nextWord(null, null);
+            else if (ke.Value == settingObj.PrevWordKey)
+                prevWord(null, null);
+            else if (ke.Value == settingObj.NextLineKey)
+                nextLine(null, null);
+            else if (ke.Value == settingObj.PrevLineKey)
+                prevLine(null, null);
+            else if (ke.Value == settingObj.FoldAllCommentsKey)
+                foldAllComments(null, null);
+            else if (ke.Value == settingObj.ExpandAllCommentsKey)
+                expandAllComments(null, null);
+            else if (ke.Value == settingObj.AlignAssignmentsKey)
+                alignAssignment(null, null);
+            else return false;
+
+            return true;
+        }
+
         public void Initialize()
         {
+            InitLocalization();
             InitBasics();
             LoadSettings();
             CreateMenu();
-            AddEventHandlers();
+            AddEventHandlers();            
         }
 
         #endregion
@@ -117,6 +148,24 @@ namespace FDjpPlugin
             string dataPath = Path.Combine(PathHelper.DataDir, Name);
             if (!Directory.Exists(dataPath)) Directory.CreateDirectory(dataPath);
             this.settingFilename = Path.Combine(dataPath, "Settings.fdb");
+        }
+
+        /// <summary>
+        /// Initializes the localization of the plugin
+        /// </summary>
+        public void InitLocalization()
+        {
+            LocaleVersion locale = PluginBase.MainForm.Settings.LocaleVersion;
+            switch (locale)
+            {
+                case LocaleVersion.ja_JP:
+                    LocaleHelper.Initialize(LocaleVersion.ja_JP);
+                    break;
+                default:
+                    LocaleHelper.Initialize(LocaleVersion.en_US);
+                    break;
+            }
+            pluginDesc = LocaleHelper.GetString("INFO_DESCRIPTION");
         }
 
         private void LoadSettings()
@@ -144,31 +193,36 @@ namespace FDjpPlugin
         /// </summary>
         private void CreateMenu()
         {
+            if (this.settingObj.HideMenu) return;
+
             MenuStrip mainMenu = PluginBase.MainForm.MenuStrip;
             this.fdjpMenu = new ToolStripMenuItem();
-            this.fdjpMenu.Text = Resources.LABEL_MENU;
+            this.fdjpMenu.Text = LocaleHelper.GetString("LABEL_MENU");
             this.nextItem = new ToolStripMenuItem();
-            this.nextItem.Text = Resources.LABEL_NEXT_WORD;
+            this.nextItem.Text = LocaleHelper.GetString("LABEL_NEXT_WORD");
             this.nextItem.Click += new EventHandler(this.nextWord);
             this.prevItem = new ToolStripMenuItem();
-            this.prevItem.Text = Resources.LABEL_PREV_WORD;
+            this.prevItem.Text = LocaleHelper.GetString("LABEL_PREV_WORD");
             this.prevItem.Click += new EventHandler(this.prevWord);
             this.alwaysItem = new ToolStripMenuItem();
-            this.alwaysItem.Text = Resources.LABEL_ALWAYS_COMPILE;
+            this.alwaysItem.Text = LocaleHelper.GetString("LABEL_ALWAYS_COMPILE");
             this.alwaysItem.Click += new EventHandler(this.alwaysCompile);
 
             this.nextLineItem = new ToolStripMenuItem();
-            this.nextLineItem.Text = Resources.LABEL_NEXT_LINE;
+            this.nextLineItem.Text = LocaleHelper.GetString("LABEL_NEXT_LINE");
             this.nextLineItem.Click += new EventHandler(this.nextLine);
             this.prevLineItem = new ToolStripMenuItem();
-            this.prevLineItem.Text = Resources.LABEL_PREV_LINE;
+            this.prevLineItem.Text = LocaleHelper.GetString("LABEL_PREV_LINE");
             this.prevLineItem.Click += new EventHandler(this.prevLine);
             this.foldAllCommentsItem = new ToolStripMenuItem();
-            this.foldAllCommentsItem.Text = Resources.LABEL_FOLD_ALL_COMMENTS;
+            this.foldAllCommentsItem.Text = LocaleHelper.GetString("LABEL_FOLD_ALL_COMMENTS");
             this.foldAllCommentsItem.Click += new EventHandler(this.foldAllComments);
             this.expandAllCommentsItem = new ToolStripMenuItem();
-            this.expandAllCommentsItem.Text = Resources.LABEL_EXPAND_ALL_COMMENTS;
+            this.expandAllCommentsItem.Text = LocaleHelper.GetString("LABEL_EXPAND_ALL_COMMENTS");
             this.expandAllCommentsItem.Click += new EventHandler(this.expandAllComments);
+            this.alignAssignmentItem = new ToolStripMenuItem();
+            this.alignAssignmentItem.Text = LocaleHelper.GetString("LABEL_ALIGN_ASSIGNMENT");
+            this.alignAssignmentItem.Click += new EventHandler(this.alignAssignment);
 
             this.fdjpMenu.DropDownItems.Add(this.nextItem);
             this.fdjpMenu.DropDownItems.Add(this.prevItem);
@@ -177,12 +231,14 @@ namespace FDjpPlugin
             this.fdjpMenu.DropDownItems.Add(this.prevLineItem);
             this.fdjpMenu.DropDownItems.Add(this.foldAllCommentsItem);
             this.fdjpMenu.DropDownItems.Add(this.expandAllCommentsItem);
+            this.fdjpMenu.DropDownItems.Add(this.alignAssignmentItem);
+
             mainMenu.Items.Add(this.fdjpMenu);
         }
 
         private void AddEventHandlers()
         {
-            EventManager.AddEventHandler(this, EventType.FileSwitch | EventType.ApplySettings);
+            EventManager.AddEventHandler(this, EventType.FileSwitch | EventType.ApplySettings | EventType.Keys);
             AddKeyEventHandler();
         }
 
@@ -195,6 +251,7 @@ namespace FDjpPlugin
             Keys prevLineKey          = settingObj.PrevLineKey;
             Keys foldAllCommentsKey   = settingObj.FoldAllCommentsKey;
             Keys expandAllCommentsKey = settingObj.ExpandAllCommentsKey;
+            Keys alignAssignmentKey   = settingObj.AlignAssignmentsKey;
 
             if (!PluginBase.MainForm.IgnoredKeys.Contains(alwaysKey))            { PluginBase.MainForm.IgnoredKeys.Add(alwaysKey); }
             if (!PluginBase.MainForm.IgnoredKeys.Contains(nextKey))              { PluginBase.MainForm.IgnoredKeys.Add(nextKey); }
@@ -203,6 +260,10 @@ namespace FDjpPlugin
             if (!PluginBase.MainForm.IgnoredKeys.Contains(prevLineKey))          { PluginBase.MainForm.IgnoredKeys.Add(prevLineKey); }
             if (!PluginBase.MainForm.IgnoredKeys.Contains(foldAllCommentsKey))   { PluginBase.MainForm.IgnoredKeys.Add(foldAllCommentsKey); }
             if (!PluginBase.MainForm.IgnoredKeys.Contains(expandAllCommentsKey)) { PluginBase.MainForm.IgnoredKeys.Add(expandAllCommentsKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(alignAssignmentKey))   { PluginBase.MainForm.IgnoredKeys.Add(alignAssignmentKey); }
+
+
+            if (this.settingObj.HideMenu) return;
 
             this.alwaysItem.ShortcutKeys            = alwaysKey;
             this.nextItem.ShortcutKeys              = nextKey;
@@ -211,6 +272,7 @@ namespace FDjpPlugin
             this.prevLineItem.ShortcutKeys          = prevLineKey;
             this.foldAllCommentsItem.ShortcutKeys   = foldAllCommentsKey;
             this.expandAllCommentsItem.ShortcutKeys = expandAllCommentsKey;
+            this.alignAssignmentItem.ShortcutKeys   = alignAssignmentKey;
         }
 
         private void nextWord(Object sender, EventArgs e)
@@ -355,15 +417,15 @@ namespace FDjpPlugin
 
         private void foldAllComments(Object sender, EventArgs e)
         {
-            foldAllComments(true);
+            performAllComments(true);
         }
 
         private void expandAllComments(Object sender, EventArgs e)
         {
-            foldAllComments(false);
+            performAllComments(false);
         }
 
-        private void foldAllComments(Boolean fold)
+        private void performAllComments(Boolean fold)
         {
             // スクロール位置を保持
             Int32 scrollTop = sci.FirstVisibleLine;
@@ -415,7 +477,7 @@ namespace FDjpPlugin
 				// 折りたたみ・展開するものがなかったら逆の動きをする
                 if (fldNum == expNum && settingObj.FoldCommentsToggle)
                 {
-                    foldAllComments(!fold);
+                    performAllComments(!fold);
                     
                     return;
                 }
@@ -433,6 +495,12 @@ namespace FDjpPlugin
         {
             FRSearch search = new FRSearch(text);
             return search.Matches(sci.Text);
+        }
+
+        // コード整列
+        private void alignAssignment(Object sender, EventArgs e)
+        {
+            AlignAssignments.Execute();
         }
     }
 }

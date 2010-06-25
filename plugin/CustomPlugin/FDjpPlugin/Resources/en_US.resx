@@ -117,28 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CATEGORY_ALIGN_ASSIGMENTS" xml:space="preserve">
+    <value>Align Assignments</value>
+  </data>
+  <data name="CATEGORY_ALWAYS_COMPILE" xml:space="preserve">
+    <value>Always Compile</value>
+  </data>
+  <data name="CATEGORY_FOLDING" xml:space="preserve">
+    <value>Folding</value>
+  </data>
+  <data name="CATEGORY_MOVE_LINE" xml:space="preserve">
+    <value>Move Line</value>
+  </data>
+  <data name="CATEGORY_MOVE_WORD" xml:space="preserve">
+    <value>Move Word</value>
+  </data>
+  <data name="DESCRIPTION_ALIGN_ASSIGNMENTS" xml:space="preserve">
+    <value>Shortcut of "Align Assignments".</value>
+  </data>
+  <data name="DESCRIPTION_ALWAYS_COMPILE" xml:space="preserve">
+    <value>Shortcut of the Set "Always Compile" as current file.</value>
+  </data>
+  <data name="DESCRIPTION_ALWAYS_COMP_AFTER_COMP" xml:space="preserve">
+    <value>Enables Change Always Compile after Compile.</value>
+  </data>
+  <data name="DESCRIPTION_EXPAND_ALL_COMMENTS" xml:space="preserve">
+    <value>Shortcut of the Expand All Comments.</value>
+  </data>
+  <data name="DESCRIPTION_FOLD_ALL_COMMENTS" xml:space="preserve">
+    <value>Shortcut of the Flod All Comments.</value>
+  </data>
+  <data name="DESCRIPTION_HIDE_MENU" xml:space="preserve">
+    <value>Hide the "Custom" menu.</value>
+  </data>
+  <data name="DESCRIPTION_MOVE_LINE_DOWN" xml:space="preserve">
+    <value>Shortcut of the Move Line Down.</value>
+  </data>
+  <data name="DESCRIPTION_MOVE_LINE_UP" xml:space="preserve">
+    <value>Shortcut of the Move Line Up.</value>
+  </data>
+  <data name="DESCRIPTION_NEXT_WORD" xml:space="preserve">
+    <value>Shortcut of the Next Word.</value>
+  </data>
+  <data name="DESCRIPTION_PREV_WORD" xml:space="preserve">
+    <value>Shortcut of the Prev Word.</value>
+  </data>
+  <data name="DESCRIPTION_TOGGLE_FOLD_EXPAND" xml:space="preserve">
+    <value>Enables toggle Fold and Expand.</value>
+  </data>
+  <data name="DESCRIPTION_WORD_SELECT" xml:space="preserve">
+    <value>Select on Move Word.</value>
+  </data>
+  <data name="INFO_DESCRIPTION" xml:space="preserve">
+    <value>FlashDevelop.jp plugin.</value>
+  </data>
+  <data name="LABEL_ALIGN_ASSIGNMENT" xml:space="preserve">
+    <value>A&amp;lign Assignment</value>
+  </data>
   <data name="LABEL_ALWAYS_COMPILE" xml:space="preserve">
-    <value>Always Compileに設定</value>
+    <value>&amp;Always Compile</value>
   </data>
   <data name="LABEL_EXPAND_ALL_COMMENTS" xml:space="preserve">
-    <value>すべての複数行コメントを展開(&amp;E)</value>
+    <value>&amp;Expand All Block Comments</value>
   </data>
   <data name="LABEL_FOLD_ALL_COMMENTS" xml:space="preserve">
-    <value>すべての複数行コメントを折りたたむ(&amp;F)</value>
+    <value>&amp;Fold All Block Comments</value>
   </data>
   <data name="LABEL_MENU" xml:space="preserve">
-    <value>カスタム(&amp;D)</value>
+    <value>C&amp;ustom</value>
   </data>
   <data name="LABEL_NEXT_LINE" xml:space="preserve">
-    <value>次の行へ</value>
+    <value>Move Line &amp;Down</value>
   </data>
   <data name="LABEL_NEXT_WORD" xml:space="preserve">
-    <value>次のワードへ</value>
+    <value>&amp;Next Word</value>
   </data>
   <data name="LABEL_PREV_LINE" xml:space="preserve">
-    <value>前の行へ</value>
+    <value>Move Line &amp;Up</value>
   </data>
   <data name="LABEL_PREV_WORD" xml:space="preserve">
-    <value>前のワードへ</value>
+    <value>&amp;Prev Word</value>
+  </data>
+  <data name="NAME_NEXT_WORD" xml:space="preserve">
+    <value>Shortcut of "Next Word"</value>
+  </data>
+  <data name="NAME_PREV_WORD" xml:space="preserve">
+    <value>Shortcut of "Prev Word"</value>
   </data>
 </root>

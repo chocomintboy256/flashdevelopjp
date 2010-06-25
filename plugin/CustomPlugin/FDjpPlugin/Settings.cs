@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.ComponentModel;
+using FDjpPlugin.Resources;
 
 namespace FDjpPlugin
 {
@@ -17,6 +18,8 @@ namespace FDjpPlugin
         public const Keys FOLD_ALL_COMMENTS_KEY = Keys.Control | Keys.Alt | Keys.F;
         public const Keys EXPAND_ALL_COMMENTS_KEY = Keys.Control | Keys.Alt | Keys.E;
         public const bool FOLD_COMMENTS_TOGGLE = false;
+        public const Keys ALIGN_ASSIGNMENTS_KEY = Keys.Control | Keys.Alt | Keys.Oem6;
+        public const bool HIDE_MENU = false;
 
         private Keys nextWordKey = NEXT_WORD_KEY;
         private Keys prevWordKey = PREV_WORD_KEY;
@@ -28,87 +31,115 @@ namespace FDjpPlugin
         private Keys foldAllCommentsKey = FOLD_ALL_COMMENTS_KEY;
         private Keys expandAllCommentsKey = EXPAND_ALL_COMMENTS_KEY;
         private bool foldCommentsToggle = FOLD_COMMENTS_TOGGLE;
+        private Keys alignAssignmentsKey = ALIGN_ASSIGNMENTS_KEY;
+        private bool hideMenu = HIDE_MENU;
         private string version = "";
 
-
-        [Category("ワード移動")]
-        [Description("次のワードに移動するショートカットの設定。"), DefaultValue(NEXT_WORD_KEY)]
+        [DisplayName("Next Word Shortcut")]
+        [LocalizedCategory("CATEGORY_MOVE_WORD")]
+        [LocalizedDescription("DESCRIPTION_NEXT_WORD"), DefaultValue(NEXT_WORD_KEY)]
         public Keys NextWordKey
         {
             get { return this.nextWordKey; }
             set { this.nextWordKey = value; }
         }
 
-        [Category("ワード移動")]
-        [Description("前のワードに移動するショートカットの設定。"), DefaultValue(PREV_WORD_KEY)]
+        [DisplayName("Prev Word Shortcut")]
+        [LocalizedCategory("CATEGORY_MOVE_WORD")]
+        [LocalizedDescription("DESCRIPTION_PREV_WORD"), DefaultValue(PREV_WORD_KEY)]
         public Keys PrevWordKey
         {
             get { return this.prevWordKey; }
             set { this.prevWordKey = value; }
         }
 
-        [Category("ワード移動")]
-        [Description("移動した際にワードをセレクトする設定。"), DefaultValue(WORD_SELECT)]
+        [DisplayName("Enable Select Word")]
+        [LocalizedCategory("CATEGORY_MOVE_WORD")]
+        [LocalizedDescription("DESCRIPTION_WORD_SELECT"), DefaultValue(WORD_SELECT)]
         public bool WordSelect
         {
             get { return this.wordSelect; }
             set { this.wordSelect = value; }
         }
 
-        [Category("行移動")]
-        [Description("下に行を移動する。"), DefaultValue(NEXT_LINE_KEY)]
+        [DisplayName("Move Line Down Shortcut")]
+        [LocalizedCategory("CATEGORY_MOVE_LINE")]
+        [LocalizedDescription("DESCRIPTION_MOVE_LINE_DOWN"), DefaultValue(NEXT_LINE_KEY)]
         public Keys NextLineKey
         {
             get { return this.nextLineKey; }
             set { this.nextLineKey = value; }
         }
 
-        [Category("行移動")]
-        [Description("下に行を移動する。"), DefaultValue(PREV_LINE_KEY)]
+        [DisplayName("Move Line Up Shortcut")]
+        [LocalizedCategory("CATEGORY_MOVE_LINE")]
+        [LocalizedDescription("DESCRIPTION_MOVE_LINE_UP"), DefaultValue(PREV_LINE_KEY)]
         public Keys PrevLineKey
         {
             get { return this.prevLineKey; }
             set { this.prevLineKey = value; }
         }
 
-        [Category("Always Compile")]
-        [Description("Always Compile を現在のドキュメントに設定するショートカット"), DefaultValue(ALWAYS_COMP_KEY)]
+        [DisplayName("Always Compile Shortcut")]
+        [LocalizedCategory("CATEGORY_ALWAYS_COMPILE")]
+        [LocalizedDescription("DESCRIPTION_ALWAYS_COMPILE"), DefaultValue(ALWAYS_COMP_KEY)]
         public Keys AlwaysCompileKey
         {
             get { return this.alwaysCompileKey; }
             set { this.alwaysCompileKey = value; }
         }
 
-        [Category("Always Compile")]
-        [Description("切り替えた後コンパイルする。"), DefaultValue(ALWAYS_COMP_AFTER_COMP)]
+        [DisplayName("Enables Compile On Set Always Compile")]
+        [LocalizedCategory("CATEGORY_ALWAYS_COMPILE")]
+        [LocalizedDescription("DESCRIPTION_ALWAYS_COMP_AFTER_COMP"), DefaultValue(ALWAYS_COMP_AFTER_COMP)]
         public bool AlwaysCompileAfterCompile
         {
             get { return this.alwaysCompileAfterCompile; }
             set { this.alwaysCompileAfterCompile = value; }
         }
 
-        [Category("折りたたみ")]
-        [Description("すべての複数コメント行を折りたたむ。"), DefaultValue(FOLD_ALL_COMMENTS_KEY)]
+        [DisplayName("Fold All Commnets Shortcut")]
+        [LocalizedCategory("CATEGORY_FOLDING")]
+        [LocalizedDescription("DESCRIPTION_FOLD_ALL_COMMENTS"), DefaultValue(FOLD_ALL_COMMENTS_KEY)]
         public Keys FoldAllCommentsKey
         {
             get { return this.foldAllCommentsKey; }
             set { this.foldAllCommentsKey = value; }
         }
 
-        [Category("折りたたみ")]
-        [Description("すべての複数コメント行を展開する。"), DefaultValue(EXPAND_ALL_COMMENTS_KEY)]
+        [DisplayName("Expand All Comments Shortcut")]
+        [LocalizedCategory("CATEGORY_FOLDING")]
+        [LocalizedDescription("DESCRIPTION_EXPAND_ALL_COMMENTS"), DefaultValue(EXPAND_ALL_COMMENTS_KEY)]
         public Keys ExpandAllCommentsKey
         {
             get { return this.expandAllCommentsKey; }
             set { this.expandAllCommentsKey = value; }
         }
 
-        [Category("折りたたみ")]
-        [Description("コメントの折りたたみ/展開をトグルさせるようにする。"), DefaultValue(FOLD_COMMENTS_TOGGLE)]
+        [DisplayName("Enables Toggle Fold and Expand")]
+        [LocalizedCategory("CATEGORY_FOLDING")]
+        [LocalizedDescription("DESCRIPTION_TOGGLE_FOLD_EXPAND"), DefaultValue(FOLD_COMMENTS_TOGGLE)]
         public bool FoldCommentsToggle
         {
             get { return this.foldCommentsToggle; }
             set { this.foldCommentsToggle = value; }
+        }
+
+        [DisplayName("Align Assignments Shortcut")]
+        [LocalizedCategory("CATEGORY_ALIGN_ASSIGMENTS")]
+        [LocalizedDescription("DESCRIPTION_ALIGN_ASSIGNMENTS"), DefaultValue(ALIGN_ASSIGNMENTS_KEY)]
+        public Keys AlignAssignmentsKey
+        {
+            get { return this.alignAssignmentsKey; }
+            set { this.alignAssignmentsKey = value; }
+        }
+
+        [DisplayName("Hide Menu")]
+        [LocalizedDescription("DESCRIPTION_HIDE_MENU"), DefaultValue(false)]
+        public bool HideMenu
+        {
+            get { return this.hideMenu; }
+            set { this.hideMenu = value; }
         }
 
         [Browsable(false)]
@@ -129,6 +160,8 @@ namespace FDjpPlugin
                 if (alwaysCompileKey == Keys.None) alwaysCompileKey = ALWAYS_COMP_KEY;
                 if (foldAllCommentsKey == Keys.None) foldAllCommentsKey = FOLD_ALL_COMMENTS_KEY;
                 if (expandAllCommentsKey == Keys.None) expandAllCommentsKey = EXPAND_ALL_COMMENTS_KEY;
+                if (alignAssignmentsKey == Keys.None) alignAssignmentsKey = ALIGN_ASSIGNMENTS_KEY;
+                
                 version = v;
             }
         }
