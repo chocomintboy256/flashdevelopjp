@@ -1,0 +1,4 @@
+CONFIG::debug$(CSLB){
+	$(EntryPoint)
+}
+
