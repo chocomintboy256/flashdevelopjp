@@ -1,14 +1,11 @@
 ﻿/**
- * Progression 4
+ * jp.nium Classes
  * 
  * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
- * @version 4.0.12 Public Beta 1.3
- * @see http://progression.jp/
+ * @version 4.0.22
+ * @see http://classes.nium.jp/
  * 
- * Progression Software is released under the Progression Software License:
- * http://progression.jp/en/overview/license
- * 
- * Progression Libraries is released under the MIT License:
+ * jp.nium Classes is released under the MIT License:
  * http://www.opensource.org/licenses/mit-license.php
  */
 package jp.nium.core.L10N {
