@@ -19,7 +19,10 @@ namespace FDjpPlugin
         public const Keys EXPAND_ALL_COMMENTS_KEY = Keys.Control | Keys.Alt | Keys.E;
         public const bool FOLD_COMMENTS_TOGGLE = false;
         public const Keys ALIGN_ASSIGNMENTS_KEY = Keys.Control | Keys.Alt | Keys.Oem6;
+        public const Keys CALC_SELECTION_KEY = Keys.Alt | Keys.C;
         public const bool HIDE_MENU = false;
+        // public const Keys SEARCH_NEXT_KEY = 
+        // public const Keys SEARCH_PREV_KEY = 
 
         private Keys nextWordKey = NEXT_WORD_KEY;
         private Keys prevWordKey = PREV_WORD_KEY;
@@ -32,7 +35,10 @@ namespace FDjpPlugin
         private Keys expandAllCommentsKey = EXPAND_ALL_COMMENTS_KEY;
         private bool foldCommentsToggle = FOLD_COMMENTS_TOGGLE;
         private Keys alignAssignmentsKey = ALIGN_ASSIGNMENTS_KEY;
+        private Keys calcSelectionKey = CALC_SELECTION_KEY;
         private bool hideMenu = HIDE_MENU;
+        private Keys searchNextKey;// = SEARCH_NEXT_KEY;
+        private Keys searchPrevKey;// = SEARCH_PREV_KEY;
         private string version = "";
 
         [DisplayName("Next Word Shortcut")]
@@ -134,12 +140,39 @@ namespace FDjpPlugin
             set { this.alignAssignmentsKey = value; }
         }
 
+        [DisplayName("Calc Selection Shortcut")]
+        [LocalizedCategory("CATEGORY_CALCULATE")]
+        [LocalizedDescription("DESCRIPTION_CALC_SELECTION"), DefaultValue(CALC_SELECTION_KEY)]
+        public Keys CalcSelectionKey
+        {
+            get { return this.calcSelectionKey; }
+            set { this.calcSelectionKey = value; }
+        }
+
         [DisplayName("Hide Menu")]
         [LocalizedDescription("DESCRIPTION_HIDE_MENU"), DefaultValue(false)]
         public bool HideMenu
         {
             get { return this.hideMenu; }
             set { this.hideMenu = value; }
+        }
+
+        [DisplayName("Search Next Shortcut")]
+        [LocalizedCategory("CATEGORY_SEARCH")]
+        [LocalizedDescription("DESCRIPTION_SEARCH_NEXT")]
+        public Keys SearchNextKey
+        {
+            get { return this.searchNextKey; }
+            set { this.searchNextKey = value; }
+        }
+
+        [DisplayName("Search Prev Shortcut")]
+        [LocalizedCategory("CATEGORY_SEARCH")]
+        [LocalizedDescription("DESCRIPTION_SEARCH_PREV")]
+        public Keys SearchPrevKey
+        {
+            get { return this.searchPrevKey; }
+            set { this.searchPrevKey = value; }
         }
 
         [Browsable(false)]

@@ -123,6 +123,9 @@
   <data name="CATEGORY_ALWAYS_COMPILE" xml:space="preserve">
     <value>Always Compile</value>
   </data>
+  <data name="CATEGORY_CALCULATE" xml:space="preserve">
+    <value>Caluclation</value>
+  </data>
   <data name="CATEGORY_FOLDING" xml:space="preserve">
     <value>Folding</value>
   </data>
@@ -132,6 +135,9 @@
   <data name="CATEGORY_MOVE_WORD" xml:space="preserve">
     <value>Move Word</value>
   </data>
+  <data name="CATEGORY_SEARCH" xml:space="preserve">
+    <value>Search</value>
+  </data>
   <data name="DESCRIPTION_ALIGN_ASSIGNMENTS" xml:space="preserve">
     <value>Shortcut of "Align Assignments".</value>
   </data>
@@ -140,6 +146,9 @@
   </data>
   <data name="DESCRIPTION_ALWAYS_COMP_AFTER_COMP" xml:space="preserve">
     <value>Enables Change Always Compile after Compile.</value>
+  </data>
+  <data name="DESCRIPTION_CALC_SELECTION" xml:space="preserve">
+    <value>Shortcut of the Caluclate Selection.</value>
   </data>
   <data name="DESCRIPTION_EXPAND_ALL_COMMENTS" xml:space="preserve">
     <value>Shortcut of the Expand All Comments.</value>
@@ -162,6 +171,12 @@
   <data name="DESCRIPTION_PREV_WORD" xml:space="preserve">
     <value>Shortcut of the Prev Word.</value>
   </data>
+  <data name="DESCRIPTION_SEARCH_NEXT" xml:space="preserve">
+    <value>Shortcut of the Search Identifier Next.</value>
+  </data>
+  <data name="DESCRIPTION_SEARCH_PREV" xml:space="preserve">
+    <value>Shortcut of the Search Identifier Prev.</value>
+  </data>
   <data name="DESCRIPTION_TOGGLE_FOLD_EXPAND" xml:space="preserve">
     <value>Enables toggle Fold and Expand.</value>
   </data>
@@ -171,11 +186,17 @@
   <data name="INFO_DESCRIPTION" xml:space="preserve">
     <value>FlashDevelop.jp plugin.</value>
   </data>
+  <data name="INFO_NOT_FOUND" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
   <data name="LABEL_ALIGN_ASSIGNMENT" xml:space="preserve">
     <value>A&amp;lign Assignment</value>
   </data>
   <data name="LABEL_ALWAYS_COMPILE" xml:space="preserve">
     <value>&amp;Always Compile</value>
+  </data>
+  <data name="LABEL_CALC_SELECTION" xml:space="preserve">
+    <value>&amp;Calcurate Selction</value>
   </data>
   <data name="LABEL_EXPAND_ALL_COMMENTS" xml:space="preserve">
     <value>&amp;Expand All Block Comments</value>
@@ -198,10 +219,31 @@
   <data name="LABEL_PREV_WORD" xml:space="preserve">
     <value>&amp;Prev Word</value>
   </data>
+  <data name="LABEL_SEARCH_NEXT" xml:space="preserve">
+    <value>Search Identifier &amp;Next</value>
+  </data>
+  <data name="LABEL_SEARCH_PREV" xml:space="preserve">
+    <value>Search Identifier &amp;Prev</value>
+  </data>
+  <data name="MESSAGE_NOT_FOUND" xml:space="preserve">
+    <value>Identifier is Not Found: </value>
+  </data>
+  <data name="NAME_CALC_SELECTION" xml:space="preserve">
+    <value>Shortcut of "Calcurate selection"</value>
+  </data>
   <data name="NAME_NEXT_WORD" xml:space="preserve">
     <value>Shortcut of "Next Word"</value>
   </data>
   <data name="NAME_PREV_WORD" xml:space="preserve">
     <value>Shortcut of "Prev Word"</value>
+  </data>
+  <data name="NAME_SEARCH_NEXT" xml:space="preserve">
+    <value>Shortcut of "Search Identifier Next"</value>
+  </data>
+  <data name="NAME_SEARCH_PREV" xml:space="preserve">
+    <value>Shortcut of "Search Identifier Prev"</value>
+  </data>
+  <data name="TITLE_NOT_FOUND" xml:space="preserve">
+    <value>Not Found</value>
   </data>
 </root>

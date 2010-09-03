@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using FlashDevelop.Managers;
 using PluginCore;
 using PluginCore.FRService;
 using PluginCore.Helpers;
@@ -18,6 +15,7 @@ using ScintillaNet;
 using FDjpPlugin.Commands;
 using PluginCore.Localization;
 using FDjpPlugin.Resources;
+using FlashDevelop;
 
 namespace FDjpPlugin
 {
@@ -26,7 +24,7 @@ namespace FDjpPlugin
         private string pluginAuth = "bkzen";
         private string pluginDesc = "FlashDevelop.jpプラグイン";
         private string pluginGuid = "4308cb28-d1d1-4ac5-aaee-ebd7dc6fa4da";
-        private string pluginVer = "1.0.0.10";
+        private string pluginVer = "1.0.0.13";
         private string pluginHelp = "http://code.google.com/p/flashdevelopjp/";
         private string pluginName = "FDjpPlugin";
         private Settings settingObj = null;
@@ -42,7 +40,9 @@ namespace FDjpPlugin
         private ToolStripMenuItem foldAllCommentsItem = null;
         private ToolStripMenuItem expandAllCommentsItem = null;
         private ToolStripMenuItem alignAssignmentItem = null;
-
+        private ToolStripMenuItem searchNextItem = null;
+        private ToolStripMenuItem searchPrevItem = null;
+        private ToolStripMenuItem calcSelectionItem = null;
 
         #region IPlugin メンバ
 
@@ -127,6 +127,12 @@ namespace FDjpPlugin
                 expandAllComments(null, null);
             else if (ke.Value == settingObj.AlignAssignmentsKey)
                 alignAssignment(null, null);
+            else if (ke.Value == settingObj.SearchNextKey)
+                searchNext(null, null);
+            else if (ke.Value == settingObj.SearchPrevKey)
+                searchPrev(null, null);
+            else if (ke.Value == settingObj.CalcSelectionKey)
+                calcSelection(null, null);
             else return false;
 
             return true;
@@ -223,6 +229,15 @@ namespace FDjpPlugin
             this.alignAssignmentItem = new ToolStripMenuItem();
             this.alignAssignmentItem.Text = LocaleHelper.GetString("LABEL_ALIGN_ASSIGNMENT");
             this.alignAssignmentItem.Click += new EventHandler(this.alignAssignment);
+            this.searchNextItem = new ToolStripMenuItem();
+            this.searchNextItem.Text = LocaleHelper.GetString("LABEL_SEARCH_NEXT");
+            this.searchNextItem.Click += new EventHandler(this.searchNext);
+            this.searchPrevItem = new ToolStripMenuItem();
+            this.searchPrevItem.Text = LocaleHelper.GetString("LABEL_SEARCH_PREV");
+            this.searchPrevItem.Click += new EventHandler(this.searchPrev);
+            this.calcSelectionItem = new ToolStripMenuItem();
+            this.calcSelectionItem.Text = LocaleHelper.GetString("LABEL_CALC_SELECTION");
+            this.calcSelectionItem.Click += new EventHandler(this.calcSelection);
 
             this.fdjpMenu.DropDownItems.Add(this.nextItem);
             this.fdjpMenu.DropDownItems.Add(this.prevItem);
@@ -232,6 +247,9 @@ namespace FDjpPlugin
             this.fdjpMenu.DropDownItems.Add(this.foldAllCommentsItem);
             this.fdjpMenu.DropDownItems.Add(this.expandAllCommentsItem);
             this.fdjpMenu.DropDownItems.Add(this.alignAssignmentItem);
+            this.fdjpMenu.DropDownItems.Add(this.searchNextItem);
+            this.fdjpMenu.DropDownItems.Add(this.searchPrevItem);
+            this.fdjpMenu.DropDownItems.Add(this.calcSelectionItem);
 
             mainMenu.Items.Add(this.fdjpMenu);
         }
@@ -252,6 +270,9 @@ namespace FDjpPlugin
             Keys foldAllCommentsKey   = settingObj.FoldAllCommentsKey;
             Keys expandAllCommentsKey = settingObj.ExpandAllCommentsKey;
             Keys alignAssignmentKey   = settingObj.AlignAssignmentsKey;
+            Keys searchNextKey        = settingObj.SearchNextKey;
+            Keys searchPrevKey        = settingObj.SearchPrevKey;
+            Keys calcSelectionKey     = settingObj.CalcSelectionKey;
 
             if (!PluginBase.MainForm.IgnoredKeys.Contains(alwaysKey))            { PluginBase.MainForm.IgnoredKeys.Add(alwaysKey); }
             if (!PluginBase.MainForm.IgnoredKeys.Contains(nextKey))              { PluginBase.MainForm.IgnoredKeys.Add(nextKey); }
@@ -261,8 +282,10 @@ namespace FDjpPlugin
             if (!PluginBase.MainForm.IgnoredKeys.Contains(foldAllCommentsKey))   { PluginBase.MainForm.IgnoredKeys.Add(foldAllCommentsKey); }
             if (!PluginBase.MainForm.IgnoredKeys.Contains(expandAllCommentsKey)) { PluginBase.MainForm.IgnoredKeys.Add(expandAllCommentsKey); }
             if (!PluginBase.MainForm.IgnoredKeys.Contains(alignAssignmentKey))   { PluginBase.MainForm.IgnoredKeys.Add(alignAssignmentKey); }
-
-
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(searchNextKey))        { PluginBase.MainForm.IgnoredKeys.Add(searchNextKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(searchPrevKey))        { PluginBase.MainForm.IgnoredKeys.Add(searchPrevKey); }
+            if (!PluginBase.MainForm.IgnoredKeys.Contains(calcSelectionKey))     { PluginBase.MainForm.IgnoredKeys.Add(calcSelectionKey); }
+    
             if (this.settingObj.HideMenu) return;
 
             this.alwaysItem.ShortcutKeys            = alwaysKey;
@@ -273,6 +296,9 @@ namespace FDjpPlugin
             this.foldAllCommentsItem.ShortcutKeys   = foldAllCommentsKey;
             this.expandAllCommentsItem.ShortcutKeys = expandAllCommentsKey;
             this.alignAssignmentItem.ShortcutKeys   = alignAssignmentKey;
+            this.searchNextItem.ShortcutKeys        = searchNextKey;
+            this.searchPrevItem.ShortcutKeys        = searchPrevKey;
+            this.calcSelectionItem.ShortcutKeys     = calcSelectionKey;
         }
 
         private void nextWord(Object sender, EventArgs e)
@@ -417,90 +443,62 @@ namespace FDjpPlugin
 
         private void foldAllComments(Object sender, EventArgs e)
         {
-            performAllComments(true);
+            FolderCommand com = new FolderCommand(Globals.SciControl, true, settingObj.FoldCommentsToggle);
+            com.Execute();
         }
 
         private void expandAllComments(Object sender, EventArgs e)
         {
-            performAllComments(false);
-        }
-
-        private void performAllComments(Boolean fold)
-        {
-            // スクロール位置を保持
-            Int32 scrollTop = sci.FirstVisibleLine;
-
-            // コメントの開始を検索。検索だと重いので他の方法がいいんですけどわからなくて・・・
-            //String commentStart = ScintillaManager.GetCommentStart(sci.ConfigurationLanguage); //これ使いたいんですけどプロテクトがかかってる・・・
-            String commentStart = "/*"; 
-            List<SearchMatch> matches = this.searchString(sci, commentStart);
-
-            if (matches != null && matches.Count != 0)
-            {
-                Int32 lexer = sci.Lexer;
-                Int32 fldNum = 0; // 折りたたみ/展開の対象になった個数
-                Int32 expNum = 0; // 折りたたみ/展開されなかった個数
-                foreach (SearchMatch match in matches)
-                {
-                    Int32 pos = sci.MBSafePosition(match.Index);
-                    Int32 line = sci.LineFromPosition(pos);
-                    Int32 foldParentLine = sci.FoldParent(line + 1);
-                    if (foldParentLine == line)
-                    {
-                        fldNum++;
-                        Boolean isExpanded = sci.FoldExpanded(foldParentLine);
-                        if (fold)
-                        {
-                            if (isExpanded)
-                            {
-                                sci.ToggleFold(line);
-                            }
-                            else
-                            {
-                                expNum++;
-                            }
-                        }
-                        else
-                        {
-                            if (!isExpanded)
-                            {
-                                sci.ToggleFold(line);
-                            }
-                            else
-                            {
-                                expNum++;
-                            }
-                        }
-                    }
-                }
-
-				// 折りたたみ・展開するものがなかったら逆の動きをする
-                if (fldNum == expNum && settingObj.FoldCommentsToggle)
-                {
-                    performAllComments(!fold);
-                    
-                    return;
-                }
-            }
-
-            // スクロール位置を元に戻す
-            if (scrollTop != sci.FirstVisibleLine)
-            {
-                sci.LineScroll(0, scrollTop - sci.FirstVisibleLine);
-            }
-        }
-
-        // 文字列検索
-        private List<SearchMatch> searchString(ScintillaControl sci, String text)
-        {
-            FRSearch search = new FRSearch(text);
-            return search.Matches(sci.Text);
+            FolderCommand com = new FolderCommand(Globals.SciControl, false, settingObj.FoldCommentsToggle);
+            com.Execute();
         }
 
         // コード整列
         private void alignAssignment(Object sender, EventArgs e)
         {
-            AlignAssignments.Execute();
+            AlignAssignments com = new AlignAssignments(Globals.SciControl);
+            com.Execute();
         }
+
+        // 次を検索
+        private void searchNext(Object sender, EventArgs e)
+        {
+            searchSame(false);
+        }
+
+        // 前を検索
+        private void searchPrev(Object sender, EventArgs e)
+        {
+            searchSame(true);
+        }
+
+        public void searchSame(bool next)
+        {
+            try
+            {
+                int curStartPos = Globals.SciControl.WordStartPosition(Globals.SciControl.CurrentPos, true);
+                int curEndPos = Globals.SciControl.WordEndPosition(Globals.SciControl.CurrentPos, true);
+                int a = Globals.SciControl.SelectionStart;
+                int b = Globals.SciControl.SelectionEnd;
+                GotoSameIdentifierCommand command = new GotoSameIdentifierCommand(true);
+                command.spos = a;
+                command.epos = b;
+                command.back = next;
+                command.curStartPos = curStartPos;
+                command.curEndPos = curEndPos;
+                command.Execute();
+            }
+            catch (Exception ex)
+            {
+                ErrorManager.ShowError(ex);
+            }
+        }
+
+        public void calcSelection(Object sender, EventArgs e)
+        {
+            CalcSelectionCommand com = new CalcSelectionCommand(Globals.SciControl);
+            com.Execute();
+        }
+
     }
 }
