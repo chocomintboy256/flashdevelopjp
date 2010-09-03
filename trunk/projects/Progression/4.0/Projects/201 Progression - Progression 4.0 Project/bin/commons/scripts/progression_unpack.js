@@ -2,7 +2,7 @@
  * Progression 4
  * 
  * @author Copyright (C) 2007-2010 taka:nium.jp, All Rights Reserved.
- * @version 4.0.12
+ * @version 4.0.22
  * @see http://progression.jp/
  * 
  * Progression Libraries is dual licensed under the "Progression Library License" and "GPL".
@@ -68,13 +68,14 @@ var progression; ( function() {
 			return name.replace( new RegExp( "[A-Z]", "g" ), function( $0 ) { return "-" + $0.toLowerCase(); } );
 		},
 		$render = function( config ) {
-			var node = d.getElementById( config.htmlContentId );
-			if ( node ) {
-				node.parentNode.removeChild( node );
+			var html = d.getElementById( config.htmlContentId );
+			if ( html ) {
+				html.parentNode.removeChild( html );
 			}
 			
 			if ( config.hscale != "none" || config.vscale != "none" ) {
-				var css = { width:"100%", height:"100%", overflow:"auto", margin:"0", padding:"0", background:config.bgcolor };
+				var css = { width:"100%", height:"100%", overflow:"auto", margin:"0", padding:"0", fontSize:"0", lineHeight:"0", background:config.bgcolor };
+				
 				$css( "html", css );
 				$css( "body", css );
 				
@@ -129,9 +130,11 @@ var progression; ( function() {
 			contentId			:"content",
 			htmlContentId		:"htmlcontent",
 			flashContentId		:"flashcontent",
-			expressInstallPath	:"commons/scripts/swfobject/expressinstall.swf",
 			bgcolor				:"#FFFFFF",
-			params				:{ allowscriptaccess:"always" },
+			expressInstallPath	:"commons/scripts/swfobject/expressinstall.swf",
+			params				:{
+				allowscriptaccess	:"always"
+			},
 			flashvars			:{},
 			attributes			:{}
 		};
@@ -144,7 +147,11 @@ var progression; ( function() {
 		config.params.wmode = "window";
 		config.params.allowfullscreen = "true";
 		
-		$render( config );
+		$css( "#" + config.htmlContentId, { display:"none" } );
+		
+		if ( new RegExp( "^PLAYSTATION 3" ).test( navigator.platform ) ) {
+			$render( config );
+		}
 		
 		swf.embedSWF( config.url, config.flashContentId, "100%", "100%", config.version, config.expressInstallPath, config.flashvars, config.params, config.attributes, complete );
 	};
@@ -152,15 +159,18 @@ var progression; ( function() {
 	var complete = function( e ) {
 		$p( $( "disabled_javascript" ), { style:{ display:"none" } } );
 		
-		$render( config );
-		
 		if ( e.success ) {
+			$render( config );
+			
 			var target = d.getElementById( config.attributes.id );
 			
 			if ( target ) {
 				target.style.outline = "none";
 				target.focus();
 			}
+		}
+		else {
+			$css( "#" + config.htmlContentId, { display:"block" } );
 		}
 	};
 } )();

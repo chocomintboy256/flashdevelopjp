@@ -10,7 +10,7 @@
 	<meta name="copyright" content="" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<meta name="generator" content="Progression 4.0.12" />
+	<meta name="generator" content="Progression 4.0.22" />
 	<title>$(ProjectName)</title>
 	<link rel="stylesheet" type="text/css" href="commons/styles/progression.css" />
 	<script type="text/javascript" src="commons/scripts/swfobject/swfobject.js"></script>
@@ -19,18 +19,19 @@
 	<script type="text/javascript">
 	// <![CDATA[
 		progression.embedSWF( {
-			version		:"9.0.45",
-			url			:"preloader.swf",
-			width		:800,
-			height		:600,
-			halign		:"center",
-			valign		:"middle",
-			hscale		:"window",
-			vscale		:"window",
-			bgcolor		:"#FFFFFF",
-			params		:{},
-			attributes	:{},
-			flashvars	:{}
+			version				:"9.0.45",
+			url					:"preloader.swf",
+			width				:800,
+			height				:600,
+			halign				:"center",
+			valign				:"middle",
+			hscale				:"window",
+			vscale				:"window",
+			bgcolor				:"#FFFFFF",
+			expressInstallPath	:"commons/scripts/swfobject/expressinstall.swf",
+			params				:{},
+			attributes			:{},
+			flashvars			:{}
 		} );
 	// ]]>
 	</script>
