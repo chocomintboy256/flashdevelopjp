@@ -8,15 +8,14 @@ using FlashDevelop.Utilities;
 
 namespace FDjpPlugin.Commands
 {
-    class AlignAssignments
+    class AlignAssignments : SCICommand
     {
-        private static ScintillaControl sci;
-
-        public static void Execute()
+        public AlignAssignments(ScintillaControl sci):base(sci)
         {
-            if (Globals.SciControl == null) return;
-            sci = (ScintillaControl)Globals.SciControl;
-
+        }
+        
+        public override void Execute()
+        {
             if (charsThatAssociateWithEquals == null)
             {
                 charsThatAssociateWithEquals = new List<char>();
@@ -121,7 +120,7 @@ namespace FDjpPlugin.Commands
             }
         }
 
-        private static ColumnAndOffset GetColumnNumberOfFirstEquals(TextSnapshotLine line)
+        private ColumnAndOffset GetColumnNumberOfFirstEquals(TextSnapshotLine line)
         {
             String snapshot = line.Text;
 
@@ -168,13 +167,13 @@ namespace FDjpPlugin.Commands
             return new ColumnAndOffset(-1, -1);
         }
 
-        private static List<char> charsThatAssociateWithEquals;
-        private static bool CharAssociatesWithEquals(char ch)
+        private List<char> charsThatAssociateWithEquals;
+        private bool CharAssociatesWithEquals(char ch)
         {
             return charsThatAssociateWithEquals.Contains(ch);
         }
 
-        private static bool isComment(int pos)
+        private bool isComment(int pos)
         {
             if (sci.StyleAt(pos) == 1 || sci.StyleAt(pos) == 2)
             {
